@@ -1,0 +1,113 @@
+{
+  "buffalo": {
+    "squirtB1": {
+      "found": true,
+      "name": "Squirt B1",
+      "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603099"
+    },
+    "bantamB2": {
+      "found": true,
+      "name": "Bantam B2",
+      "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=9135406"
+    },
+    "totalTeams": 16,
+    "allTeams": [
+      {
+        "name": "BYHA Mite Coaching Program",
+        "level": "Mites",
+        "detail": "BYHA Mite Coaching Program",
+        "url": "https://cdn2.sportngin.com/attachments/document/3f83-2282391/BYHA_Coach_Info_2022-2023.docx"
+      },
+      {
+        "name": "Squirt B1",
+        "level": "Squirts",
+        "detail": "Squirt B1",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603099"
+      },
+      {
+        "name": "Mite Black",
+        "level": "Mites",
+        "detail": "Mite Black",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603183"
+      },
+      {
+        "name": "Mite Gray",
+        "level": "Mites",
+        "detail": "Mite Gray",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603198"
+      },
+      {
+        "name": "Mite Purple",
+        "level": "Mites",
+        "detail": "Mite Purple",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603199"
+      },
+      {
+        "name": "Mite White",
+        "level": "Mites",
+        "detail": "Mite White",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603200"
+      },
+      {
+        "name": "Squirt C White",
+        "level": "Squirts",
+        "detail": "Squirt C White",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603102"
+      },
+      {
+        "name": "Squirt B2",
+        "level": "Squirts",
+        "detail": "Squirt B2",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603100"
+      },
+      {
+        "name": "Bantam B1",
+        "level": "Bantams",
+        "detail": "Bantam B1",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=9135404"
+      },
+      {
+        "name": "Bantam B2",
+        "level": "Bantams",
+        "detail": "Bantam B2",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=9135406"
+      },
+      {
+        "name": "Squirt A",
+        "level": "Squirts",
+        "detail": "Squirt A",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603098"
+      },
+      {
+        "name": "PeeWee AA",
+        "level": "Peewees",
+        "detail": "PeeWee AA",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603145"
+      },
+      {
+        "name": "PeeWee B1",
+        "level": "Peewees",
+        "detail": "PeeWee B1",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603147"
+      },
+      {
+        "name": "PeeWee B2",
+        "level": "Peewees",
+        "detail": "PeeWee B2",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603148"
+      },
+      {
+        "name": "PeeWee C",
+        "level": "Peewees",
+        "detail": "PeeWee C",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=8603149"
+      },
+      {
+        "name": "Bantam AA",
+        "level": "Bantams",
+        "detail": "Bantam AA",
+        "url": "webcal://buffalo.pucksystems2.com/ical_feed?tags=9135400"
+      }
+    ]
+  }
+}

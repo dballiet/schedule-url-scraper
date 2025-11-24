@@ -1,0 +1,9 @@
+
+--- URL: https://buffalo.pucksystems2.com/page/show/7046-teams ---
+Status: 200
+Link: [skip navigation] -> #yieldContent
+Link: [] -> /
+Link: [Sports Relationship Management] -> https://www.sportsengine.com/solutions/
+Link: [©2025 SportsEngine, LLC.] -> https://www.sportsengine.com/corp
+Link: [Privacy Policy] -> /privacy_policy.pdf
+Link: [] -> https://www.sportsengine.com/?utm_source=Sitebuilder&utm_medium=Footer&utm_campaign=SportsEngine+Internal+Link&utm_term=Footer

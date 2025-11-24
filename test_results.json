@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "byPlatform": {
+      "SportsEngine": {
+        "passed": 10,
+        "failed": 0
+      },
+      "Crossbar": {
+        "passed": 3,
+        "failed": 0
+      },
+      "Other": {
+        "passed": 1,
+        "failed": 0
+      }
+    }
+  },
+  "tests": [
+    {
+      "association": "Anoka",
+      "teamName": "Bantam A",
+      "expectedUrl": "webcal://www.anokaareahockey.com/ical_feed?tags=9100345",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://www.anokaareahockey.com/ical_feed?tags=9100345",
+      "foundTeamName": "Bantam A"
+    },
+    {
+      "association": "Anoka",
+      "teamName": "Squirt B1",
+      "expectedUrl": "webcal://www.anokaareahockey.com/ical_feed?tags=9100398",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://www.anokaareahockey.com/ical_feed?tags=9100398",
+      "foundTeamName": "Squirt B1"
+    },
+    {
+      "association": "Buffalo",
+      "teamName": "Squirt B1",
+      "expectedUrl": "webcal://buffalo.pucksystems2.com/ical_feed?tags=9147098",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://buffalo.pucksystems2.com/ical_feed?tags=9147098",
+      "foundTeamName": "Squirt B1"
+    },
+    {
+      "association": "Buffalo",
+      "teamName": "Bantam B2",
+      "expectedUrl": "webcal://buffalo.pucksystems2.com/ical_feed?tags=9135406",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://buffalo.pucksystems2.com/ical_feed?tags=9135406",
+      "foundTeamName": "Bantam B2"
+    },
+    {
+      "association": "Chaska",
+      "teamName": "Squirt B1 Gold",
+      "expectedUrl": "https://www.cchockey.org/team/142360/calendar",
+      "platform": "Crossbar",
+      "status": "PASSED",
+      "foundUrl": "https://www.cchockey.org/team/142360/calendar",
+      "foundTeamName": "SQUIRT B1 GOLD"
+    },
+    {
+      "association": "Minnetonka",
+      "teamName": "Squirt B2 Blue",
+      "expectedUrl": "webcal://www.tonkahockey.org/ical_feed?tags=9209292",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://www.tonkahockey.org/ical_feed?tags=9209292",
+      "foundTeamName": "Squirt B2 Blue Machine"
+    },
+    {
+      "association": "Minnetonka",
+      "teamName": "Bantam AA",
+      "expectedUrl": "webcal://www.tonkahockey.org/ical_feed?tags=9136984",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://www.tonkahockey.org/ical_feed?tags=9136984",
+      "foundTeamName": "Bantam AA"
+    },
+    {
+      "association": "St. Paul Capitals",
+      "teamName": "PeeWee A",
+      "expectedUrl": "https://www.stpaulcapitalshockey.com/team/154117/calendar",
+      "platform": "Crossbar",
+      "status": "PASSED",
+      "foundUrl": "https://www.stpaulcapitalshockey.com/team/154117/calendar",
+      "foundTeamName": "Peewee A"
+    },
+    {
+      "association": "Blaine Youth Hockey Association",
+      "teamName": "Peewee B2",
+      "expectedUrl": "webcal://www.byha.org/ical_feed?tags=9236045",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://www.byha.org/ical_feed?tags=9236045",
+      "foundTeamName": "PW B2"
+    },
+    {
+      "association": "Woodbury Area Hockey Club",
+      "teamName": "Bantam B1 Royal",
+      "expectedUrl": "webcal://www.woodburyhockey.com/ical_feed?tags=9248176",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://www.woodburyhockey.com/ical_feed?tags=9248176",
+      "foundTeamName": "Woodbury BN B1 Royal"
+    },
+    {
+      "association": "Waconia Hockey Association",
+      "teamName": "Squirt C",
+      "expectedUrl": "webcal://waconiahockey.sprocketsports.com/ical?team=26272",
+      "platform": "Other",
+      "status": "PASSED",
+      "foundUrl": "webcal://waconiahockey.sprocketsports.com/ical?team=26272",
+      "foundTeamName": "Squirt C"
+    },
+    {
+      "association": "Eden Prairie Hockey Association",
+      "teamName": "Squirt B2 Red",
+      "expectedUrl": "webcal://www.ephockey.com/ical_feed?tags=9256701",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://www.ephockey.com/ical_feed?tags=9256701",
+      "foundTeamName": "EP Squirt B2 Red"
+    },
+    {
+      "association": "Rogers Youth Hockey Association",
+      "teamName": "Squirt B2 Black",
+      "expectedUrl": "https://www.rogershockey.com/team/162578/calendar",
+      "platform": "Crossbar",
+      "status": "PASSED",
+      "foundUrl": "https://www.rogershockey.com/team/162578/calendar",
+      "foundTeamName": "Squirt B2 Black"
+    },
+    {
+      "association": "Prior Lake-Savage Hockey Association",
+      "teamName": "Squirt B2 Gold",
+      "expectedUrl": "webcal://www.plsha.com/ical_feed?tags=5220340",
+      "platform": "SportsEngine",
+      "status": "PASSED",
+      "foundUrl": "webcal://www.plsha.com/ical_feed?tags=5220340",
+      "foundTeamName": "Squirt B2 Gold"
+    }
+  ]
+}

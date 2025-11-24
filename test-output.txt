@@ -1,0 +1,496 @@
+Testing Buffalo Hockey Association...
+
+Scraping Buffalo Hockey Association...
+Checking sitemap: https://buffalo.pucksystems2.com/sitemap.xml
+Found 62 relevant URLs in sitemap.
+Scanning page (1/75): https://buffalo.pucksystems2.com
+Scanning page (2/75): https://buffalo.pucksystems2.com/page/show/7046-teams
+Scanning page (3/75): https://buffalo.pucksystems2.com/page/show/13581-15u-teams
+Scanning page (4/75): https://buffalo.pucksystems2.com/page/show/13583-bantam-teams
+Scanning page (5/75): https://cdn1.sportngin.com/attachments/document/fd9a-3476458/Tryout_Master_2025_-_Bantam_Teams.pdf
+Scanning page (6/75): https://buffalo.pucksystems2.com/page/show/13590-peewee-teams
+Scanning page (7/75): https://cdn1.sportngin.com/attachments/document/b604-3282656/Tryout_Master_2025_-_Peewee_Teams.pdf
+Scanning page (8/75): https://buffalo.pucksystems2.com/page/show/13595-10u-teams
+Scanning page (9/75): https://buffalo.pucksystems2.com/page/show/15011-squirt-teams
+Scanning page (10/75): https://cdn2.sportngin.com/attachments/document/9edd-3266852/Squirt_Parent_Meeting_Template.docx.pdf
+Scanning page (11/75): https://cdn2.sportngin.com/attachments/document/6efe-3476159/Tryout_Master_25-26_Squirt_Teams.pdf
+Scanning page (12/75): https://buffalo.pucksystems2.com/page/show/15071-high-school-teams
+Scanning page (13/75): https://buffalo.pucksystems2.com/page/show/38503-12u-teams
+Scanning page (14/75): https://buffalo.pucksystems2.com/page/show/388123-mite-mini-mite-and-8u-team-pages
+Scanning page (15/75): https://buffalo.pucksystems2.com/page/show/1050848-safe-sport-team-before-ice
+Scanning page (16/75): https://buffalo.pucksystems2.com/page/show/7341178-squirt-b1-2022-23-
+Scanning page (17/75): https://buffalo.pucksystems2.com/page/show/7342477-mite-black-2022-23-
+Scanning page (18/75): https://buffalo.pucksystems2.com/page/show/7342478-mite-gray-2022-23-
+Scanning page (19/75): https://buffalo.pucksystems2.com/page/show/7342479-mite-purple-2022-23-
+Scanning page (20/75): https://buffalo.pucksystems2.com/page/show/7342480-mite-white-2022-23-
+Scanning page (21/75): https://buffalo.pucksystems2.com/page/show/7342537-mite-open-hockey-2023-24-
+Scanning page (22/75): http://buffalo.pucksystems2.com/page/show/7342537-mite-open-hockey-2023-24-
+Scanning page (23/75): https://buffalo.pucksystems2.com/page/show/7344552-squirt-c-white-2022-23-
+Scanning page (24/75): https://buffalo.pucksystems2.com/page/show/8021759-mite-black-2023-2024-
+Scanning page (25/75): https://buffalo.pucksystems2.com/page/show/8023226-mite-gray-2023-2024-
+Scanning page (26/75): https://buffalo.pucksystems2.com/page/show/8023246-mite-purple-2023-2024-
+Scanning page (27/75): https://buffalo.pucksystems2.com/page/show/8023247-mite-white-2023-2024-
+Scanning page (28/75): https://buffalo.pucksystems2.com/page/show/8037898-squirt-b1-2023-24-
+Scanning page (29/75): https://buffalo.pucksystems2.com/page/show/8037899-squirt-b2-2023-24-
+Scanning page (30/75): https://buffalo.pucksystems2.com/page/show/8038506-squirt-c-white-2023-24-
+Scanning page (31/75): https://buffalo.pucksystems2.com/page/show/8263148-squirt-3v3-league
+Scanning page (32/75): https://buffalo.pucksystems2.com/page/show/8589988-bantam-b1-2024-25-
+Scanning page (33/75): https://buffalo.pucksystems2.com/page/show/8589989-bantam-b2-2024-25-
+Scanning page (34/75): https://buffalo.pucksystems2.com/page/show/8603098-squirt-a-2024-25-
+Scanning page (35/75): https://buffalo.pucksystems2.com/page/show/8603099-squirt-b1-2024-25-
+Scanning page (36/75): https://buffalo.pucksystems2.com/page/show/8603100-squirt-b2-2024-25-
+Scanning page (37/75): https://buffalo.pucksystems2.com/page/show/8603102-squirt-c-white-2024-25-
+Scanning page (38/75): https://buffalo.pucksystems2.com/page/show/8603145-peewee-aa-2024-25-
+Scanning page (39/75): https://buffalo.pucksystems2.com/page/show/8603147-peewee-b1-2024-25-
+Scanning page (40/75): https://buffalo.pucksystems2.com/page/show/8603148-peewee-b2-2024-25-
+Scanning page (41/75): https://buffalo.pucksystems2.com/page/show/8603149-peewee-c-2024-25-
+Scanning page (42/75): https://buffalo.pucksystems2.com/page/show/8603183-mite-black-2024-25-
+Scanning page (43/75): https://buffalo.pucksystems2.com/page/show/8603198-mite-gray-2024-25-
+Scanning page (44/75): https://buffalo.pucksystems2.com/page/show/8603199-mite-purple-2024-25-
+Scanning page (45/75): https://buffalo.pucksystems2.com/page/show/8603200-mite-white-2024-25-
+Scanning page (46/75): https://buffalo.pucksystems2.com/page/show/8603284-mite-open-hockey-2024-25-
+Scanning page (47/75): http://buffalo.pucksystems2.com/page/show/8603284-mite-open-hockey-2024-25-
+Scanning page (48/75): https://buffalo.pucksystems2.com/page/show/9135400-bantam-aa-2025-26-
+Scanning page (49/75): https://buffalo.pucksystems2.com/page/show/9135404-bantam-b1-2025-26-
+Scanning page (50/75): https://buffalo.pucksystems2.com/page/show/9135406-bantam-b2-2025-26-
+Scanning page (51/75): https://buffalo.pucksystems2.com/page/show/9147097-squirt-a-2025-26-
+Scanning page (52/75): https://buffalo.pucksystems2.com/page/show/9147098-squirt-b1-2025-26-
+Scanning page (53/75): https://buffalo.pucksystems2.com/page/show/9147101-squirt-c-white-2025-26-
+Scanning page (54/75): https://buffalo.pucksystems2.com/page/show/9168283-peewee-aa-2025-26-
+Scanning page (55/75): https://buffalo.pucksystems2.com/page/show/9168284-peewee-b1-2025-26-
+Scanning page (56/75): https://buffalo.pucksystems2.com/page/show/9168285-peewee-b2-2025-26-
+Scanning page (57/75): https://buffalo.pucksystems2.com/page/show/9168286-peewee-c-2025-26-
+Scanning page (58/75): https://buffalo.pucksystems2.com/page/show/9168295-squirt-b2-2025-26-
+Scanning page (59/75): https://buffalo.pucksystems2.com/page/show/9230816-squirt-c-purple-2025-2026-
+Scanning page (60/75): https://buffalo.pucksystems2.com/page/show/9246457-mite-black-2025-26-
+Scanning page (61/75): https://buffalo.pucksystems2.com/page/show/9246458-mite-gray-2025-26-
+Scanning page (62/75): https://buffalo.pucksystems2.com/page/show/9246459-mite-purple-2025-26-
+Scanning page (63/75): https://buffalo.pucksystems2.com/page/show/9246460-mite-white-2025-26-
+Scanning page (64/75): https://buffalo.pucksystems2.com/news_article/show/10501-squirt-b-u10-b-volunteers-needed
+Scanning page (65/75): https://buffalo.pucksystems2.com/news_article/show/10538-squirt-b-u10-b-volunteers-needed
+Scanning page (66/75): https://buffalo.pucksystems2.com/news_article/show/10706-vfw-bantam-a-tournament-volunteers
+Scanning page (67/75): https://buffalo.pucksystems2.com/news_article/show/45147-bantam-b-s-win-2-seed-in-district-playoff
+Scanning page (68/75): https://buffalo.pucksystems2.com/news_article/show/676545-squirt-tournaments
+Scanning page (69/75): https://buffalo.pucksystems2.com/news_article/show/710641-district-5-schedule-news-squirt-b-
+Scanning page (70/75): https://buffalo.sportngin.com/register/form/236665353
+Scanning page (71/75): https://www.facebook.com/Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/
+Failed to fetch https://www.facebook.com/Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/: AxiosError: Request failed with status code 400
+    at settle (K:\Cursor Repo\QR\schedule-url-scraper\node_modules\axios\lib\core\settle.js:19:12)
+    at BrotliDecompress.handleStreamEnd (K:\Cursor Repo\QR\schedule-url-scraper\node_modules\axios\lib\adapters\http.js:793:11)
+    at BrotliDecompress.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (K:\Cursor Repo\QR\schedule-url-scraper\node_modules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async fetchHtml (K:\Cursor Repo\QR\schedule-url-scraper\src\lib\scraper.ts:10:26)
+    at async scrapeAssociation (K:\Cursor Repo\QR\schedule-url-scraper\src\lib\scraper.ts:217:26)
+    at async runTests (K:\Cursor Repo\QR\schedule-url-scraper\scripts\test-buffalo.ts:12:19) {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 10000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://www.facebook.com/Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/ HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: www.facebook.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 3,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://www.facebook.com/Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 48,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'www.facebook.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://www.facebook.com/Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/',
+      _timeout: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'www.facebook.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'www.facebook.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 9090,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 2541,
+        [Symbol(triggerId)]: 2539,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      pragma: 'no-cache',
+      'cache-control': 'private, no-cache, no-store, must-revalidate',
+      expires: 'Sat, 01 Jan 2000 00:00:00 GMT',
+      'content-security-policy': "default-src blob: 'self' https://*.fbsbx.com *.facebook.com *.fbcdn.net;script-src *.facebook.com *.fbcdn.net *.facebook.net 127.0.0.1:* 'nonce-B6ytfOOZ' blob: 'self' connect.facebook.net 'unsafe-eval' https://*.google-analytics.com *.google.com;style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline' https://fonts.googleapis.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* wss://*.whatsapp.com:* wss://*.fbcdn.net attachment.fbsbx.com ws://localhost:* blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ v.whatsapp.net *.fbsbx.com *.fb.com https://*.google-analytics.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com https://fonts.gstatic.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net connect.facebook.net *.carriersignal.info blob: android-webview-video-poster: *.whatsapp.net *.fb.com *.oculuscdn.com *.tenor.co *.tenor.com *.giphy.com https://trustly.one/ https://*.trustly.one/ https://paywithmybank.com/ https://*.paywithmybank.com/ https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.google-analytics.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data: *.tenor.co *.tenor.com https://*.giphy.com;child-src data: blob: 'self' https://*.fbsbx.com *.facebook.com *.fbcdn.net;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: www.instagram.com *.fbcdn.net accounts.meta.com *.accounts.meta.com https://trustly.one/ https://*.trustly.one/ https://paywithmybank.com/ https://*.paywithmybank.com/ https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://td.doubleclick.net *.google.com *.doubleclick.net;manifest-src data: blob: 'self' https://*.fbsbx.com *.facebook.com *.fbcdn.net;object-src data: blob: 'self' https://*.fbsbx.com *.facebook.com *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;",
+      'document-policy': 'include-js-call-stacks-in-crash-reports',
+      'x-frame-options': 'DENY',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '0',
+      'reporting-endpoints': 'coop_report="https://www.facebook.com/browser_reporting/coop/?minimize=0", default="https://www.facebook.com/ajax/comet_error_reports/?device_level=unknown&brsid=7575615651837072991&comet_app_key=15&cpp=C3&cv=1030274078&st=1763835468756"',
+      'report-to': '{"max_age":2592000,"endpoints":[{"url":"https:\\/\\/www.facebook.com\\/browser_reporting\\/coop\\/?minimize=0"}],"group":"coop_report","include_subdomains":true}, {"max_age":259200,"endpoints":[{"url":"https:\\/\\/www.facebook.com\\/ajax\\/comet_error_reports\\/?device_level=unknown&brsid=7575615651837072991&comet_app_key=15&cpp=C3&cv=1030274078&st=1763835468756"}]}',
+      'cross-origin-opener-policy': 'same-origin-allow-popups',
+      vary: 'Sec-Fetch-Site, Sec-Fetch-Mode, Accept-Encoding',
+      'origin-agent-cluster': '?1',
+      'strict-transport-security': 'max-age=15552000; preload',
+      'content-type': 'text/html; charset="utf-8"',
+      'x-fb-debug': 'tb/nF52EY57TUb0oyVF1n/57pKhXwh6dSc/mz1i8mFIql/iBl1p7b5GzQ25juU4JKwTpRNNc4NfjgPDr0dC+YA==',
+      date: 'Sat, 22 Nov 2025 18:17:48 GMT',
+      'proxy-status': 'http_request_error; e_fb_vipaddr="AcP7MjvnbSvUNpjmcOf1e9O9zFTEVm3HArSquHM89Bu_Jy2IjC55gpGfGdST5rMj5wYUU_ruBdyxByu0swUE7asuFFJew0F20xl7"; e_clientaddr="AcMRzgo5ZHE_JsC1SYKjiZrd_I2WcI3TrEcGiDyI7XIuCyUnmbd0rPRQj8Ltsi9-tItp8Q2L-aSzPsHzVhGV1hCGjMFIx79k4ZECFoDQ2mJsUmeSBw"; e_upip="AcNIYAwANajIl-SX2QkfUbxw8NBVQZil6mTvurQvMvGiWvIAPvMANAy9yg-2hn7UEeJuzEi_oNAtl8NMpgwyUMQfdXByUZtpoVpaBhR5"; e_fb_zone="AcOgiorQaR-3dHgvtLjWLF9nfOUWzYtzbJO2xA_PEPK_M5EgWl2APUxkvGZqrM6z"; e_fb_twtaskhandle="AcN933vXaJuUEUA6I9mGtK7G0Bg_aY6i_80woIa2y1pNtVcXCtJeA25Hk4ztg_j8cHDXUpGJ8UpMKXw07aGkyNQq6TRMb_R-dZKaoWxH9DA250rD"; e_proxy="AcM2D-MDQg1vV5RA2cbs4_2X0vJiRQHsvUs4Mgu8qwmsEu1Xw49XakJMpkdjhWnqWAcT9FLBhnHOiEwE0nA", http_request_error; e_fb_vipaddr="AcNX7q7HF32NgfAkRtuvmPP9WRCklWGWiObgoCs2ngbeM1HO8KRNFqj_2A2XRZN_60I4YrUP"; e_clientaddr="AcOw5Hlf75TKwiq2Jap243ieBNvcVf7Ie-MmNUumCFde886qDHkCDJITdmi5y-DoD8DtmLEDIUqbKc4"; e_upip="AcOdtb1UDQbUFkKjC2NKKj1FmK6u26Giy3GSGYfT-NvhQC48dSl3S8L9OVSXeayP5ww14YJgnXnvFuN9eysaSD2EAA3Y4tnT4Wkh"; e_fb_zone="AcMMZcfvSUhj6WYFdLV3-Esrtqt8XWdXulDi3FI1ZrkPcXdT4QlfSSxQ-YDbPQ"; e_fb_twtaskhandle="AcMxH7DRRU_1std9DmMzqgGKlPYpwpH9tlb7DBSqNLjZazLL81e1Hr8q-60h5Ox28DtPgu1XkyLr09E7WCmVxRfDkdrrix7XSHa2"; e_proxy="AcN-VuYvM7veigsPTrUS8M8u_vd0ne7VaF-Y5heThQPyxxCoaV35L3oZKInBpCq5iZznF6fBPJIMFwM"',
+      'x-fb-connection-quality': 'GOOD; q=0.7, rtt=50, rtx=0, c=10, mss=1392, tbw=3456, tp=-1, tpl=-1, uplat=78, ullat=0',
+      'alt-svc': 'h3=":443"; ma=86400',
+      connection: 'keep-alive',
+      'content-length': '744'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 10000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'get',
+      url: 'https://www.facebook.com/Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/ HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: www.facebook.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/Buffalo-Youth-Hockey-Association-BYHA-Buffalo-MN-194416720635621/',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'www.facebook.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: `<!DOCTYPE html><html lang="en" id="facebook"><head><title>Error</title><meta charset="utf-8" /><meta http-equiv="Cache-Control" content="no-cache" /><meta name="robots" content="noindex,nofollow" /><style nonce="B6ytfOOZ">html, body { color: #333; font-family: 'Lucida Grande', 'Tahoma', 'Verdana', 'Arial', sans-serif; margin: 0; padding: 0; text-align: center;}\n` +
+      '#header { height: 30px; padding-bottom: 10px; padding-top: 10px; text-align: center;}\n' +
+      '#icon { width: 30px;}\n' +
+      '.core { margin: auto; padding: 1em 0; text-align: left; width: 904px;}\n' +
+      'h1 { font-size: 18px;}\n' +
+      'p { font-size: 13px;}\n' +
+      '.footer { border-top: 1px solid #ddd; color: #777; float: left; font-size: 11px; padding: 5px 8px 6px 0; width: 904px;}</style></head><body><div id="header"><a href="//www.facebook.com/"><img id="icon" src="//static.facebook.com/images/logos/facebook_2x.png" /></a></div><div class="core"><h1>Sorry, something went wrong.</h1><p>We&#039;re working on getting this fixed as soon as we can.</p><p><a id="back" href="//www.facebook.com/">Go back</a></p><div class="footer"> Meta &#169; 2025 &#183; <a href="//www.facebook.com/help/?ref=href052">Help</a></div></div><script nonce="B6ytfOOZ">\n' +
+      '              document.getElementById("back").onclick = function() {\n' +
+      '                if (history.length > 1) {\n' +
+      '                  history.back();\n' +
+      '                  return false;\n' +
+      '                }\n' +
+      '              };\n' +
+      '            </script></body></html><!-- @codegen-command : phps GenerateErrorPages --><!-- @generated SignedSource<<a2e14b6d3c6a99777af41324d62f78e6>> -->'
+  },
+  status: 400
+}
+Found 44 potential teams. Filtering for current season...
+After season filtering: 17 teams (removed 27 old season duplicates)
+Resolving calendar for BYHA Mite Coaching Program...
+Resolving calendar for Squirt B1...
+Resolving calendar for Mite Black...
+Resolving calendar for Mite Gray...
+Resolving calendar for Mite Purple...
+Resolving calendar for Mite White...
+Resolving calendar for Squirt C White...
+Resolving calendar for Squirt B2...
+Resolving calendar for Bantam B1...
+Resolving calendar for Bantam B2...
+Resolving calendar for Squirt A...
+Resolving calendar for PeeWee AA...
+Resolving calendar for PeeWee B1...
+Resolving calendar for PeeWee B2...
+Resolving calendar for PeeWee C...
+Resolving calendar for Bantam AA...
+Resolving calendar for Squirt C Purple...
+=== Results ===
+
+Squirt B1:
+  Expected: webcal://buffalo.pucksystems2.com/ical_feed?tags=9147098
+  Found:    webcal://buffalo.pucksystems2.com/ical_feed?tags=9147098
+  Match:    ✓
+
+Bantam B2:
+  Expected: webcal://buffalo.pucksystems2.com/ical_feed?tags=9135406
+  Found:    webcal://buffalo.pucksystems2.com/ical_feed?tags=9135406
+  Match:    ✓
+
+Peewee AA:
+  Found:    webcal://buffalo.pucksystems2.com/ical_feed?tags=9168283
+
+
+Total teams found: 17
