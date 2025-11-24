@@ -4,23 +4,68 @@ import puppeteer from 'puppeteer';
 import { Association, ScrapedTeam } from './types';
 
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36';
+const MIN_HOST_GAP_MS = 400;
+const HOST_JITTER_MS = 200;
+const MAX_FETCH_RETRIES = 2;
+const htmlCache = new Map<string, Promise<string | null>>();
+const hostLastRequest = new Map<string, number>();
+
+function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function applyHostDelay(url: string) {
+    try {
+        const host = new URL(url).hostname;
+        const last = hostLastRequest.get(host) || 0;
+        const gap = MIN_HOST_GAP_MS + Math.random() * HOST_JITTER_MS;
+        const waitFor = Math.max(0, last + gap - Date.now());
+        if (waitFor > 0) await sleep(waitFor);
+        hostLastRequest.set(host, Date.now());
+    } catch {
+        // If URL parsing fails, just continue without delaying
+    }
+}
 
 async function fetchHtml(url: string): Promise<string | null> {
-    try {
-        if (url.startsWith('javascript:') || url.startsWith('webcal:') || url.endsWith('.ics')) return null;
-        const response = await axios.get(url, {
-            headers: { 'User-Agent': USER_AGENT },
-            timeout: 10000,
-        });
-        return response.data;
-    } catch (error) {
-        if (axios.isAxiosError(error)) {
-            console.error(`Failed to fetch ${url}: ${error.message}`);
-        } else {
-            console.error(`Failed to fetch ${url}:`, error);
+    if (url.startsWith('javascript:') || url.startsWith('webcal:') || url.endsWith('.ics')) return null;
+    if (htmlCache.has(url)) return htmlCache.get(url)!;
+
+    const fetchPromise = (async () => {
+        let attempt = 0;
+        while (attempt <= MAX_FETCH_RETRIES) {
+            try {
+                await applyHostDelay(url);
+                const response = await axios.get(url, {
+                    headers: { 'User-Agent': USER_AGENT },
+                    timeout: 10000,
+                });
+                return response.data;
+            } catch (error) {
+                const isAxios = axios.isAxiosError(error);
+                const status = isAxios ? error.response?.status : null;
+                const retryable = status === 429 || status === 503 || status === 504;
+                const shouldRetry = retryable && attempt < MAX_FETCH_RETRIES;
+
+                if (!shouldRetry) {
+                    if (isAxios) {
+                        console.error(`Failed to fetch ${url}: ${error.message}`);
+                    } else {
+                        console.error(`Failed to fetch ${url}:`, error);
+                    }
+                    return null;
+                }
+
+                const backoff = 1000 * Math.pow(2, attempt) + Math.random() * 300;
+                attempt++;
+                await sleep(backoff);
+            }
         }
         return null;
-    }
+    })();
+
+    htmlCache.set(url, fetchPromise);
+    return fetchPromise;
 }
 
 function normalizeUrl(baseUrl: string, href: string): string {
@@ -30,6 +75,26 @@ function normalizeUrl(baseUrl: string, href: string): string {
     } catch {
         return href;
     }
+}
+
+function buildSprocketCalendarUrl(association: Association, href?: string, navigationTeamId?: string | null): string | null {
+    if (href) {
+        let absolute = normalizeUrl(association.baseUrl, href);
+        if (absolute.includes('/overview') && navigationTeamId) {
+            absolute = absolute.replace('/overview', '/schedule');
+        }
+        if (absolute.includes('/schedule') || absolute.includes('/calendar')) {
+            return absolute;
+        }
+    }
+
+    if (navigationTeamId) {
+        const urlMatch = association.baseUrl.match(/https?:\/\/(?:www\.)?([^./]+)/);
+        const subdomain = urlMatch ? urlMatch[1] : new URL(association.baseUrl).hostname;
+        return `https://${subdomain}.sprocketsports.com/ical?team=${navigationTeamId}`;
+    }
+
+    return null;
 }
 
 function buildAbsoluteUrl(baseUrl: string, href: string): string | null {
@@ -85,6 +150,14 @@ function getLevelDetail(name: string, ageGroup: string): string {
     detail = detail.replace(/^(Team|Jr\.?|Boys|Girls)\s+/i, '');
     detail = detail.replace(/[-–]/g, '').trim();
     return detail || 'Unknown';
+}
+
+function isAggregateLevelDetail(detail: string): boolean {
+    const normalized = detail.toLowerCase().replace(/\s+/g, ' ').trim();
+    return normalized === 'all' ||
+        normalized === 'all team' ||
+        normalized === 'all teams' ||
+        normalized === 'all levels';
 }
 
 function extractSeasonYearRange(text: string): { start: number, end: number } | null {
@@ -147,6 +220,7 @@ function isCurrentSeason(text: string, currentSeasonYear: number): boolean {
  */
 function isLikelyNonTeamPage(name: string, url: string): boolean {
     const lower = name.toLowerCase();
+    const lowerUrl = url.toLowerCase();
 
     // Reject obvious non-team keywords
     const rejectKeywords = [
@@ -156,7 +230,9 @@ function isLikelyNonTeamPage(name: string, url: string): boolean {
         'contact', 'board', 'coaching corner', 'coaches corner',
         'game day roster', 'layout', 'cost', 'fees',
         'camp', 'clinic', 'article', 'news', 'trophy', 'achievement',
-        'photo album', 'pictures', 'champions', 'congratulations'
+        'photo album', 'pictures', 'champions', 'congratulations',
+        'schedule and results', 'tournament', 'classic', 'showcase',
+        'festival', 'cup', 'invite', 'invitational'
     ];
 
     if (rejectKeywords.some(kw => lower.includes(kw))) {
@@ -183,6 +259,17 @@ function isLikelyNonTeamPage(name: string, url: string): boolean {
         return true;
     }
 
+    // Skip generic schedules (often tournament pages) unless clearly tied to a specific team
+    if ((lowerUrl.endsWith('/schedule') || lowerUrl.includes('/schedule/facility')) &&
+        !lowerUrl.includes('/team/')) {
+        const eventKeywords = ['classic', 'tournament', 'showcase', 'festival', 'cup', 'invite', 'invitational'];
+        if (eventKeywords.some(k => lower.includes(k))) {
+            return true;
+        }
+        // Generic association schedules without team context are noisy
+        return true;
+    }
+
     return false;
 }
 
@@ -195,22 +282,19 @@ function isValidCalendarUrl(url: string): boolean {
         url.includes('/ical_feed') ||
         url.includes('.ics') ||
         url.includes('/calendar') ||
-        url.includes('/schedule');
+        url.includes('/schedule') ||
+        url.includes('season-microsites.ui.sportsengine.com/seasons/');
 }
 
 async function findCalendarUrl(teamUrl: string): Promise<string | null> {
     const idMatch = teamUrl.match(/\/page\/show\/(\d+)/);
-    if (idMatch) {
-        const id = idMatch[1];
-        const baseUrl = new URL(teamUrl).origin;
-        return `webcal://${new URL(baseUrl).hostname}/ical_feed?tags=${id}`;
-    }
-
     const html = await fetchHtml(teamUrl);
     if (!html) return null;
 
     const $ = cheerio.load(html);
     let bestUrl: string | null = null;
+
+    const seasonMicrositePattern = /(?:season-microsites\.ui\.sportsengine\.com)?\/seasons\/[^/]+\/teams\/[^/?#]+/i;
 
     $('a').each((_, el) => {
         const href = $(el).attr('href');
@@ -220,9 +304,36 @@ async function findCalendarUrl(teamUrl: string): Promise<string | null> {
             bestUrl = normalizeUrl(teamUrl, href);
             return false;
         }
+
+        if (seasonMicrositePattern.test(href)) {
+            bestUrl = normalizeUrl(teamUrl, href);
+            return false;
+        }
     });
 
+    if (!bestUrl) {
+        $('script[src*="season-microsites"]').each((_, el) => {
+            const src = $(el).attr('src');
+            if (!src) return;
+            const url = normalizeUrl(teamUrl, src);
+            const pathMatch = url.match(/path=([^&]+)/);
+            if (pathMatch) {
+                const decoded = decodeURIComponent(pathMatch[1]);
+                if (seasonMicrositePattern.test(decoded)) {
+                    bestUrl = `https://season-microsites.ui.sportsengine.com${decoded}`;
+                    return false;
+                }
+            }
+        });
+    }
+
     if (bestUrl && isValidCalendarUrl(bestUrl)) return bestUrl;
+
+    if (idMatch) {
+        const id = idMatch[1];
+        const baseUrl = new URL(teamUrl).origin;
+        return `webcal://${new URL(baseUrl).hostname}/ical_feed?tags=${id}`;
+    }
 
     let pageId: string | null = null;
     $('a').each((_, el) => {
@@ -384,17 +495,18 @@ async function scrapeSprocketSports(association: Association): Promise<ScrapedTe
                     for (const team of categoryTeams) {
                         const ageGroup = getAgeGroup(team.name);
                         if (!ageGroup) continue;
-
-                        const urlMatch = association.baseUrl.match(/https?:\/\/(?:www\.)?([^./]+)/);
-                        const subdomain = urlMatch ? urlMatch[1] : 'unknown';
+                        const levelDetail = getLevelDetail(team.name, ageGroup);
+                        if (isAggregateLevelDetail(levelDetail)) continue;
+                        const calendarUrl = buildSprocketCalendarUrl(association, team.href, team.teamId);
+                        if (!calendarUrl) continue;
 
                         teams.push({
                             association_name: association.name,
                             name: team.name,
                             sport_type: 'hockey',
                             team_level: ageGroup,
-                            level_detail: getLevelDetail(team.name, ageGroup),
-                            calendar_sync_url: `webcal://${subdomain}.sprocketsports.com/ical?team=${team.teamId}`
+                            level_detail: levelDetail,
+                            calendar_sync_url: calendarUrl
                         });
                     }
                 } catch (e) {
@@ -408,17 +520,18 @@ async function scrapeSprocketSports(association: Association): Promise<ScrapedTe
                 if (teamId && group.text) {
                     const ageGroup = getAgeGroup(group.text);
                     if (!ageGroup) continue;
-
-                    const urlMatch = association.baseUrl.match(/https?:\/\/(?:www\.)?([^./]+)/);
-                    const subdomain = urlMatch ? urlMatch[1] : 'unknown';
+                    const levelDetail = getLevelDetail(group.text, ageGroup);
+                    if (isAggregateLevelDetail(levelDetail)) continue;
+                    const calendarUrl = buildSprocketCalendarUrl(association, group.href, teamId);
+                    if (!calendarUrl) continue;
 
                     teams.push({
                         association_name: association.name,
                         name: group.text,
                         sport_type: 'hockey',
                         team_level: ageGroup,
-                        level_detail: getLevelDetail(group.text, ageGroup),
-                        calendar_sync_url: `webcal://${subdomain}.sprocketsports.com/ical?team=${teamId}`
+                        level_detail: levelDetail,
+                        calendar_sync_url: calendarUrl
                     });
                 }
             }
@@ -555,10 +668,10 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
 
         let pageTitle = $page('h1').first().text().trim();
 
-        if (!pageTitle) {
+        if (!pageTitle || !getAgeGroup(pageTitle)) {
             const h2Text = $page('h2').first().text().trim();
             const hasLevelIndicators = /\b(A{1,2}|B[12]?|C|[Gg]old|[Pp]urple|[Bb]lack|[Ww]hite|[Bb]lue|[Rr]ed|[Gg]reen|[Mm]achine)\b/.test(h2Text);
-            if (hasLevelIndicators) {
+            if (hasLevelIndicators || !pageTitle) {
                 pageTitle = h2Text;
             }
         }
@@ -572,6 +685,12 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
                 continue;
             }
 
+            const levelDetail = getLevelDetail(pageTitle, pageAgeGroup);
+            if (isAggregateLevelDetail(levelDetail)) {
+                console.log(`  Skipping aggregate page: ${pageTitle}`);
+                continue;
+            }
+
             const calendarUrl = await findCalendarUrl(url);
             if (calendarUrl) {
                 if (!teams.some(t => t.calendar_sync_url === calendarUrl)) {
@@ -580,7 +699,7 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
                         name: pageTitle,
                         sport_type: 'hockey',
                         team_level: pageAgeGroup,
-                        level_detail: getLevelDetail(pageTitle, pageAgeGroup),
+                        level_detail: levelDetail,
                         calendar_sync_url: calendarUrl
                     });
                 }
@@ -622,13 +741,16 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
                         pagesToVisit.unshift(absUrl);
                     }
                 } else {
+                    const levelDetail = getLevelDetail(text, ageGroup);
+                    if (isAggregateLevelDetail(levelDetail)) return;
+
                     if (!teams.some(t => t.calendar_sync_url === absUrl)) {
                         teams.push({
                             association_name: association.name,
                             name: text,
                             sport_type: 'hockey',
                             team_level: ageGroup,
-                            level_detail: getLevelDetail(text, ageGroup),
+                            level_detail: levelDetail,
                             calendar_sync_url: absUrl
                         });
                     }
