@@ -1,0 +1,422 @@
+﻿Debugging Edina Hockey Association...
+Scraping Edina Hockey Association...
+Checking sitemap: https://www.edinahockeyassociation.com/sitemap.xml
+Found 239 relevant URLs in sitemap.
+Filtered sitemap: 196 / 239 URLs kept (removed old seasons)
+Scanning page (1/500): https://www.edinahockeyassociation.com
+Scanning page (2/500): https://www.edinahockeyassociation.com/page/show/3022952-bantam-aa
+Scanning page (3/500): https://www.edinahockeyassociation.com/page/show/3022953-bantam-a
+Scanning page (4/500): https://www.edinahockeyassociation.com/page/show/3022954-bantam-b1
+Scanning page (5/500): https://www.edinahockeyassociation.com/page/show/3022955-peewee-aa
+Scanning page (6/500): https://www.edinahockeyassociation.com/page/show/3022958-peewee-a
+Scanning page (7/500): https://www.edinahockeyassociation.com/page/show/3022960-peewee-b1
+Scanning page (8/500): https://www.edinahockeyassociation.com/page/show/3510760-registered-teams
+Scanning page (9/500): https://www.edinahockeyassociation.com/page/show/3916834-bantam-b2
+Scanning page (10/500): https://www.edinahockeyassociation.com/page/show/3916838-bantam-c
+Scanning page (11/500): https://www.edinahockeyassociation.com/page/show/3916845-peewee-b2
+Scanning page (12/500): https://www.edinahockeyassociation.com/page/show/3916848-peewee-c
+Scanning page (13/500): https://www.edinahockeyassociation.com/page/show/3916853-squirt-b2
+Scanning page (14/500): https://www.edinahockeyassociation.com/page/show/3916857-squirt-c
+Scanning page (15/500): https://www.edinahockeyassociation.com/page/show/4641734-edina-girls-mite-jamboree
+Scanning page (16/500): https://www.edinahockeyassociation.com/page/show/5005354-boys-termites
+Scanning page (17/500): http://www.edinahockeyassociation.com/page/show/5005354-boys-termites
+Scanning page (18/500): https://www.edinahockeyassociation.com/page/show/5005356-girls-termites
+Scanning page (19/500): http://www.edinahockeyassociation.com/page/show/5005356-girls-termites
+Scanning page (20/500): https://www.edinahockeyassociation.com/page/show/5005357-boys-mite-1
+Scanning page (21/500): http://www.edinahockeyassociation.com/page/show/5005357-boys-mite-1
+Scanning page (22/500): https://www.edinahockeyassociation.com/page/show/5005358-boys-mite-2
+Scanning page (23/500): http://www.edinahockeyassociation.com/page/show/5005358-boys-mite-2
+Scanning page (24/500): https://www.edinahockeyassociation.com/page/show/5005360-boys-mite-3
+Scanning page (25/500): http://www.edinahockeyassociation.com/page/show/5005360-boys-mite-3
+Scanning page (26/500): https://www.edinahockeyassociation.com/page/show/5005361-girls-mite-2
+Scanning page (27/500): http://www.edinahockeyassociation.com/page/show/5005361-girls-mite-2
+Scanning page (28/500): https://www.edinahockeyassociation.com/page/show/5005365-boys-mite-4
+Scanning page (29/500): http://www.edinahockeyassociation.com/page/show/5005365-boys-mite-4
+Scanning page (30/500): https://www.edinahockeyassociation.com/page/show/5005366-girls-mite-3
+Scanning page (31/500): http://www.edinahockeyassociation.com/page/show/5005366-girls-mite-3
+Scanning page (32/500): https://www.edinahockeyassociation.com/page/show/5018804-mite-program-info-and-contacts
+Scanning page (33/500): https://www.edinahockeyassociation.com/page/show/5043781-8u-mites
+Scanning page (34/500): https://www.edinahockeyassociation.com/page/show/5043782-termites
+Scanning page (35/500): https://www.edinahockeyassociation.com/page/show/5043783-mite-
+Scanning page (36/500): https://www.edinahockeyassociation.com/page/show/5043784-mite-2
+Scanning page (37/500): https://www.edinahockeyassociation.com/page/show/5043785-mite-3
+Scanning page (38/500): https://www.edinahockeyassociation.com/page/show/5043787-mite-4
+Scanning page (39/500): https://www.edinahockeyassociation.com/page/show/5130442-girls-mite-1
+Scanning page (40/500): http://www.edinahockeyassociation.com/page/show/5130442-girls-mite-1
+Scanning page (41/500): https://www.edinahockeyassociation.com/page/show/5739335-mite-program-info-and-contacts
+Scanning page (42/500): https://www.edinahockeyassociation.com/page/show/5739336-boys-termites
+Scanning page (43/500): http://www.edinahockeyassociation.com/page/show/5739336-boys-termites
+Scanning page (44/500): http://www.edinahockeyassociation.com/page/show/5739375-girls-mite-3
+Scanning page (45/500): http://www.edinahockeyassociation.com/page/show/5739372-girls-mite-2
+Scanning page (46/500): http://www.edinahockeyassociation.com/page/show/5739368-girls-mite-1
+Scanning page (47/500): http://www.edinahockeyassociation.com/page/show/5739365-girls-termites
+Scanning page (48/500): http://www.edinahockeyassociation.com/page/show/5739362-boys-mite-4
+Scanning page (49/500): http://www.edinahockeyassociation.com/page/show/5739355-boys-mite-3
+Scanning page (50/500): http://www.edinahockeyassociation.com/page/show/5739348-boys-mite-2
+Scanning page (51/500): http://www.edinahockeyassociation.com/page/show/5739341-boys-mite-1
+Scanning page (52/500): https://www.edinahockeyassociation.com/page/show/5739341-boys-mite-1
+Scanning page (53/500): https://www.edinahockeyassociation.com/page/show/5739348-boys-mite-2
+Scanning page (54/500): https://www.edinahockeyassociation.com/page/show/5739355-boys-mite-3
+Scanning page (55/500): https://www.edinahockeyassociation.com/page/show/5739362-boys-mite-4
+Scanning page (56/500): https://www.edinahockeyassociation.com/page/show/5739365-girls-termites
+Scanning page (57/500): https://www.edinahockeyassociation.com/page/show/5739368-girls-mite-1
+Scanning page (58/500): https://www.edinahockeyassociation.com/page/show/5739372-girls-mite-2
+Scanning page (59/500): https://www.edinahockeyassociation.com/page/show/5739375-girls-mite-3
+Scanning page (60/500): https://www.edinahockeyassociation.com/page/show/6199310-squirt-a
+Scanning page (61/500): https://www.edinahockeyassociation.com/page/show/6199311-squirt-b1
+Scanning page (62/500): https://www.edinahockeyassociation.com/page/show/7273667-boys-termites
+Scanning page (63/500): http://www.edinahockeyassociation.com/page/show/7273667-boys-termites
+Scanning page (64/500): https://www.edinahockeyassociation.com/page/show/7273672-girls-termites
+Scanning page (65/500): http://www.edinahockeyassociation.com/page/show/7273672-girls-termites
+Scanning page (66/500): https://www.edinahockeyassociation.com/page/show/7273675-boys-mite-1
+Scanning page (67/500): http://www.edinahockeyassociation.com/page/show/7273675-boys-mite-1
+Scanning page (68/500): http://www.edinahockeyassociation.com/page/show/7273708-girls-mite-4
+Scanning page (69/500): http://www.edinahockeyassociation.com/page/show/7273705-boys-mite-4
+Scanning page (70/500): http://www.edinahockeyassociation.com/page/show/7273700-girls-mite-3
+Scanning page (71/500): http://www.edinahockeyassociation.com/page/show/7273695-boys-mite-3
+Scanning page (72/500): http://www.edinahockeyassociation.com/page/show/7273692-girls-mite-2
+Scanning page (73/500): http://www.edinahockeyassociation.com/page/show/7273686-boys-mite-2
+Scanning page (74/500): http://www.edinahockeyassociation.com/page/show/7273680-girls-mite-1
+Scanning page (75/500): https://www.edinahockeyassociation.com/page/show/7273680-girls-mite-1
+Scanning page (76/500): https://www.edinahockeyassociation.com/page/show/7273686-boys-mite-2
+Scanning page (77/500): https://www.edinahockeyassociation.com/page/show/7273692-girls-mite-2
+Scanning page (78/500): https://www.edinahockeyassociation.com/page/show/7273695-boys-mite-3
+Scanning page (79/500): https://www.edinahockeyassociation.com/page/show/7273700-girls-mite-3
+Scanning page (80/500): https://www.edinahockeyassociation.com/page/show/7273705-boys-mite-4
+Scanning page (81/500): https://www.edinahockeyassociation.com/page/show/7273708-girls-mite-4
+Scanning page (82/500): https://www.edinahockeyassociation.com/page/show/7992830-boys-termites
+Scanning page (83/500): http://www.edinahockeyassociation.com/page/show/7992830-boys-termites
+Scanning page (84/500): https://www.edinahockeyassociation.com/page/show/7992835-girls-termites
+Scanning page (85/500): http://www.edinahockeyassociation.com/page/show/7992835-girls-termites
+Scanning page (86/500): https://www.edinahockeyassociation.com/page/show/7992838-boys-mite-1
+Scanning page (87/500): http://www.edinahockeyassociation.com/page/show/7992838-boys-mite-1
+Scanning page (88/500): https://www.edinahockeyassociation.com/page/show/7992843-girls-mite-1
+Scanning page (89/500): http://www.edinahockeyassociation.com/page/show/7992843-girls-mite-1
+Scanning page (90/500): https://www.edinahockeyassociation.com/page/show/7992849-boys-mite-2
+Scanning page (91/500): http://www.edinahockeyassociation.com/page/show/7992849-boys-mite-2
+Scanning page (92/500): https://www.edinahockeyassociation.com/page/show/7992854-girls-mite-2
+Scanning page (93/500): http://www.edinahockeyassociation.com/page/show/7992854-girls-mite-2
+Scanning page (94/500): https://www.edinahockeyassociation.com/page/show/7992857-boys-mite-3
+Scanning page (95/500): http://www.edinahockeyassociation.com/page/show/7992857-boys-mite-3
+Scanning page (96/500): https://www.edinahockeyassociation.com/page/show/7992863-girls-mite-3
+Scanning page (97/500): http://www.edinahockeyassociation.com/page/show/7992863-girls-mite-3
+Scanning page (98/500): https://www.edinahockeyassociation.com/page/show/7992868-boys-mite-4
+Scanning page (99/500): http://www.edinahockeyassociation.com/page/show/7992868-boys-mite-4
+Scanning page (100/500): https://www.edinahockeyassociation.com/page/show/7992871-girls-mite-4
+Scanning page (101/500): http://www.edinahockeyassociation.com/page/show/7992871-girls-mite-4
+Scanning page (102/500): https://www.edinahockeyassociation.com/page/show/8255024-mite-team-managers
+Scanning page (103/500): https://www.edinahockeyassociation.com/page/show/8513145-squirt-b2
+Scanning page (104/500): https://www.edinahockeyassociation.com/page/show/9116601-teams
+Scanning page (105/500): https://www.edinahockeyassociation.com/page/show/9116605-peewees
+Scanning page (106/500): https://www.edinahockeyassociation.com/page/show/9116606-bantams
+Scanning page (107/500): https://www.edinahockeyassociation.com/page/show/9116609-squirts
+Scanning page (108/500): https://www.edinahockeyassociation.com/page/show/9116610-boys-mite-1
+Scanning page (109/500): https://www.edinahockeyassociation.com/page/show/9116611-girls-mite-4
+Scanning page (110/500): https://www.edinahockeyassociation.com/page/show/9116612-boys-mite-2
+Scanning page (111/500): https://www.edinahockeyassociation.com/page/show/9116613-girls-mite-2
+Scanning page (112/500): https://www.edinahockeyassociation.com/page/show/9116614-girls-termites
+Scanning page (113/500): https://www.edinahockeyassociation.com/page/show/9116615-girls-mite-1
+Scanning page (114/500): https://www.edinahockeyassociation.com/page/show/9116616-girls-mite-3
+Scanning page (115/500): https://www.edinahockeyassociation.com/page/show/9116617-boys-termites
+Scanning page (116/500): https://www.edinahockeyassociation.com/page/show/9116618-boys-mite-4
+Scanning page (117/500): https://www.edinahockeyassociation.com/page/show/9116619-boys-mite-3
+Scanning page (118/500): https://www.edinahockeyassociation.com/page/show/9117039-squirt-b2-white
+Scanning page (119/500): https://www.edinahockeyassociation.com/page/show/9117040-squirt-b2-green
+Scanning page (120/500): https://www.edinahockeyassociation.com/page/show/9117041-squirt-b1-white
+Scanning page (121/500): https://www.edinahockeyassociation.com/page/show/9117042-squirt-c-green
+Scanning page (122/500): https://www.edinahockeyassociation.com/page/show/9117043-squirt-c-gold
+Scanning page (123/500): https://www.edinahockeyassociation.com/page/show/9117044-squirt-c-black
+Scanning page (124/500): https://www.edinahockeyassociation.com/page/show/9117045-squirt-a-white
+Scanning page (125/500): https://www.edinahockeyassociation.com/page/show/9117046-squirt-b1-green
+Scanning page (126/500): https://www.edinahockeyassociation.com/page/show/9117047-squirt-a-green
+Scanning page (127/500): https://www.edinahockeyassociation.com/page/show/9117048-squirt-b2-black
+Scanning page (128/500): https://www.edinahockeyassociation.com/page/show/9117049-squirt-b2-gold
+Scanning page (129/500): https://www.edinahockeyassociation.com/page/show/9117050-squirt-c-white
+Scanning page (130/500): https://www.edinahockeyassociation.com/page/show/9117051-peewee-b2-white
+Scanning page (131/500): https://www.edinahockeyassociation.com/page/show/9117052-peewee-b1-white
+Scanning page (132/500): https://www.edinahockeyassociation.com/page/show/9117053-peewee-aa
+Scanning page (133/500): https://www.edinahockeyassociation.com/page/show/9117054-peewee-a
+Scanning page (134/500): https://www.edinahockeyassociation.com/page/show/9117055-peewee-b2-black
+Scanning page (135/500): https://www.edinahockeyassociation.com/page/show/9117056-peewee-c-green
+Scanning page (136/500): https://www.edinahockeyassociation.com/page/show/9117057-peewee-b1-green
+Scanning page (137/500): https://www.edinahockeyassociation.com/page/show/9117058-peewee-c-white
+Scanning page (138/500): https://www.edinahockeyassociation.com/page/show/9117059-peewee-b2-green
+Scanning page (139/500): https://www.edinahockeyassociation.com/page/show/9117061-bantam-aa
+Scanning page (140/500): https://www.edinahockeyassociation.com/page/show/9117062-bantam-c-white
+Scanning page (141/500): https://www.edinahockeyassociation.com/page/show/9117063-bantam-c-green
+Scanning page (142/500): https://www.edinahockeyassociation.com/page/show/9117064-bantam-b2-green
+Scanning page (143/500): https://www.edinahockeyassociation.com/page/show/9117065-bantam-b1-green
+Scanning page (144/500): https://www.edinahockeyassociation.com/page/show/9117066-bantam-b2-white
+Scanning page (145/500): https://www.edinahockeyassociation.com/page/show/9117067-bantam-b1-white
+Scanning page (146/500): https://www.edinahockeyassociation.com/page/show/9117068-bantam-a
+Scanning page (147/500): https://www.edinahockeyassociation.com/page/show/9136223-termite-6u-8u-information
+Scanning page (148/500): https://www.edinahockeyassociation.com/news_article/show/36849-team-pictures-tbd-either-15-or-22-november
+Scanning page (149/500): https://www.edinahockeyassociation.com/news_article/show/37026-team-pictures
+Scanning page (150/500): https://www.edinahockeyassociation.com/news_article/show/37106-team-pictures-sunday-15-november
+Scanning page (151/500): https://www.edinahockeyassociation.com/news_article/show/37413-team-pictures
+Scanning page (152/500): https://www.edinahockeyassociation.com/news_article/show/37804-team-picture-site-added
+Scanning page (153/500): https://www.edinahockeyassociation.com/news_article/show/37981-squirt-b-white-sign-dahlquist-schuveiller-and-rondestvedt-to-extentions-
+Scanning page (154/500): https://www.edinahockeyassociation.com/news_article/show/38671-hopkins-thanksgiving-tournment-champions-bantam-b2-green
+  Skipping non-team page: Hopkins Thanksgiving Tournment Champions-Bantam B2 Green
+Scanning page (155/500): https://www.edinahockeyassociation.com/news_article/show/38720-apple-valley-tournament-winners-squirt-c-white
+  Skipping non-team page: Apple Valley Tournament Winners-Squirt C White
+Scanning page (156/500): https://www.edinahockeyassociation.com/news_article/show/38780-schwans-super-rink-spectacular-champions-squirt-b-black
+  Skipping non-team page: Schwans Super Rink Spectacular Champions-Squirt B Black
+Scanning page (157/500): https://www.edinahockeyassociation.com/news_article/show/39526-grand-rapids-star-of-the-north-champions-peewee-b2-white
+  Skipping non-team page: Grand Rapids "Star of the North" Champions-PeeWee B2 White
+Scanning page (158/500): https://www.edinahockeyassociation.com/news_article/show/39561-peewee-c-silver-take-2nd-at-richfield-spartan-tournament
+  Skipping non-team page: PeeWee C Silver take 2nd at Richfield Spartan Tournament
+Scanning page (159/500): https://www.edinahockeyassociation.com/news_article/show/39603-peewee-c-gold-take-2nd-at-richfield-tournament
+  Skipping non-team page: PeeWee C Gold Take 2nd at Richfield Tournament
+Scanning page (160/500): https://www.edinahockeyassociation.com/news_article/show/39655-squirt-b-white-and-green-teams-donate-to-toys-for-tots
+  Skipping non-team page: Squirt B White and Green Teams Donate to Toys for Tots
+Scanning page (161/500): https://www.edinahockeyassociation.com/news_article/show/39777-eden-prairie-tournament-champions-peewee-b1-white
+  Skipping non-team page: Eden Prairie Tournament Champions-PeeWee B1 White
+Scanning page (162/500): https://www.edinahockeyassociation.com/news_article/show/40372-rochester-invitational-tournament-champions-bantam-c-white
+Scanning page (163/500): https://www.edinahockeyassociation.com/news_article/show/44579-peewee-c-black-takes-third-place-in-o-connor-tournament
+Scanning page (164/500): https://www.edinahockeyassociation.com/news_article/show/56842-coaches-needed-for-edina-youth-hockey
+Scanning page (165/500): https://www.edinahockeyassociation.com/news_article/show/74534-team-service-project
+Scanning page (166/500): https://www.edinahockeyassociation.com/news_article/show/74692-edina-10u-b-white-takes-3rd-apple-valley-tournament
+Scanning page (167/500): https://www.edinahockeyassociation.com/news_article/show/109086-peewee-c-white-tourney-schedule
+Scanning page (168/500): https://www.edinahockeyassociation.com/news_article/show/110854-team-contacts-info
+Scanning page (169/500): https://www.edinahockeyassociation.com/news_article/show/112960-a-great-new-team-
+Scanning page (170/500): https://www.edinahockeyassociation.com/news_article/show/113514-thanksgiving-shootout-2011-peewee-c
+Scanning page (171/500): https://www.edinahockeyassociation.com/news_article/show/114140-edina-peewee-c-white-win-league-opener
+Scanning page (172/500): https://www.edinahockeyassociation.com/news_article/show/114298-team-photo-prior-to-first-cake-eater-game
+Scanning page (173/500): https://www.edinahockeyassociation.com/news_article/show/115073-team-photos
+Scanning page (174/500): https://www.edinahockeyassociation.com/news_article/show/115327-great-game-team
+Scanning page (175/500): https://www.edinahockeyassociation.com/news_article/show/119211-the-team-raises-2-365-for-special-olympics-
+Scanning page (176/500): https://www.edinahockeyassociation.com/news_article/show/125773-squirt-b-gold-takes-3rd-at-hibbing-chisholm-tournament-
+Scanning page (177/500): https://www.edinahockeyassociation.com/news_article/show/127253-squirt-b-gold-takes-2nd-at-north-st-paul-tournament-
+Scanning page (178/500): https://www.edinahockeyassociation.com/news_article/show/129298-pwb-3-prior-lake-travels-to-2-edina
+Scanning page (179/500): https://www.edinahockeyassociation.com/news_article/show/132186-squirt-b-gold-takes-3rd-at-inver-grove-heights-tourney-
+Scanning page (180/500): https://www.edinahockeyassociation.com/news_article/show/134326-bantam-b2-green-banquet
+Scanning page (181/500): https://www.edinahockeyassociation.com/news_article/show/134797-wednesday-win-sunday-loss-green-team-gears-up-for-final-5-regular-season-games
+Scanning page (182/500): https://www.edinahockeyassociation.com/news_article/show/183958-bantam-b2-green-tournament-schedule-
+Scanning page (183/500): https://www.edinahockeyassociation.com/news_article/show/195676-black-and-green-team-tie
+Scanning page (184/500): https://www.edinahockeyassociation.com/news_article/show/196536-team-volunteer-assignments
+Scanning page (185/500): https://www.edinahockeyassociation.com/news_article/show/199162-edina-black-duluth-bantam-b2-consolation-champions
+Scanning page (186/500): https://www.edinahockeyassociation.com/news_article/show/202518-bantam-c-green-team-takes-third-place-at-new-prague-tourney
+Scanning page (187/500): https://www.edinahockeyassociation.com/news_article/show/207207-bloomington-squirt-tournament
+Scanning page (188/500): https://www.edinahockeyassociation.com/news_article/show/214360-moundsview-narrowly-beaten-by-bantam-b2-white-4-2
+Scanning page (189/500): https://www.edinahockeyassociation.com/news_article/show/214655-eden-prairie-goes-the-distance-to-beat-bantam-b2-white-5-4-in-ot
+Scanning page (190/500): https://www.edinahockeyassociation.com/news_article/show/214787-new-prague-defeated-by-bantam-b2-green-5-2
+Scanning page (191/500): https://www.edinahockeyassociation.com/news_article/show/214910-bantam-b2-white-routs-minnetonka-7-1
+Scanning page (192/500): https://www.edinahockeyassociation.com/news_article/show/215254-eden-prairie-taken-out-by-bantam-b2-white-7-1
+Scanning page (193/500): https://www.edinahockeyassociation.com/news_article/show/215436-mpls-storm-downs-bantam-b2-green-5-1
+Scanning page (194/500): https://www.edinahockeyassociation.com/news_article/show/217879-bantam-b2-white-dominates-prior-lake-savage-8-1
+Scanning page (195/500): https://www.edinahockeyassociation.com/news_article/show/218034-squirt-c-white-narrowly-defeats-kennedy-richfield-4-2
+Scanning page (196/500): https://www.edinahockeyassociation.com/news_article/show/218083-rogers-champlin-shut-out-by-bantam-b2-green-7-0
+Scanning page (197/500): https://www.edinahockeyassociation.com/news_article/show/218085-bantam-b2-green-shuts-door-on-andover-7-0
+Scanning page (198/500): https://www.edinahockeyassociation.com/news_article/show/219559-chaska-chanhassen-loses-close-game-against-bantam-b2-green-3-1
+Scanning page (199/500): https://www.edinahockeyassociation.com/news_article/show/219748-bantam-b2-white-outscores-burnsville-7-2
+Scanning page (200/500): https://www.edinahockeyassociation.com/news_article/show/219780-woodbury-royal-squeaks-past-bantam-b2-green-3-2
+Scanning page (201/500): https://www.edinahockeyassociation.com/news_article/show/221285-new-prague-loses-close-game-against-bantam-b2-white-4-2
+Scanning page (202/500): https://www.edinahockeyassociation.com/news_article/show/222481-bantam-b2-green-narrowly-defeats-kennedy-richfield-3-2
+Scanning page (203/500): https://www.edinahockeyassociation.com/news_article/show/223689-bantam-b2-green-shuts-out-eastview-3-0
+Scanning page (204/500): https://www.edinahockeyassociation.com/news_article/show/223994-bantam-b2-white-outlasts-osseo-maple-grove-b2-white-1-0-in-overtime
+Scanning page (205/500): https://www.edinahockeyassociation.com/news_article/show/224337-bantam-b2-green-beats-out-hopkins-1-0
+Scanning page (206/500): https://www.edinahockeyassociation.com/news_article/show/224921-edina-white-defeats-bantam-b2-green-2-1
+Scanning page (207/500): https://www.edinahockeyassociation.com/news_article/show/228462-bantam-b2-green-dominates-minneapolis-storm-7-1
+Scanning page (208/500): https://www.edinahockeyassociation.com/news_article/show/229063-bantam-b2-green-narrowly-defeats-minnetonka-3-1
+Scanning page (209/500): https://www.edinahockeyassociation.com/news_article/show/229838-bantam-b2-green-wins-against-new-prague-7-2
+Scanning page (210/500): https://www.edinahockeyassociation.com/news_article/show/235663-edina-peewee-b2-white-wins-over-tbd-4-1
+Scanning page (211/500): https://www.edinahockeyassociation.com/news_article/show/236507-edina-peewee-b2-white-narrowly-loses-to-minnetonka-blue-5-4
+Scanning page (212/500): https://www.edinahockeyassociation.com/news_article/show/236782-edina-peewee-b2-white-slams-chaska-chan-gold-7-1
+Scanning page (213/500): https://www.edinahockeyassociation.com/news_article/show/237605-minnetonka-blue-beaten-by-edina-peewee-b2-white-6-3
+Scanning page (214/500): https://www.edinahockeyassociation.com/news_article/show/238275-bantam-b2-white-defeats-edina-green-2-1
+Scanning page (215/500): https://www.edinahockeyassociation.com/news_article/show/314780-super-rink-spectacular-thanksgiving-tournament-consolation-champion-squirt-c-black
+Scanning page (216/500): https://www.edinahockeyassociation.com/news_article/show/315083-squirt-c-gold-claims-3rd-in-hopkins-
+Scanning page (217/500): https://www.edinahockeyassociation.com/news_article/show/348867-edina-squirt-c-black-3rd-place-finish
+Scanning page (218/500): https://www.edinahockeyassociation.com/news_article/show/439588-update-from-the-team-manager
+Scanning page (219/500): https://www.edinahockeyassociation.com/news_article/show/444648-welcome-to-squirt-c-green-
+Scanning page (220/500): https://www.edinahockeyassociation.com/news_article/show/571391-welcome-to-eha-squirt-b-green
+Scanning page (221/500): https://www.edinahockeyassociation.com/news_article/show/584488-peewee-b2-green-in-lph-
+Scanning page (222/500): https://www.edinahockeyassociation.com/news_article/show/711859-team-pictures
+Scanning page (223/500): https://www.edinahockeyassociation.com/news_article/show/714022-team-information
+Scanning page (224/500): https://www.edinahockeyassociation.com/news_article/show/716210-pwcb-team-party
+Scanning page (225/500): https://www.edinahockeyassociation.com/news_article/show/723413-talent-tenacity-and-teamwork-earns-edina-u12a-early-season-championship-
+Scanning page (226/500): https://www.edinahockeyassociation.com/news_article/show/728005-edina-emerges-from-burning-barn-12u-a-cake-eater-champs
+Scanning page (227/500): https://www.edinahockeyassociation.com/news_article/show/773357-eha-teams-win-5-state-championships
+Scanning page (228/500): https://www.edinahockeyassociation.com/news_article/show/846630-parent-team-meeting-parent-team-mixer
+Scanning page (229/500): https://www.edinahockeyassociation.com/news_article/show/847394-saturday-scrimmage-time-change-and-team-dinner
+Scanning page (230/500): https://www.edinahockeyassociation.com/news_article/show/848771-community-service-project-team-dinner-december-20th
+Scanning page (231/500): https://www.edinahockeyassociation.com/news_article/show/855053-team-pictures
+Scanning page (232/500): https://www.edinahockeyassociation.com/news_article/show/873161-quinn-s-cup-team-service-event
+Scanning page (233/500): https://www.edinahockeyassociation.com/news_article/show/901286-stoneman-douglas-hockey-team-gets-warm-welcome-at-national-championships
+Scanning page (234/500): https://www.edinahockeyassociation.com/news_article/show/973273-squirt-c-green-wins-first-district-game-
+Scanning page (235/500): https://www.edinahockeyassociation.com/news_article/show/1140666-team-apparel-
+Scanning page (236/500): http://#
+node.exe : Failed to fetch http://#: TypeError: Invalid URL
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to fetch...or: 
+Inva    lid URL:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (K:\Cursor Repo\QR\schedule-url-scraper\
+node_modules\axios\lib\adapters\http.js:408:20)
+    at <anonymous> (K:\Cursor Repo\QR\schedule-url-scraper\node_mod
+ules\axios\lib\adapters\http.js:249:5)
+    at new Promise (<anonymous>)
+    at wrapAsync (K:\Cursor Repo\QR\schedule-url-scraper\node_modul
+es\axios\lib\adapters\http.js:229:10)
+    at http (K:\Cursor Repo\QR\schedule-url-scraper\node_modules\ax
+ios\lib\adapters\http.js:314:10)
+    at Axios.dispatchRequest (K:\Cursor Repo\QR\schedule-url-scrape
+r\node_modules\axios\lib\core\dispatchRequest.js:51:10)
+Scanning page (237/500): http://www.edinahockeyassociation.com/page/show/9160550-return-2-the-hive-program
+    at Axios._request (K:\Cursor Repo\QR\schedule-url-scraper\node_
+modules\axios\lib\core\Axios.js:185:33)
+    at Axios.request (K:\Cursor Repo\QR\schedule-url-scraper\node_m
+odules\axios\lib\core\Axios.js:40:25)
+    at Axios.Axios.<computed> (K:\Cursor Repo\QR\schedule-url-scrap
+er\node_modules\axios\lib\core\Axios.js:211:17)
+    at Axios.request (K:\Cursor Repo\QR\schedule-url-scraper\node_m
+odules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:105:5)
+    at async fetchHtml (K:\Cursor 
+Repo\QR\schedule-url-scraper\src\lib\scraper.ts:11:26)
+    at async scrapeAssociation (K:\Cursor 
+Repo\QR\schedule-url-scraper\src\lib\scraper.ts:503:26)
+    at async debugEdina (K:\Cursor 
+Repo\QR\schedule-url-scraper\scripts\debug-edina.ts:12:19) {
+  code: 'ERR_INVALID_URL',
+  input: 'http://#'
+}
+Scanning page (238/500): https://edinahockeyassociation.sportngin.com/register/form/420871779
+Scanning page (239/500): https://www.edinahockeyassociation.com/page/show/7379306-our-heritage
+Scanning page (240/500): https://www.edinahockeyassociation.com/cornerstone
+Scanning page (241/500): http://www.d6hockey.net/
+Scanning page (242/500): http://#www.minnesotahockey.org/page/show/80470-home
+Failed to fetch 
+http://#www.minnesotahockey.org/page/show/80470-home: TypeError: 
+Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (K:\Cursor Repo\QR\schedule-url-scraper\
+node_modules\axios\lib\adapters\http.js:408:20)
+    at <anonymous> (K:\Cursor Repo\QR\schedule-url-scraper\node_mod
+ules\axios\lib\adapters\http.js:249:5)
+    at new Promise (<anonymous>)
+    at wrapAsync (K:\Cursor Repo\QR\schedule-url-scraper\node_modul
+es\axios\lib\adapters\http.js:229:10)
+    at http (K:\Cursor Repo\QR\schedule-url-scraper\node_modules\ax
+ios\lib\adapters\http.js:314:10)
+    at Axios.dispatchRequest (K:\Cursor Repo\QR\schedule-url-scrape
+r\node_modules\axios\lib\core\dispatchRequest.js:51:10)
+    at Axios._request (K:\Cursor Repo\QR\schedule-url-scraper\node_
+modules\axios\lib\core\Axios.js:185:33)
+    at Axios.request (K:\Cursor Repo\QR\schedule-url-scraper\node_m
+odules\axios\lib\core\Axios.js:40:25)
+    at Axios.Axios.<computed> (K:\Cursor Repo\QR\schedule-url-scrap
+er\node_modules\axios\lib\core\Axios.js:211:17)
+    at Axios.request (K:\Cursor Repo\QR\schedule-url-scraper\node_m
+odules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:105:5)
+    at async fetchHtml (K:\Cursor 
+Repo\QR\schedule-url-scraper\src\lib\scraper.ts:11:26)
+    at async scrapeAssociation (K:\Cursor 
+Repo\QR\schedule-url-scraper\src\lib\scraper.ts:503:26)
+    at async debugEdina (K:\Cursor 
+Repo\QR\schedule-url-scraper\scripts\debug-edina.ts:12:19) {
+  code: 'ERR_INVALID_URL',
+  input: 'http://#www.minnesotahockey.org/page/show/80470-home'
+}
+Scanning page (243/500): http://#ww.usahockey.com
+Failed to fetch http://#ww.usahockey.com: TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at dispatchHttpRequest (K:\Cursor Repo\QR\schedule-url-scraper\
+node_modules\axios\lib\adapters\http.js:408:20)
+    at <anonymous> (K:\Cursor Repo\QR\schedule-url-scraper\node_mod
+ules\axios\lib\adapters\http.js:249:5)
+    at new Promise (<anonymous>)
+    at wrapAsync (K:\Cursor Repo\QR\schedule-url-scraper\node_modul
+es\axios\lib\adapters\http.js:229:10)
+    at http (K:\Cursor Repo\QR\schedule-url-scraper\node_modules\ax
+ios\lib\adapters\http.js:314:10)
+    at Axios.dispatchRequest (K:\Cursor Repo\QR\schedule-url-scrape
+r\node_modules\axios\lib\core\dispatchRequest.js:51:10)
+    at Axios._request (K:\Cursor Repo\QR\schedule-url-scraper\node_
+modules\axios\lib\core\Axios.js:185:33)
+    at Axios.request (K:\Cursor Repo\QR\schedule-url-scraper\node_m
+odules\axios\lib\core\Axios.js:40:25)
+    at Axios.Axios.<computed> (K:\Cursor Repo\QR\schedule-url-scrap
+er\node_modules\axios\lib\core\Axios.js:211:17)
+    at Axios.request (K:\Cursor Repo\QR\schedule-url-scraper\node_m
+odules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:105:5)
+    at async fetchHtml (K:\Cursor 
+Repo\QR\schedule-url-scraper\src\lib\scraper.ts:11:26)
+    at async scrapeAssociation (K:\Cursor 
+Repo\QR\schedule-url-scraper\src\lib\scraper.ts:503:26)
+    at async debugEdina (K:\Cursor 
+Repo\QR\schedule-url-scraper\scripts\debug-edina.ts:12:19) {
+  code: 'ERR_INVALID_URL',
+  input: 'http://#ww.usahockey.com'
+}
+Scanning page (244/500): https://www.jghsl.org/
+Scanning page (245/500): https://letsplayhockey.com/
+Failed to fetch https://letsplayhockey.com/: socket hang up
+Scanning page (246/500): https://www.edinahockeyassociation.com/parents
+Found 33 potential teams. Filtering for current season...
+After season filtering: 33 teams (removed 0 old season duplicates)
+Resolving calendar for Bantam B2...
+Resolving calendar for MITE COMMITTEE...
+Resolving calendar for Squirt A...
+Resolving calendar for Squirt B1...
+Resolving calendar for Squirt B2...
+Resolving calendar for Squirt B2 White...
+Resolving calendar for Squirt B2 Green...
+Resolving calendar for Squirt B1 White...
+Resolving calendar for Squirt C Green...
+Resolving calendar for Squirt C Gold...
+Resolving calendar for Squirt C Black...
+Resolving calendar for Squirt A White...
+Resolving calendar for Squirt B1 Green...
+Resolving calendar for Squirt A Green...
+Resolving calendar for Squirt B2 Black...
+Resolving calendar for Squirt B2 Gold...
+Resolving calendar for PeeWee B2 White...
+Resolving calendar for PeeWee B1 White...
+Resolving calendar for PeeWee AA...
+Resolving calendar for PeeWee A...
+Resolving calendar for PeeWee B2 Black...
+Resolving calendar for PeeWee C Green...
+Resolving calendar for PeeWee B1 Green...
+Resolving calendar for PeeWee C White...
+Resolving calendar for PeeWee B2 Green...
+Resolving calendar for Bantam AA...
+Resolving calendar for Bantam C White...
+Resolving calendar for Bantam C Green...
+Resolving calendar for Bantam B2 Green...
+Resolving calendar for Bantam B1 Green...
+Resolving calendar for Bantam B2 White...
+Resolving calendar for Bantam B1 White...
+Resolving calendar for Bantam A...
+
+--- Filtering Results for Bantam B2 Green ---
+Team: Bantam C Green
+  URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117063
+  Level: Bantams - C Green
+Team: Bantam B2 Green
+  URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117064
+  Level: Bantams - B2 Green
+Team: Bantam B1 Green
+  URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117065
+  Level: Bantams - B1 Green
+
+--- All Bantam Teams ---
+Team: Bantam B2 | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=3916834
+Team: Bantam AA | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117061
+Team: Bantam C White | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117062
+Team: Bantam C Green | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117063
+Team: Bantam B2 Green | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117064
+Team: Bantam B1 Green | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117065
+Team: Bantam B2 White | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117066
+Team: Bantam B1 White | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117067
+Team: Bantam A | URL: webcal://www.edinahockeyassociation.com/ical_feed?tags=9117068

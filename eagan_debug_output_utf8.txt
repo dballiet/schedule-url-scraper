@@ -1,0 +1,303 @@
+﻿Debugging Eagan Hockey Association...
+Scraping Eagan Hockey Association...
+Checking sitemap: https://www.eaganhockey.com/sitemap.xml
+Found 199 relevant URLs in sitemap.
+Scanning page (1/200): https://www.eaganhockey.com
+Scanning page (2/200): https://www.eaganhockey.com/page/show/537009-team-information
+Scanning page (3/200): https://www.eaganhockey.com/bantam
+Scanning page (4/200): https://www.eaganhockey.com/peewees
+Scanning page (5/200): https://www.eaganhockey.com/squirts
+Scanning page (6/200): https://www.eaganhockey.com/miteprogram
+Scanning page (7/200): https://www.eaganhockey.com/page/show/646976-bantam
+Scanning page (8/200): https://www.eaganhockey.com/page/show/646988-bantam-c-2012-2013-
+Scanning page (9/200): https://www.eaganhockey.com/page/show/646989-peewee
+Scanning page (10/200): https://www.eaganhockey.com/page/show/646993-peewee-aa-2012-2013-
+Scanning page (11/200): https://www.eaganhockey.com/page/show/646995-peewee-b1-2012-2013-
+Scanning page (12/200): https://www.eaganhockey.com/page/show/646997-peewee-b1-green-2012-2013-
+Scanning page (13/200): https://www.eaganhockey.com/page/show/646999-peewee-b2-2012-2013-
+Scanning page (14/200): https://www.eaganhockey.com/page/show/647001-peewee-c-2012-2013-
+Scanning page (15/200): https://www.eaganhockey.com/page/show/647004-squirt
+Scanning page (16/200): https://www.eaganhockey.com/page/show/647006-squirt-a-2012-2013-
+Scanning page (17/200): https://www.eaganhockey.com/page/show/647014-squirt-c-blue-2012-2013-
+Scanning page (18/200): https://www.eaganhockey.com/page/show/647017-mite-program
+Scanning page (19/200): https://www.eaganhockey.com/page/show/950904-bantam-aa-2013-2014-
+Scanning page (20/200): https://www.eaganhockey.com/page/show/950905-bantam-b1-2013-2014-
+Scanning page (21/200): https://www.eaganhockey.com/page/show/950910-bantam-b2-2013-2014-
+Scanning page (22/200): https://www.eaganhockey.com/page/show/950915-peewee-aa-2013-2014-
+Scanning page (23/200): https://www.eaganhockey.com/page/show/950917-peewee-b1-2013-2014-
+Scanning page (24/200): https://www.eaganhockey.com/page/show/950918-peewee-b1-green-2013-2014-
+Scanning page (25/200): https://www.eaganhockey.com/page/show/950919-peewee-b2-2013-2014-
+Scanning page (26/200): https://www.eaganhockey.com/page/show/950921-peewee-c-2013-2014-
+Scanning page (27/200): https://www.eaganhockey.com/page/show/950922-squirt-a-2013-2014-
+Scanning page (28/200): https://www.eaganhockey.com/page/show/950924-squirt-b1-blue-2013-2014-
+Scanning page (29/200): https://www.eaganhockey.com/page/show/950925-squirt-c-blue-2013-2014-
+Scanning page (30/200): https://www.eaganhockey.com/page/show/995642-bantam-c-2013-2014-
+Scanning page (31/200): https://www.eaganhockey.com/page/show/1410331-squirt-a-2014-2015-
+Scanning page (32/200): https://www.eaganhockey.com/page/show/1410343-squirt-b2-blue-2014-2015-
+Scanning page (33/200): http://www.fargohockey.org/page/show/107138-2015-squirt-international
+Scanning page (34/200): https://www.eaganhockey.com/page/show/1410346-squirt-b1-blue-2014-2015-
+Scanning page (35/200): https://www.eaganhockey.com/layout_container/show_layout_tab?layout_container_id=13853233&page_node_id=1410346&tab_element_id=42259
+Scanning page (36/200): https://www.eaganhockey.com/page/show/1410347-squirt-c-blue-2014-2015-
+Scanning page (37/200): https://www.eaganhockey.com/page/show/1434979-bantam-aa-2014-2015-
+Scanning page (38/200): https://www.eaganhockey.com/page/show/1434980-bantam-b1-2014-2015-
+Scanning page (39/200): https://www.eaganhockey.com/page/show/1434982-bantam-b2-2014-2015-
+Scanning page (40/200): https://www.eaganhockey.com/page/show/1434983-bantam-c-2014-2015-
+Scanning page (41/200): https://www.eaganhockey.com/page/show/1434987-peewee-aa-2014-2015-
+Scanning page (42/200): https://www.eaganhockey.com/page/show/1434988-peewee-b1-2014-2015-
+Scanning page (43/200): https://www.eaganhockey.com/page/show/1434991-peewee-b2-2014-2015-
+Scanning page (44/200): https://www.eaganhockey.com/page/show/1434993-peewee-c-2014-2015-
+Scanning page (45/200): https://www.eaganhockey.com/page/show/2031205-squirt-a-2015-2016-
+Scanning page (46/200): https://www.eaganhockey.com/page/show/2031206-squirt-b1-blue-2015-2016-
+Scanning page (47/200): http://www.bemidjiyouthhockey.org/page/show/96287-tournaments
+node.exe : Failed to fetch 
+http://www.bemidjiyouthhockey.org/page/show/96287-tournaments: 
+Request failed with status code 404
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to fetch...sta 
+   tus code 404:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Scanning page (48/200): http://igh.pucksystems2.com/page/show/30096-home-tournament-information
+Scanning page (49/200): https://www.eaganhockey.com/page/show/2031207-squirt-b2-blue-2015-2016-
+Scanning page (50/200): https://www.eaganhockey.com/page/show/2031208-squirt-c-blue-2015-2016-
+Scanning page (51/200): https://www.eaganhockey.com/page/show/2147246-bantam-aa-2015-2016-
+Scanning page (52/200): https://www.eaganhockey.com/page/show/2147247-bantam-b1-2015-2016-
+Scanning page (53/200): https://www.eaganhockey.com/page/show/2149307-bantam-b2-2015-2016-
+Scanning page (54/200): https://www.eaganhockey.com/page/show/2149310-bantam-c-2015-2016-
+Scanning page (55/200): https://www.eaganhockey.com/page/show/2149314-peewee-aa-2015-2016-
+Scanning page (56/200): https://www.eaganhockey.com/page/show/2149315-peewee-b1-2015-2016-
+Scanning page (57/200): https://www.eaganhockey.com/page/show/2149316-peewee-b2-2015-2016-
+Scanning page (58/200): https://www.eaganhockey.com/page/show/2149317-peewee-c-2015-2016-
+Scanning page (59/200): https://www.eaganhockey.com/page/show/2194847-mini-mite
+Scanning page (60/200): https://www.eaganhockey.com/page/show/2194849-mite
+Scanning page (61/200): https://www.eaganhockey.com/page/show/2775796-bantam-aa-2016-2017-
+Scanning page (62/200): https://www.eaganhockey.com/page/show/2839349-bantam-b2-2016-2017-
+Scanning page (63/200): https://www.eaganhockey.com/page/show/2839350-bantam-b1-2016-2017-
+Scanning page (64/200): https://www.eaganhockey.com/page/show/2839351-bantam-c-2016-2017-
+Scanning page (65/200): https://www.eaganhockey.com/page/show/2839352-peewee-aa-2016-2017-
+Scanning page (66/200): https://www.eaganhockey.com/page/show/2839353-peewee-c-2016-2017-
+Scanning page (67/200): https://www.eaganhockey.com/page/show/2839354-peewee-b2-2016-2017-
+Scanning page (68/200): https://www.eaganhockey.com/page/show/2839355-peewee-b1-2016-2017-
+Scanning page (69/200): https://www.eaganhockey.com/page/show/2853364-squirt-a-2016-2017-
+Scanning page (70/200): https://www.eaganhockey.com/page/show/2853369-squirt-b1-blue-2016-2017-
+Scanning page (71/200): https://www.eaganhockey.com/page/show/2853385-squirt-c-blue-2016-2017-
+Scanning page (72/200): https://www.eaganhockey.com/page/show/3405842-fall-mite-4on4-league
+Scanning page (73/200): https://eaganhockey.sportngin.com/register/form/378465623
+Scanning page (74/200): https://www.eaganhockey.com/page/show/3547869-squirt-c-blue-2017-2018-
+Scanning page (75/200): https://www.eaganhockey.com/page/show/3547922-squirt-a-2017-2018-
+Scanning page (76/200): https://www.eaganhockey.com/page/show/3547923-squirt-b2-blue-2017-2018-
+Scanning page (77/200): https://www.eaganhockey.com/page/show/3641614-bantam-aa-2017-2018-
+Scanning page (78/200): https://www.eaganhockey.com/page/show/3680103-bantam-b1-2017-2018-
+Scanning page (79/200): https://www.eaganhockey.com/page/show/3688474-bantam-b2-2017-2018-
+Scanning page (80/200): https://mmxreservations.com/fer/#/fargomoorhead?groupCode=EaganBantamB2&eventId=3644
+Scanning page (81/200): https://www.eaganhockey.com/page/show/3688490-peewee-b1-2017-2018-
+Scanning page (82/200): https://www.eaganhockey.com/page/show/3688492-peewee-b2-2017-2018-
+Scanning page (83/200): https://www.eaganhockey.com/page/show/3688494-peewee-c-2017-2018-
+Scanning page (84/200): https://www.eaganhockey.com/page/show/4457071-bantam-b1-2018-2019-
+Scanning page (85/200): https://www.eaganhockey.com/page/show/4457072-bantam-b2-2018-2019-
+Scanning page (86/200): https://www.eaganhockey.com/page/show/4492678-peewee-c-2018-2019-
+Scanning page (87/200): https://www.eaganhockey.com/page/show/4492682-peewee-a-2018-2019-
+Scanning page (88/200): https://www.eaganhockey.com/page/show/4493356-peewee-b1-2018-2019-
+Scanning page (89/200): https://www.eaganhockey.com/page/show/4493358-peewee-b2-2018-2019-
+Scanning page (90/200): https://www.eaganhockey.com/page/show/4517451-bantam-aa-2018-2019-
+Scanning page (91/200): https://twitter.com/EaganBantamA
+Scanning page (92/200): https://www.eaganhockey.com/page/show/4539743-squirt-a-2018-2019-
+Scanning page (93/200): https://www.eaganhockey.com/page/show/4541060-squirt-b2-blue-2018-2019-
+Scanning page (94/200): https://www.eaganhockey.com/page/show/4541062-squirt-c-blue-2018-2019-
+Scanning page (95/200): https://www.eaganhockey.com/page/show/4620764-termites
+Scanning page (96/200): https://www.eaganhockey.com/page/show/5232601-squirt-a-2019-2020-
+Scanning page (97/200): https://www.eaganhockey.com/page/show/5232605-squirt-b2-blue-2019-2020-
+Scanning page (98/200): https://www.eaganhockey.com/page/show/5232607-squirt-c-blue-2019-2020-
+Scanning page (99/200): https://www.fargohockey.org/page/show/2828085-squirt-international
+Scanning page (100/200): https://www.eaganhockey.com/page/show/5232608-squirt-b1-blue-2019-2020-
+Scanning page (101/200): https://www.eaganhockey.com/page/show/5232609-peewee-a-2019-2020-
+Scanning page (102/200): https://www.eaganhockey.com/page/show/5232610-peewee-b1-2019-2020-
+Scanning page (103/200): https://www.eaganhockey.com/page/show/5232611-peewee-b2-2019-2020-
+Scanning page (104/200): https://www.eaganhockey.com/page/show/5232612-peewee-c-2019-2020-
+Scanning page (105/200): https://www.eaganhockey.com/page/show/5232613-bantam-aa-2019-2020-
+Scanning page (106/200): https://www.eaganhockey.com/page/show/5232614-bantam-b1-2019-2020-
+Scanning page (107/200): https://www.eaganhockey.com/page/show/5232615-bantam-b2-2019-2020-
+Scanning page (108/200): https://www.eaganhockey.com/page/show/5232616-bantam-c-2019-2020-
+Scanning page (109/200): https://www.eaganhockey.com/page/show/5353547-squirt-b2-green-2019-2020-
+Scanning page (110/200): https://www.omgha.com/squirtextravaganzac
+Scanning page (111/200): https://www.eaganhockey.com/page/show/5827019-bantam-checking-clinic
+Scanning page (112/200): https://www.eaganhockey.com/page/show/5980753-bantam-aa-2020-2021-
+Scanning page (113/200): https://www.eaganhockey.com/page/show/5980754-bantam-b1-2020-2021-
+  Skipping non-team page: Bantam District 8 Champions!
+Scanning page (114/200): https://www.eaganhockey.com/page/show/5980755-bantam-b2-2020-2021-
+Scanning page (115/200): https://www.eaganhockey.com/page/show/5980756-bantam-c-2020-2021-
+Scanning page (116/200): https://www.eaganhockey.com/page/show/5980757-peewee-a-2020-2021-
+Scanning page (117/200): https://www.eaganhockey.com/page/show/5980758-peewee-b1-2020-2021-
+Scanning page (118/200): https://www.eaganhockey.com/page/show/5980759-peewee-b2-2020-2021-
+Scanning page (119/200): https://ryha.pucksystems2.com/page/show/1552-rochester-youth-hockey-tournaments
+Scanning page (120/200): https://www.eaganhockey.com/page/show/5980760-peewee-c-2020-2021-
+Scanning page (121/200): https://www.eaganhockey.com/page/show/5991848-squirt-a-2020-2021-
+Scanning page (122/200): https://www.eaganhockey.com/page/show/5991853-squirt-b2-blue-2020-2021-
+Scanning page (123/200): https://www.fargohockey.org/page/show/136904-tournaments-
+Scanning page (124/200): https://www.youthhockeyhub.com/squirtaculartournament
+Scanning page (125/200): http://www.yhhtourney.com/page/show/3857834-squirt-b?subseason=474383
+Scanning page (126/200): https://www.yhhtourney.com/page/show/3842991-squirtacular-14-24-squirtacular-?subseason=474383
+Scanning page (127/200): https://www.yhhtourney.com/page/show/8938313-squirtacular-2025-present
+Scanning page (128/200): https://www.yhhtourney.com/page/show/8389403-squirtacular-14-24-squirtacular-
+Scanning page (129/200): http://www.yhhtourney.com/page/show/8389403-squirtacular-14-24-squirtacular-
+Scanning page (130/200): http://www.yhhtourney.com/page/show/8938313-squirtacular-2025-present
+Scanning page (131/200): https://www.yhhtourney.com/page/show/8389403-squirtacular-14-24-squirtacular-?subseason=474383
+Scanning page (132/200): https://www.yhhtourney.com/page/show/3857834-squirt-b?subseason=474383
+Scanning page (133/200): https://www.yhhtourney.com/page/show/3857834-squirt-b
+Scanning page (134/200): https://www.yhhtourney.com/page/show/3842991-squirtacular-14-24-squirtacular-
+Scanning page (135/200): http://www.yhhtourney.com/page/show/3857834-squirt-b
+Scanning page (136/200): http://www.yhhtourney.com/page/show/3842991-squirtacular-14-24-squirtacular-
+Scanning page (137/200): http://www.yhhtourney.com/page/show/3857833-squirt-a
+Scanning page (138/200): http://www.yhhtourney.com/page/show/4696137?subseason=578731&tab=content
+Scanning page (139/200): http://www.yhhtourney.com/page/show/4696137-squirt-b
+Scanning page (140/200): https://www.yhhtourney.com/page/show/4696130-squirtacular-14-24-squirtacular-?subseason=578731
+Scanning page (141/200): http://www.yhhtourney.com/page/show/4696130-squirtacular-14-24-squirtacular-
+Scanning page (142/200): https://www.yhhtourney.com/page/show/8389403-squirtacular-14-24-squirtacular-?subseason=578731
+Scanning page (143/200): https://www.yhhtourney.com/page/show/4696137-squirt-b?subseason=578731
+Scanning page (144/200): http://www.yhhtourney.com/page/show/4696137-squirt-b?subseason=578731
+Scanning page (145/200): http://www.yhhtourney.com/page/show/4696130-squirtacular-14-24-squirtacular-?subseason=578731
+Scanning page (146/200): http://www.yhhtourney.com/page/show/8389403-squirtacular-14-24-squirtacular-?subseason=578731
+Scanning page (147/200): http://www.yhhtourney.com/page/show/4696136?subseason=578731&tab=content
+Scanning page (148/200): https://www.eaganhockey.com/page/show/5991875-squirt-b1-blue-2020-2021-
+Scanning page (149/200): https://www.eaganhockey.com/page/show/5991879-squirt-b2-green-2020-2021-
+Scanning page (150/200): https://www.eaganhockey.com/page/show/5991883-squirt-c-blue-2020-2021-
+Scanning page (151/200): https://www.eaganhockey.com/page/show/6101685-termites-2020-2021-
+Scanning page (152/200): http://www.eaganhockey.com/page/show/6101685-termites-2020-2021-
+Scanning page (153/200): https://www.eaganhockey.com/page/show/6719978-squirt-a-2021-2022-
+Scanning page (154/200): https://www.eaganhockey.com/page/show/6719979-squirt-b2-blue-2021-2022-
+Scanning page (155/200): https://www.eaganhockey.com/page/show/6719981-squirt-b1-blue-2021-2022-
+Scanning page (156/200): https://www.eaganhockey.com/page/show/6719992-squirt-b2-green-2021-2022-
+Scanning page (157/200): https://www.eaganhockey.com/page/show/6719999-squirt-c-blue-2021-2022-
+Scanning page (158/200): https://www.eaganhockey.com/page/show/6720000-peewee-a-2021-2022-
+Scanning page (159/200): https://www.eaganhockey.com/page/show/6720001-peewee-b1-2021-2022-
+Scanning page (160/200): https://www.eaganhockey.com/page/show/6720025-peewee-b2-2021-2022-
+Scanning page (161/200): https://www.eaganhockey.com/page/show/6720026-peewee-c-2021-2022-
+Scanning page (162/200): https://www.eaganhockey.com/page/show/6720029-bantam-aa-2021-2022-
+Scanning page (163/200): https://www.eaganhockey.com/page/show/6720030-bantam-b1-2021-2022-
+Scanning page (164/200): https://www.eaganhockey.com/page/show/6720036-bantam-b2-2021-2022-
+Scanning page (165/200): https://www.eaganhockey.com/page/show/6720037-bantam-c-2021-2022-
+Scanning page (166/200): https://www.eaganhockey.com/page/show/6873420-termites-2021-2022-
+Scanning page (167/200): http://www.eaganhockey.com/page/show/6873420-termites-2021-2022-
+Scanning page (168/200): https://www.eaganhockey.com/page/show/7212810-squirt-c-blue-2022-2023-
+Scanning page (169/200): https://www.eaganhockey.com/page/show/7236090-peewee-b1-2022-2023-
+Scanning page (170/200): https://www.eaganhockey.com/page/show/7237024-peewee-c-2022-2023-
+Scanning page (171/200): https://www.eaganhockey.com/page/show/7237031-bantam-aa-2022-2023-
+Scanning page (172/200): https://www.eaganhockey.com/page/show/7237049-bantam-b1-2022-2023-
+Scanning page (173/200): https://www.eaganhockey.com/page/show/7237061-bantam-b2-2022-2023-
+Scanning page (174/200): https://www.eaganhockey.com/page/show/7237065-bantam-c-2022-2023-
+Scanning page (175/200): https://www.eaganhockey.com/page/show/7237072-squirt-a-2022-2023-
+Scanning page (176/200): https://www.eaganhockey.com/page/show/7237075-squirt-b2-blue-2022-2023-
+Scanning page (177/200): https://www.eaganhockey.com/page/show/7278162-squirt-b1-blue-2022-2023-
+Scanning page (178/200): https://www.eaganhockey.com/page/show/7278168-squirt-b2-green-2022-2023-
+Scanning page (179/200): https://www.eaganhockey.com/page/show/7278170-squirt-c-green-2022-2023-
+Scanning page (180/200): https://www.eaganhockey.com/page/show/7538656-termites-2022-2023-
+Scanning page (181/200): http://www.eaganhockey.com/page/show/7538656-termites-2022-2023-
+Scanning page (182/200): https://www.eaganhockey.com/page/show/8010798-squirt-a-2023-2024-
+Scanning page (183/200): https://www.eaganhockey.com/page/show/8010997-squirt-b1-blue-2023-2024-
+Scanning page (184/200): https://www.eaganhockey.com/page/show/8046308-squirt-b2-blue-2023-2024-
+Scanning page (185/200): https://www.eaganhockey.com/page/show/8046315-squirt-b2-green-2023-2024-
+Scanning page (186/200): https://www.eaganhockey.com/page/show/8046467-squirt-c-green-2023-2024-
+Scanning page (187/200): https://www.eaganhockey.com/page/show/8046476-squirt-c-blue-2023-2024-
+Scanning page (188/200): https://www.eaganhockey.com/page/show/8062862-peewee-a-2023-2024-
+Scanning page (189/200): https://www.eaganhockey.com/page/show/8062917-peewee-b1-2023-2024-
+Scanning page (190/200): https://www.eaganhockey.com/page/show/8062926-peewee-c-2023-2024-
+Scanning page (191/200): https://www.eaganhockey.com/page/show/8062938-bantam-b1-2023-2024-
+Scanning page (192/200): https://www.eaganhockey.com/page/show/8062939-bantam-b2-2023-2024-
+Scanning page (193/200): https://www.eaganhockey.com/page/show/8062942-bantam-c-2023-2024-
+Scanning page (194/200): https://www.eaganhockey.com/page/show/8062963-bantam-aa-2023-2024-
+Scanning page (195/200): https://www.eaganhockey.com/page/show/8141220-peewee-aa-2023-2024-
+Scanning page (196/200): https://www.eaganhockey.com/page/show/8151804-peewee-b2-blue-2023-2024-
+Scanning page (197/200): https://www.eaganhockey.com/page/show/8151839-peewee-b2-green-2023-2024-
+Scanning page (198/200): https://www.eaganhockey.com/page/show/8209374-peewee-contact-clinic
+Scanning page (199/200): https://www.eaganhockey.com/page/show/8240959-termites-2023-2024-
+Scanning page (200/200): http://www.eaganhockey.com/page/show/8240959-termites-2023-2024-
+Found 160 potential teams. Filtering for current season...
+After season filtering: 31 teams (removed 129 old season duplicates)
+Resolving calendar for Bantam C...
+Resolving calendar for 2012-2013 BANTAM C GREEN WORK DUTY TRACKER...
+Failed to fetch https://docs.google.com/spreadsheet/ccc?key=0AlaKTF
+iRTnNDdEFFa1hNaTN5R05ueUFwamVXbGJnT1E: Request failed with status 
+code 410
+Resolving calendar for Peewee AA...
+Resolving calendar for Peewee B1...
+Resolving calendar for Peewee B1 - Green...
+Resolving calendar for Peewee B2...
+Resolving calendar for Peewee C...
+Resolving calendar for Squirt A...
+Resolving calendar for Squirt C - Blue...
+Resolving calendar for 2012-2013 SQUIRT C BLUE WORK DUTY TRACKER...
+Failed to fetch https://docs.google.com/spreadsheet/ccc?key=0AlaKTF
+iRTnNDdEphTjdWUUUzZlotVEFzMXZrbXF2X2c: Request failed with status 
+code 410
+Resolving calendar for Bantam AA...
+Resolving calendar for Bantam B1...
+Resolving calendar for Bantam B2...
+Resolving calendar for Squirt B1 - Blue...
+Resolving calendar for Squirt B2 - Blue...
+Resolving calendar for District 8 B1 Bantam Standings...
+Resolving calendar for District 8 Squirt A Standings...
+Resolving calendar for Armstrong Cooper Squirt B Classic Tournament - Dec 4-6...
+Resolving calendar for CARBONES THANKSGIVING BANTAM A...
+Resolving calendar for ROSEAU CENTER ICE CLUB BANTAM AA...
+Resolving calendar for 1st ANNUAL PLAY 4 PATRICK BANTAM AA...
+Failed to fetch http://www.eastviewhockey.net/tournaments: Request 
+failed with status code 404
+Resolving calendar for DISTRICT 8 BANTAM A/AA PLAY OFFS...
+Resolving calendar for Hermantown Bantam B2 Tournament...
+Resolving calendar for District 8 Bantam AA Standings...
+Resolving calendar for Peewee A...
+Resolving calendar for Squirt B2 - Green...
+Resolving calendar for Squirt C - Green...
+Resolving calendar for Follow Eagan Bantam C on Facebook...
+Failed to fetch 
+https://fb.me/g/p_YFwkojBbQkKxb2EV/qn2DgiMm?ref=share: Request 
+failed with status code 400
+Resolving calendar for District 8 Bantam AA Playoffs Schedule...
+Resolving calendar for Peewee B2-Blue...
+Resolving calendar for Peewee B2 - Green...
+
+--- Filtering Results for Bantam C ---
+Team: Bantam C
+  URL: webcal://www.eaganhockey.com/ical_feed?tags=8062942
+  Level: Bantams - C
+Team: 2012-2013 BANTAM C GREEN WORK DUTY TRACKER
+  URL: https://docs.google.com/spreadsheet/ccc?key=0AlaKTFiRTnNDdEFFa1hNaTN5R05ueUFwamVXbGJnT1E
+  Level: Bantams - 20122013  C GREEN WORK DUTY TRACKER
+Team: Bantam AA
+  URL: webcal://www.eaganhockey.com/ical_feed?tags=8062963
+  Level: Bantams - AA
+Team: Bantam B1
+  URL: webcal://www.eaganhockey.com/ical_feed?tags=8062938
+  Level: Bantams - B1
+Team: Bantam B2
+  URL: webcal://www.eaganhockey.com/ical_feed?tags=8062939
+  Level: Bantams - B2
+Team: District 8 B1 Bantam Standings
+  URL: http://www.stickstats.com/?page_id=450
+  Level: Bantams - District 8 B1  Standings
+Team: CARBONES THANKSGIVING BANTAM A
+  URL: webcal://www.rosemounthockey.org/ical_feed?tags=214382
+  Level: Bantams - CARBONES THANKSGIVING  A
+Team: ROSEAU CENTER ICE CLUB BANTAM AA
+  URL: webcal://www.roseauhockeyonline.com/ical_feed?tags=1027586
+  Level: Bantams - ROSEAU CENTER ICE CLUB  AA
+Team: 1st ANNUAL PLAY 4 PATRICK BANTAM AA
+  URL: http://www.eastviewhockey.net/tournaments
+  Level: Bantams - 1st ANNUAL PLAY 4 PATRICK  AA
+Team: DISTRICT 8 BANTAM A/AA PLAY OFFS
+  URL: http://stickstats.com/district-8/playoffs/
+  Level: Bantams - DISTRICT 8  A/AA PLAY OFFS
+Team: Hermantown Bantam B2 Tournament
+  URL: webcal://hermantownhockey.pucksystems.com/ical_feed?tags=62835
+  Level: Bantams - Hermantown  B2 Tournament
+Team: District 8 Bantam AA Standings
+  URL: http://stickstats.com/district-8/standings/bantam-aa/
+  Level: Bantams - District 8  AA Standings
+Team: Follow Eagan Bantam C on Facebook
+  URL: https://fb.me/g/p_YFwkojBbQkKxb2EV/qn2DgiMm?ref=share
+  Level: Bantams - Follow Eagan  C on Facebook
+Team: District 8 Bantam AA Playoffs Schedule
+  URL: https://crossbar.s3.amazonaws.com/organizations/692/uploads/ac84976e-238d-489e-99ce-933d8c229a58.pdf?versionId=tLhPvQkg4BAC8u7.HZyXydcd20fC.SKg
+  Level: Bantams - District 8  AA Playoffs Schedule

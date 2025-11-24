@@ -1,0 +1,118 @@
+﻿Debugging Eagan Hockey Association...
+Scraping Eagan Hockey Association...
+Checking sitemap: https://www.eaganhockey.com/sitemap.xml
+Found 199 relevant URLs in sitemap.
+Filtered sitemap: 54 / 199 URLs kept (removed old seasons)
+Scanning page (1/500): https://www.eaganhockey.com
+Scanning page (2/500): https://www.eaganhockey.com/page/show/537009-team-information
+Scanning page (3/500): https://www.eaganhockey.com/bantam
+Scanning page (4/500): https://www.eaganhockey.com/peewees
+Scanning page (5/500): https://www.eaganhockey.com/squirts
+Scanning page (6/500): https://www.eaganhockey.com/miteprogram
+Scanning page (7/500): https://www.eaganhockey.com/page/show/646976-bantam
+Scanning page (8/500): https://www.eaganhockey.com/page/show/646989-peewee
+Scanning page (9/500): https://www.eaganhockey.com/page/show/647004-squirt
+Scanning page (10/500): https://www.eaganhockey.com/page/show/647017-mite-program
+Scanning page (11/500): https://www.eaganhockey.com/page/show/2194847-mini-mite
+Scanning page (12/500): https://www.eaganhockey.com/page/show/2194849-mite
+Scanning page (13/500): https://www.eaganhockey.com/page/show/3405842-fall-mite-4on4-league
+Scanning page (14/500): https://eaganhockey.sportngin.com/register/form/378465623
+Scanning page (15/500): https://www.eaganhockey.com/page/show/4620764-termites
+Scanning page (16/500): https://www.eaganhockey.com/page/show/5827019-bantam-checking-clinic
+Scanning page (17/500): https://www.eaganhockey.com/page/show/8209374-peewee-contact-clinic
+Scanning page (18/500): https://www.eaganhockey.com/page/show/8557092-termites-2024-2025-
+Scanning page (19/500): http://www.eaganhockey.com/page/show/8557092-termites-2024-2025-
+Scanning page (20/500): https://www.eaganhockey.com/page/show/8643195-peewee-b1-2024-2025-
+Scanning page (21/500): https://www.eaganhockey.com/page/show/8643196-peewee-b2-blue-2024-2025-
+Scanning page (22/500): https://www.eaganhockey.com/page/show/8647986-squirt-a-2024-2025-
+Scanning page (23/500): https://www.eaganhockey.com/page/show/8648023-squirt-b1-blue-2024-2025-
+Scanning page (24/500): https://www.eaganhockey.com/page/show/8648024-squirt-b2-blue-2024-2025-
+Scanning page (25/500): https://www.eaganhockey.com/page/show/8648025-squirt-b2-green-2024-2025-
+Scanning page (26/500): https://www.eaganhockey.com/page/show/8648026-squirt-c-green-2024-2025-
+Scanning page (27/500): https://www.eaganhockey.com/page/show/8648028-squirt-c-blue-2024-2025-
+Scanning page (28/500): https://www.eaganhockey.com/page/show/8648029-peewee-b2-green-2024-2025-
+Scanning page (29/500): https://www.eaganhockey.com/page/show/8648030-peewee-c-2024-2025-
+Scanning page (30/500): https://www.eaganhockey.com/page/show/8656617-squirt-contact-clinic
+Scanning page (31/500): https://www.eaganhockey.com/page/show/8766607-squirt-b1-green-2024-25-
+Scanning page (32/500): https://www.eaganhockey.com/page/show/8766610-squirt-b2-white-2024-2025-
+Scanning page (33/500): https://www.eaganhockey.com/page/show/9088669-termites-2025-2026-
+Scanning page (34/500): http://www.eaganhockey.com/page/show/9088669-termites-2025-2026-
+Scanning page (35/500): https://www.eaganhockey.com/page/show/9197026-squirt-a-2025-2026-
+Scanning page (36/500): https://www.eaganhockey.com/page/show/9197027-squirt-b1-blue-2025-2026-
+Scanning page (37/500): https://www.eaganhockey.com/page/show/9197030-squirt-b1-green-2025-2026-
+Scanning page (38/500): https://www.eaganhockey.com/page/show/9197031-squirt-b2-blue-2025-2026-
+Scanning page (39/500): https://www.eaganhockey.com/page/show/9197033-squirt-b2-green-2025-2026-
+Scanning page (40/500): https://www.eaganhockey.com/page/show/9197035-squirt-b2-white-2025-2026-
+Scanning page (41/500): https://www.eaganhockey.com/page/show/9197041-squirt-c-blue-2025-2026-
+Scanning page (42/500): https://www.eaganhockey.com/page/show/9197046-squirt-c-green-2025-2026-
+Scanning page (43/500): https://www.eaganhockey.com/page/show/9229008-peewee-a-2025-2026-
+Scanning page (44/500): https://www.eaganhockey.com/page/show/9229009-peewee-b1-2025-2026-
+Scanning page (45/500): https://www.eaganhockey.com/page/show/9229010-peewee-b2-blue-2025-2026-
+Scanning page (46/500): https://www.eaganhockey.com/page/show/9229011-peewee-b2-green-2025-2026-
+Scanning page (47/500): https://www.eaganhockey.com/page/show/9229012-peewee-c-2025-2026-
+Scanning page (48/500): https://www.eaganhockey.com/page/show/9229018-bantam-aa-2025-2026-
+Scanning page (49/500): https://www.eaganhockey.com/page/show/9229019-bantam-b1-2025-2026-
+Scanning page (50/500): https://www.eaganhockey.com/page/show/9229021-bantam-b2-2025-2026-
+Scanning page (51/500): https://www.eaganhockey.com/page/show/9229023-bantam-c-2025-2026-
+Scanning page (52/500): https://www.eaganhockey.com/news_article/show/309725-minor-officials-teams
+Scanning page (53/500): https://www.eaganhockey.com/news_article/show/311781-minor-officials-teams
+Scanning page (54/500): https://www.eaganhockey.com/news_article/show/566494-team-pictures-wednesday-oct-28th-6-30-pm
+Scanning page (55/500): https://www.eaganhockey.com/news_article/show/567160-scrimmage-scheduled-with-burnsville-peewee-c
+Scanning page (56/500): https://www.eaganhockey.com/news_article/show/569381-team-pictures
+Scanning page (57/500): https://www.eaganhockey.com/news_article/show/570065-team-pictures
+Scanning page (58/500): https://www.eaganhockey.com/news_article/show/570736-team-meeting-
+Scanning page (59/500): https://www.eaganhockey.com/news_article/show/574284-minor-officials-parent-teams
+Scanning page (60/500): https://www.eaganhockey.com/news_article/show/709886-squirt-c-blue-tournaments
+Scanning page (61/500): https://www.eaganhockey.com/news_article/show/712824-district-8-squirt-a-preview
+Scanning page (62/500): https://www.eaganhockey.com/news_article/show/714188-hotel-room-block-for-fargo-squirt-international-c-b2-tournament
+Scanning page (63/500): https://mmxreservations.com/fargomoorhead/gc/2850/EaganSquirtC
+node.exe : Failed to fetch 
+https://mmxreservations.com/fargomoorhead/gc/2850/EaganSquirtC: 
+Request failed with status code 403
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to fetch...sta 
+   tus code 403:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Scanning page (64/500): https://eaganhockey.sportngin.com/register/form/214664130
+Scanning page (65/500): http://www.eaganhockey.com/teams
+Scanning page (66/500): http://www.eaganhockey.com/page/show/5765231-resources
+Scanning page (67/500): http://www.eaganhockey.com/page/show/607142-volunteering-dibs-
+Scanning page (68/500): http://www.wildcat-hockey.com/
+Scanning page (69/500): https://www.eaganwildcats.org/page/show/6583755-girls-hockey
+Found 30 potential teams. Filtering for current season...
+After season filtering: 18 teams (removed 12 old season duplicates)
+Resolving calendar for Peewee B1...
+Resolving calendar for Peewee B2-Blue...
+Resolving calendar for Squirt A...
+Resolving calendar for Squirt B1 - Blue...
+Resolving calendar for Squirt B2 - Blue...
+Resolving calendar for Squirt B2 - Green...
+Resolving calendar for Squirt C - Green...
+Resolving calendar for Squirt C - Blue...
+Resolving calendar for Peewee B2 - Green...
+Resolving calendar for Peewee C...
+Resolving calendar for Squirt B1 - Green...
+Resolving calendar for Squirt B2 - White...
+Resolving calendar for Cowtown Classic Squirt Tourney Info...
+Resolving calendar for Peewee A...
+Resolving calendar for Bantam AA...
+Resolving calendar for Bantam B1...
+Resolving calendar for Bantam B2...
+Resolving calendar for Bantam C...
+
+--- Filtering Results for Bantam C ---
+Team: Bantam AA
+  URL: webcal://www.eaganhockey.com/ical_feed?tags=9229018
+  Level: Bantams - AA
+Team: Bantam B1
+  URL: webcal://www.eaganhockey.com/ical_feed?tags=9229019
+  Level: Bantams - B1
+Team: Bantam B2
+  URL: webcal://www.eaganhockey.com/ical_feed?tags=9229021
+  Level: Bantams - B2
+Team: Bantam C
+  URL: webcal://www.eaganhockey.com/ical_feed?tags=9229023
+  Level: Bantams - C

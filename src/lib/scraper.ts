@@ -32,6 +32,43 @@ function normalizeUrl(baseUrl: string, href: string): string {
     }
 }
 
+function buildAbsoluteUrl(baseUrl: string, href: string): string | null {
+    if (!href) return null;
+    const trimmed = href.trim();
+    if (!trimmed || trimmed === '#' || trimmed === '/' ||
+        trimmed.startsWith('javascript:') || trimmed.startsWith('mailto:') ||
+        trimmed.startsWith('http://#') || trimmed.startsWith('https://#')) {
+        return null;
+    }
+
+    try {
+        const absolute = new URL(trimmed, baseUrl);
+        if (!['http:', 'https:'].includes(absolute.protocol)) return null;
+        return absolute.toString();
+    } catch {
+        return null;
+    }
+}
+
+function getSameHostUrl(baseUrl: string, href: string, baseHost: string): string | null {
+    const absolute = buildAbsoluteUrl(baseUrl, href);
+    if (!absolute) return null;
+
+    try {
+        const host = new URL(absolute).hostname;
+        if (host !== baseHost) return null;
+    } catch {
+        return null;
+    }
+
+    // Skip obvious non-team or noisy pages early
+    if (absolute.includes('/news_article/') || absolute.includes('/news/')) return null;
+    if (absolute.includes('/register') || absolute.includes('/registration')) return null;
+    if (absolute.includes('trophycase') || absolute.includes('/attachments/document/')) return null;
+
+    return absolute;
+}
+
 function getAgeGroup(name: string): 'Mites' | 'Squirts' | 'Peewees' | 'Bantams' | null {
     const lower = name.toLowerCase();
     if (lower.includes('mite')) return 'Mites';
@@ -411,6 +448,12 @@ const associationOverrides: Record<string, string[]> = {
     ],
     'Minneapolis Titans Hockey': [
         'https://www.minneapolistitanshockey.com/page/show/9080091-pee-wee-2025-2026'
+    ],
+    'Edina Hockey Association': [
+        'https://www.edinahockeyassociation.com/page/show/9116601-teams',
+        'https://www.edinahockeyassociation.com/page/show/9116606-bantams',
+        'https://www.edinahockeyassociation.com/page/show/9116605-peewees',
+        'https://www.edinahockeyassociation.com/page/show/9116609-squirts'
     ]
 };
 
@@ -422,14 +465,34 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
         console.log('Detected Sprocket Sports platform...');
         return scrapeSprocketSports(association);
     }
-
     const teams: ScrapedTeam[] = [];
     const visitedUrls = new Set<string>();
     const pagesToVisit: string[] = [association.baseUrl];
+    const baseHost = new URL(association.baseUrl).hostname;
 
     const sitemapUrls = await fetchSitemap(association.baseUrl);
+    const currentSeason = getCurrentSeasonYear();
+
     if (sitemapUrls.length > 0) {
-        pagesToVisit.push(...sitemapUrls);
+        // Filter sitemap URLs to remove explicit old seasons and subseason views
+        const relevantSitemapUrls = sitemapUrls.filter(url => {
+            // Skip SportsEngine subseason URLs (historical views)
+            if (url.includes('subseason=')) return false;
+
+            const range = extractSeasonYearRange(url);
+            if (range) {
+                // If it has a year, it MUST be the current or next season
+                return isCurrentSeason(url, currentSeason);
+            }
+            return true; // Keep generic URLs
+        });
+        console.log(`Filtered sitemap: ${relevantSitemapUrls.length} / ${sitemapUrls.length} URLs kept (removed old seasons)`);
+        for (const url of relevantSitemapUrls) {
+            const sameHostUrl = getSameHostUrl(association.baseUrl, url, baseHost);
+            if (sameHostUrl && !pagesToVisit.includes(sameHostUrl)) {
+                pagesToVisit.push(sameHostUrl);
+            }
+        }
     }
 
     if (associationOverrides[association.name]) {
@@ -444,14 +507,24 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
         $('a').each((_, el) => {
             const text = $(el).text().trim().toLowerCase();
             const href = $(el).attr('href');
-            if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
+            const url = getSameHostUrl(association.baseUrl, href || '', baseHost);
+            if (!url) return;
 
             if (linksFound < 100) {
                 linksFound++;
             }
 
-            const url = normalizeUrl(association.baseUrl, href);
-            const lowerHref = href.toLowerCase();
+            // Check for old season in URL or text
+            const urlRange = extractSeasonYearRange(url);
+            const textRange = extractSeasonYearRange(text);
+
+            if (urlRange && !isCurrentSeason(url, currentSeason)) return;
+            if (textRange && !isCurrentSeason(text, currentSeason)) return;
+
+            // Skip SportsEngine subseason URLs (historical views)
+            if (url.includes('subseason=')) return;
+
+            const lowerHref = (href || '').toLowerCase();
 
             const keywords = ['teams', 'travel', 'youth', 'programs', 'boys', 'girls', 'hockey'];
             const hasKeyword = keywords.some(k => text.includes(k) || lowerHref.includes(k));
@@ -465,7 +538,7 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
         });
     }
 
-    const MAX_PAGES = 200;
+    const MAX_PAGES = 500;
     let pagesProcessed = 0;
 
     while (pagesToVisit.length > 0 && pagesProcessed < MAX_PAGES) {
@@ -517,11 +590,21 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
         $page('a').each((_, el) => {
             const text = $page(el).text().trim();
             const href = $page(el).attr('href');
-            if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
+            const absUrl = getSameHostUrl(url, href || '', baseHost);
+            if (!absUrl) return;
+
+            // Check for old season in URL or text
+            const urlRange = extractSeasonYearRange(absUrl);
+            const textRange = extractSeasonYearRange(text);
+
+            if (urlRange && !isCurrentSeason(absUrl, currentSeason)) return;
+            if (textRange && !isCurrentSeason(text, currentSeason)) return;
+
+            // Skip SportsEngine subseason URLs (historical views)
+            if (absUrl.includes('subseason=')) return;
 
             const ageGroup = getAgeGroup(text);
             if (ageGroup) {
-                const absUrl = normalizeUrl(url, href);
                 if (visitedUrls.has(absUrl) || absUrl.startsWith('webcal:') || absUrl.endsWith('.ics')) return;
 
                 // Skip if this looks like a non-team page
@@ -556,7 +639,6 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
 
     console.log(`Found ${teams.length} potential teams. Filtering for current season...`);
 
-    const currentSeason = getCurrentSeasonYear();
     const teamMap = new Map<string, ScrapedTeam>();
 
     for (const team of teams) {
