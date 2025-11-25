@@ -1,0 +1,32 @@
+[
+  {
+    "association": "Waconia Hockey Association",
+    "season": "2025-26",
+    "teams": [
+      {
+        "name": "U12 A",
+        "team_level": "12U",
+        "level_detail": "A",
+        "calendar_sync_url": "https://waconiahockey.org/team/55552/program/12136/schedule?navigationTeamID=26256"
+      },
+      {
+        "name": "U12 B2",
+        "team_level": "12U",
+        "level_detail": "B2",
+        "calendar_sync_url": "https://waconiahockey.org/team/55553/program/12136/schedule?navigationTeamID=26268"
+      },
+      {
+        "name": "U10 B1",
+        "team_level": "10U",
+        "level_detail": "B1",
+        "calendar_sync_url": "https://waconiahockey.org/team/55550/program/12136/schedule?navigationTeamID=26258"
+      },
+      {
+        "name": "U10 B2",
+        "team_level": "10U",
+        "level_detail": "B2",
+        "calendar_sync_url": "https://waconiahockey.org/team/55551/program/12136/schedule?navigationTeamID=26269"
+      }
+    ]
+  }
+]

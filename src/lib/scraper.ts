@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import puppeteer from 'puppeteer';
-import { Association, ScrapedTeam } from './types';
+import { AGE_GROUPS, AgeGroup, Association, ScrapedTeam } from './types';
 
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36';
 const MIN_HOST_GAP_MS = 400;
@@ -134,13 +134,20 @@ function getSameHostUrl(baseUrl: string, href: string, baseHost: string): string
     return absolute;
 }
 
-function getAgeGroup(name: string): 'Mites' | 'Squirts' | 'Peewees' | 'Bantams' | null {
+function getAgeGroup(name: string): AgeGroup | null {
     const lower = name.toLowerCase();
     if (lower.includes('mite')) return 'Mites';
     if (lower.includes('squirt') || lower.includes('sq-') || /\bsq\b/.test(lower)) return 'Squirts';
     if (lower.includes('peewee') || lower.includes('pw-') || /\bpw\b/.test(lower)) return 'Peewees';
     if (lower.includes('bantam') || lower.includes('btm-') || lower.includes('bn-') || /\b(btm|bn)\b/.test(lower)) return 'Bantams';
+    if (/\b10u\b/.test(lower) || /\bu10\b/.test(lower)) return '10U';
+    if (/\b12u\b/.test(lower) || /\bu12\b/.test(lower)) return '12U';
+    if (/\b15u\b/.test(lower) || /\bu15\b/.test(lower)) return '15U';
     return null;
+}
+
+function isAllowedAgeGroup(ageGroup: AgeGroup | null, allowed: Set<AgeGroup>): ageGroup is AgeGroup {
+    return !!ageGroup && allowed.has(ageGroup);
 }
 
 function getLevelDetail(name: string, ageGroup: string): string {
@@ -148,7 +155,7 @@ function getLevelDetail(name: string, ageGroup: string): string {
     const regex = new RegExp(`(${ageGroup}|${singular})`, 'i');
     let detail = name.replace(regex, '').trim();
     detail = detail.replace(/^(Team|Jr\.?|Boys|Girls)\s+/i, '');
-    detail = detail.replace(/[-–]/g, '').trim();
+    detail = detail.replace(/[-–]/g, ' ').trim();
     return detail || 'Unknown';
 }
 
@@ -158,6 +165,119 @@ function isAggregateLevelDetail(detail: string): boolean {
         normalized === 'all team' ||
         normalized === 'all teams' ||
         normalized === 'all levels';
+}
+
+function normalizeMiteLevelDetail(detail: string): string {
+    const token = detail.match(/\b(aa|a|b1|b2|b|c1|c2|c|d|[1-4]|6u|8u)\b/i);
+    return token ? token[1].toUpperCase() : detail;
+}
+
+function normalizeCompetitiveLevelDetail(detail: string): string {
+    // Remove leftover age-group abbreviations then capture a known level token
+    const stripped = detail.toLowerCase()
+        .replace(/\b(bantam|bantams|ban|btm|bn|squirt|squirts|sq|peewee|peewees|pw)\b/g, '')
+        .trim();
+    const token = stripped.match(/^(aa|a|b1|b2|b|c1|c2|c)/i) || stripped.match(/\b(aa|a|b1|b2|b|c1|c2|c)\b/i);
+    return token ? token[1].toUpperCase() : detail;
+}
+
+function normalizeLevelDetailForAgeGroup(ageGroup: string, detail: string): string {
+    if (ageGroup === 'Mites') return normalizeMiteLevelDetail(detail);
+    if (ageGroup === 'Squirts' || ageGroup === 'Peewees' || ageGroup === 'Bantams' ||
+        ageGroup === '10U' || ageGroup === '12U' || ageGroup === '15U') {
+        return normalizeCompetitiveLevelDetail(detail);
+    }
+    return detail;
+}
+
+function getNormalizedLevelToken(ageGroup: string, detail: string): string | null {
+    if (ageGroup === 'Mites') {
+        const token = detail.match(/\b(aa|a|b1|b2|b|c1|c2|c|d|[1-4])\b/i);
+        return token ? token[1].toUpperCase() : null;
+    }
+    if (ageGroup === 'Squirts' || ageGroup === 'Peewees' || ageGroup === 'Bantams' ||
+        ageGroup === '10U' || ageGroup === '12U' || ageGroup === '15U') {
+        const stripped = detail.toLowerCase()
+            .replace(/\b(bantam|bantams|ban|btm|bn|squirt|squirts|sq|peewee|peewees|pw)\b/g, '')
+            .trim();
+        const token = stripped.match(/^(aa|a|b1|b2|b|c1|c2|c)/i) || stripped.match(/\b(aa|a|b1|b2|b|c1|c2|c)\b/i);
+        return token ? token[1].toUpperCase() : null;
+    }
+    return null;
+}
+
+function isValidCompetitiveLevel(ageGroup: string, levelDetail: string): boolean {
+    if (ageGroup === 'Squirts' || ageGroup === 'Peewees' || ageGroup === 'Bantams' ||
+        ageGroup === '10U' || ageGroup === '12U' || ageGroup === '15U') {
+        const normalized = levelDetail.toLowerCase().trim();
+        return /^(aa|a|b1|b2|b|c1|c2|c)$/.test(normalized);
+    }
+    return true;
+}
+
+function isAggregateOrInHouse(name: string, detail: string): boolean {
+    const combined = `${name} ${detail}`.toLowerCase().replace(/\s+/g, ' ').trim();
+    const keywords = [
+        'team', 'teams', 'program', 'league', 'open', 'intro', 'skills',
+        'clinic', 'camp', 'practice', 'edge work', '3v3', '3 v 3',
+        'scrimmage', 'tournament', 'jamboree', 'classic', 'cup', 'tornado',
+        'coach', 'manager', 'schedule', 'miska', 'wild night', 'evaluation', 'evaluations', 'mini mite'
+    ];
+    return keywords.some(k => combined.includes(k));
+}
+
+function shouldSkipTeam(ageGroup: string, levelDetail: string, name: string): boolean {
+    if (isAggregateLevelDetail(levelDetail)) return true;
+    const normalizedName = name.toLowerCase().replace(/\s+/g, '');
+    const normalizedAge = ageGroup.toLowerCase().replace(/\s+/g, '');
+    if (levelDetail.toLowerCase() === 'unknown' && normalizedName === normalizedAge) return true;
+    const lowerName = name.toLowerCase();
+    if (ageGroup === 'Mites' && levelDetail.toLowerCase() === '8u' &&
+        lowerName.includes('mite') && !/(black|white|blue|gold|red|green|purple|navy|orange|gray|grey|silver|maroon|royal|aa|a|b1|b2|b|c|d)/.test(lowerName)) {
+        return true;
+    }
+    if (ageGroup === 'Mites' && lowerName.includes('hockey mite')) return true;
+    if (isAggregateOrInHouse(name, levelDetail)) return true;
+    const token = getNormalizedLevelToken(ageGroup, levelDetail) ||
+        getNormalizedLevelToken(ageGroup, name) ||
+        levelDetail;
+    if (!isValidCompetitiveLevel(ageGroup, token)) return true;
+    return false;
+}
+
+function getAgePriority(ageGroup: string): number {
+    const order: Record<string, number> = {
+        'Bantams': 1,
+        'Peewees': 2,
+        'Squirts': 3,
+        'Mites': 4,
+        '15U': 5,
+        '12U': 6,
+        '10U': 7,
+        '8U': 8
+    };
+    return order[ageGroup] ?? 99;
+}
+
+function getLevelPriority(levelDetail: string, ageGroup: string): number {
+    const token = getNormalizedLevelToken(ageGroup, levelDetail) || levelDetail;
+    const normalized = token.replace(/\s+/g, '').toUpperCase();
+    const order: Record<string, number> = {
+        'AA': 1,
+        'A': 2,
+        'B': 3,
+        'B1': 4,
+        'B2': 5,
+        'C': 6,
+        'C1': 7,
+        'C2': 8,
+        'D': 9,
+        '1': 10,
+        '2': 11,
+        '3': 12,
+        '4': 13
+    };
+    return order[normalized] ?? 99;
 }
 
 function extractSeasonYearRange(text: string): { start: number, end: number } | null {
@@ -416,7 +536,7 @@ function extractPageId(url: string): number | null {
     return match ? parseInt(match[1]) : null;
 }
 
-async function scrapeSprocketSports(association: Association): Promise<ScrapedTeam[]> {
+async function scrapeSprocketSports(association: Association, allowedAgeGroups: Set<AgeGroup>): Promise<ScrapedTeam[]> {
     console.log(`Using browser automation for Sprocket Sports site...`);
     const teams: ScrapedTeam[] = [];
 
@@ -449,11 +569,11 @@ async function scrapeSprocketSports(association: Association): Promise<ScrapedTe
 
         const ageGroups = await page.evaluate(() => {
             const links = Array.from(document.querySelectorAll('a'));
+            const tokens = ['squirt', 'bantam', 'peewee', 'mite', '10u', '12u', '15u', 'u10', 'u12', 'u15'];
             return links
                 .filter(a => {
                     const text = a.textContent?.toLowerCase() || '';
-                    return text.includes('squirt') || text.includes('bantam') ||
-                        text.includes('peewee') || text.includes('mite');
+                    return tokens.some(token => text.includes(token));
                 })
                 .map(a => ({
                     text: a.textContent?.trim() || '',
@@ -461,11 +581,17 @@ async function scrapeSprocketSports(association: Association): Promise<ScrapedTe
                 }));
         });
 
-        console.log(`Found ${ageGroups.length} age group categories`);
+        const filteredAgeGroups = ageGroups.filter(group =>
+            isAllowedAgeGroup(getAgeGroup(group.text), allowedAgeGroups)
+        );
 
-        for (const group of ageGroups) {
+        console.log(`Found ${filteredAgeGroups.length} age group categories (filtered from ${ageGroups.length})`);
+
+        for (const group of filteredAgeGroups) {
             // Skip if this looks like a submenu (contains 'team' or 'teams')
             const isSubmenu = group.text.toLowerCase().includes('team');
+            const groupAge = getAgeGroup(group.text);
+            if (!isAllowedAgeGroup(groupAge, allowedAgeGroups)) continue;
 
             if (isSubmenu) {
                 // Original Waconia-style: click submenu then extract teams
@@ -494,9 +620,13 @@ async function scrapeSprocketSports(association: Association): Promise<ScrapedTe
 
                     for (const team of categoryTeams) {
                         const ageGroup = getAgeGroup(team.name);
-                        if (!ageGroup) continue;
+                        if (!isAllowedAgeGroup(ageGroup, allowedAgeGroups)) continue;
                         const levelDetail = getLevelDetail(team.name, ageGroup);
-                        if (isAggregateLevelDetail(levelDetail)) continue;
+                        const normalizedDetail = normalizeLevelDetailForAgeGroup(ageGroup, levelDetail);
+                        if (shouldSkipTeam(ageGroup, normalizedDetail, team.name)) continue;
+                        const token = getNormalizedLevelToken(ageGroup, levelDetail) ||
+                            normalizedDetail ||
+                            levelDetail.trim();
                         const calendarUrl = buildSprocketCalendarUrl(association, team.href, team.teamId);
                         if (!calendarUrl) continue;
 
@@ -505,7 +635,7 @@ async function scrapeSprocketSports(association: Association): Promise<ScrapedTe
                             name: team.name,
                             sport_type: 'hockey',
                             team_level: ageGroup,
-                            level_detail: levelDetail,
+                            level_detail: token,
                             calendar_sync_url: calendarUrl
                         });
                     }
@@ -519,9 +649,13 @@ async function scrapeSprocketSports(association: Association): Promise<ScrapedTe
 
                 if (teamId && group.text) {
                     const ageGroup = getAgeGroup(group.text);
-                    if (!ageGroup) continue;
+                    if (!isAllowedAgeGroup(ageGroup, allowedAgeGroups)) continue;
                     const levelDetail = getLevelDetail(group.text, ageGroup);
-                    if (isAggregateLevelDetail(levelDetail)) continue;
+                    const normalizedDetail = normalizeLevelDetailForAgeGroup(ageGroup, levelDetail);
+                    if (shouldSkipTeam(ageGroup, normalizedDetail, group.text)) continue;
+                    const token = getNormalizedLevelToken(ageGroup, levelDetail) ||
+                        normalizedDetail ||
+                        levelDetail.trim();
                     const calendarUrl = buildSprocketCalendarUrl(association, group.href, teamId);
                     if (!calendarUrl) continue;
 
@@ -530,7 +664,7 @@ async function scrapeSprocketSports(association: Association): Promise<ScrapedTe
                         name: group.text,
                         sport_type: 'hockey',
                         team_level: ageGroup,
-                        level_detail: levelDetail,
+                        level_detail: token,
                         calendar_sync_url: calendarUrl
                     });
                 }
@@ -570,13 +704,14 @@ const associationOverrides: Record<string, string[]> = {
     ]
 };
 
-export async function scrapeAssociation(association: Association): Promise<ScrapedTeam[]> {
+export async function scrapeAssociation(association: Association, ageGroups: AgeGroup[] = AGE_GROUPS): Promise<ScrapedTeam[]> {
     console.log(`Scraping ${association.name}...`);
 
+    const allowedAgeGroups = new Set<AgeGroup>(ageGroups);
     const html = await fetchHtml(association.baseUrl);
     if (html && (html.includes('sprocketsports.com') || html.includes('app-root'))) {
         console.log('Detected Sprocket Sports platform...');
-        return scrapeSprocketSports(association);
+        return scrapeSprocketSports(association, allowedAgeGroups);
     }
     const teams: ScrapedTeam[] = [];
     const visitedUrls = new Set<string>();
@@ -642,8 +777,9 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
             const keywords = ['teams', 'travel', 'youth', 'programs', 'boys', 'girls', 'hockey'];
             const hasKeyword = keywords.some(k => text.includes(k) || lowerHref.includes(k));
             const ageGroup = getAgeGroup(text);
+            const matchesAgeGroup = isAllowedAgeGroup(ageGroup, allowedAgeGroups);
 
-            if (hasKeyword || ageGroup) {
+            if (hasKeyword || matchesAgeGroup) {
                 if (!pagesToVisit.includes(url)) {
                     pagesToVisit.push(url);
                 }
@@ -678,7 +814,7 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
 
         const pageAgeGroup = getAgeGroup(pageTitle);
 
-        if (pageAgeGroup) {
+        if (isAllowedAgeGroup(pageAgeGroup, allowedAgeGroups)) {
             // Skip if this looks like a non-team page
             if (isLikelyNonTeamPage(pageTitle, url)) {
                 console.log(`  Skipping non-team page: ${pageTitle}`);
@@ -686,10 +822,18 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
             }
 
             const levelDetail = getLevelDetail(pageTitle, pageAgeGroup);
-            if (isAggregateLevelDetail(levelDetail)) {
+            const normalizedDetail = normalizeLevelDetailForAgeGroup(pageAgeGroup, levelDetail);
+            if (shouldSkipTeam(pageAgeGroup, normalizedDetail, pageTitle)) {
                 console.log(`  Skipping aggregate page: ${pageTitle}`);
                 continue;
             }
+            if (!url.includes('/team/') && !url.includes('/page/show/') && url.toLowerCase().includes('/schedule')) {
+                console.log(`  Skipping generic schedule page: ${url}`);
+                continue;
+            }
+            const token = getNormalizedLevelToken(pageAgeGroup, levelDetail) ||
+                normalizedDetail ||
+                levelDetail.trim();
 
             const calendarUrl = await findCalendarUrl(url);
             if (calendarUrl) {
@@ -699,7 +843,7 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
                         name: pageTitle,
                         sport_type: 'hockey',
                         team_level: pageAgeGroup,
-                        level_detail: levelDetail,
+                        level_detail: token,
                         calendar_sync_url: calendarUrl
                     });
                 }
@@ -723,7 +867,7 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
             if (absUrl.includes('subseason=')) return;
 
             const ageGroup = getAgeGroup(text);
-            if (ageGroup) {
+            if (isAllowedAgeGroup(ageGroup, allowedAgeGroups)) {
                 if (visitedUrls.has(absUrl) || absUrl.startsWith('webcal:') || absUrl.endsWith('.ics')) return;
 
                 // Skip if this looks like a non-team page
@@ -742,7 +886,11 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
                     }
                 } else {
                     const levelDetail = getLevelDetail(text, ageGroup);
-                    if (isAggregateLevelDetail(levelDetail)) return;
+                    const normalizedDetail = normalizeLevelDetailForAgeGroup(ageGroup, levelDetail);
+                    if (shouldSkipTeam(ageGroup, normalizedDetail, text)) return;
+                    const token = getNormalizedLevelToken(ageGroup, levelDetail) ||
+                        normalizedDetail ||
+                        levelDetail.trim();
 
                     if (!teams.some(t => t.calendar_sync_url === absUrl)) {
                         teams.push({
@@ -750,7 +898,7 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
                             name: text,
                             sport_type: 'hockey',
                             team_level: ageGroup,
-                            level_detail: levelDetail,
+                            level_detail: token,
                             calendar_sync_url: absUrl
                         });
                     }
@@ -764,7 +912,8 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
     const teamMap = new Map<string, ScrapedTeam>();
 
     for (const team of teams) {
-        const key = `${team.team_level}-${team.level_detail}`.toLowerCase();
+        const normalizedToken = getNormalizedLevelToken(team.team_level, team.level_detail) || team.level_detail;
+        const key = `${team.team_level}-${normalizedToken}-${team.name}`.toLowerCase();
 
         // Check if this team is from the current season
         const teamIsCurrentSeason = isCurrentSeason(team.name, currentSeason) ||
@@ -810,8 +959,8 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
         }
     }
 
-    const filteredTeams = Array.from(teamMap.values());
-    console.log(`After season filtering: ${filteredTeams.length} teams (removed ${teams.length - filteredTeams.length} old season duplicates)`);
+    const filteredTeams = Array.from(teamMap.values()).filter(team => allowedAgeGroups.has(team.team_level));
+    console.log(`After season and age filtering: ${filteredTeams.length} teams (removed ${teams.length - filteredTeams.length} old/filtered duplicates)`);
 
     for (const team of filteredTeams) {
         console.log(`Resolving calendar for ${team.name}...`);
@@ -819,5 +968,15 @@ export async function scrapeAssociation(association: Association): Promise<Scrap
         if (resolved) team.calendar_sync_url = resolved;
     }
 
-    return filteredTeams;
+    const sortedTeams = filteredTeams.sort((a, b) => {
+        const ageA = getAgePriority(a.team_level);
+        const ageB = getAgePriority(b.team_level);
+        if (ageA !== ageB) return ageA - ageB;
+        const levelA = getLevelPriority(a.level_detail, a.team_level);
+        const levelB = getLevelPriority(b.level_detail, b.team_level);
+        if (levelA !== levelB) return levelA - levelB;
+        return a.name.localeCompare(b.name);
+    });
+
+    return sortedTeams;
 }

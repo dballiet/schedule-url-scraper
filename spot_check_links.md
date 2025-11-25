@@ -30,7 +30,6 @@
 | Mahtomedi Youth Hockey Association | Bantam AA | Bantams | webcal://mahtomedihockey.pucksystems.com/ical_feed?tags=9168686 |
 | Mankato Area Hockey Association | Bantam A | Bantams | webcal://www.mankatohockey.com/ical_feed?tags=9178198 |
 | Minneapolis Youth Hockey Association | Bantam A | Bantams | webcal://mplshockey.sprocketsports.com/ical?team=23649 |
-| Minneapolis Titans Hockey | (none found) |  |  |
 | Minnetonka Youth Hockey Association | Bantam C Black | Bantams | webcal://www.tonkahockey.org/ical_feed?tags=9136978 |
 | Mound Westonka Hockey Association | MWHA BANTAM B2 | Bantams | https://season-microsites.ui.sportsengine.com/seasons/68d558634bc1e231069fafd7/teams/68d55866cebe5f0001f1a57c |
 | Mounds View Irondale Youth Hockey Association | Bantam A | Bantams | webcal://www.mvihockey.org/ical_feed?tags=9168098 |
@@ -38,7 +37,7 @@
 | North Branch Area Hockey Association | Bantam B1 | Bantams | https://www.northbranchhockey.com/team/158858/calendar |
 | Northfield Hockey Association | Bantam A | Bantams | webcal://www.northfieldhockey.net/ical_feed?tags=9177901 |
 | Osseo Maple Grove Hockey Association (OMGHA) | Bantam A | Bantams | webcal://www.omgha.com/ical_feed?tags=8203355 |
-| Owatonna Youth Hockey Association | Bantam A & B | Bantams | https://www.owatonnahockey.com/schedule |
+| Owatonna Youth Hockey Association | Bantam A | Bantams | https://www.owatonnahockey.com/team/164921/calendar |
 | Pine City Youth Hockey Association | Bantam B2 | Bantams | webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256614 |
 | Prior Lake-Savage Hockey Association | Bantam AA | Bantams | https://www.plsha.com/page/show/9253812-bantam-aa |
 | Princeton Youth Hockey Association | Bantam B2 | Bantams | webcal://www.princetonyouthhockey.com/ical_feed?tags=9248627 |
@@ -51,7 +50,7 @@
 | Sauk Rapids Youth Hockey Association | Bantam A | Bantams | https://www.saukrapidshockey.org/team/167609/calendar |
 | Shakopee Hockey Association | Bantam AA | Bantams | https://www.shakopeehockey.com/team/132460/calendar |
 | South St. Paul Youth Hockey Association | Bantam B1 | Bantams | webcal://sspyha.pucksystems2.com/ical_feed?tags=9241294 |
-| Spring Lake Park Youth Hockey Association | (none found) |  |  |
+| Spring Lake Park Youth Hockey Association | Peewee B2 Red | Peewees | webcal://www.slpyha.org/ical_feed?tags=9230353 |
 | St. Cloud Youth Hockey Association | Bantam B1 Red | Bantams | webcal://www.stcloudhockey.com/ical_feed?tags=7423777 |
 | St. Francis Youth Hockey Association | Bantam B1 | Bantams | https://www.sfyha.org/team/152992/calendar |
 | St. Louis Park Hockey Association | Peewee B1 | Peewees | https://www.slphockey.com/team/154364/calendar |
@@ -61,5 +60,5 @@
 | Waconia Hockey Association | Bantam A | Bantams | https://waconiahockey.org/team/55562/program/12136/schedule?navigationTeamID=26250 |
 | Wayzata Youth Hockey Association | Bantam A | Bantams | https://www.wayzatahockey.org/team/140983/calendar |
 | West St. Paul Hockey Association (Sibley) | Bantam AA | Bantams | https://www.warrioryouthhockey.org/team/157109/calendar |
-| White Bear Lake Area Hockey Association | Bantam A Moose Goheen Tournaments | Bantams | webcal://www.wblhockey.com/ical_feed?tags=4215446 |
+| White Bear Lake Area Hockey Association | Bantam AA | Bantams | webcal://www.wblhockey.com/ical_feed?tags=9246028 |
 | Woodbury Area Hockey Club | Woodbury BN A | Bantams | webcal://www.woodburyhockey.com/ical_feed?tags=9248171 |

@@ -1,5 +1,6 @@
 import { scrapeAssociation } from '../src/lib/scraper';
 import { ASSOCIATIONS } from '../src/lib/associations';
+import { ScrapedTeam } from '../src/lib/types';
 import * as fs from 'fs';
 
 interface TestCase {
@@ -7,6 +8,19 @@ interface TestCase {
     teamName: string;
     expectedUrl: string;
     platform: 'SportsEngine' | 'Crossbar' | 'Other';
+}
+
+interface GroundTruthTeam {
+    name: string;
+    team_level: string;
+    level_detail?: string;
+    calendar_sync_url?: string;
+}
+
+interface GroundTruthEntry {
+    association: string;
+    season: string;
+    teams: GroundTruthTeam[];
 }
 
 const TEST_CASES: TestCase[] = [
@@ -118,8 +132,39 @@ async function runTests() {
             failed: 0,
             byPlatform: {} as Record<string, { passed: number; failed: number }>
         },
-        tests: [] as any[]
+        tests: [] as any[],
+        groundTruth: {
+            total: 0,
+            passed: 0,
+            failed: 0,
+            entries: [] as any[]
+        }
     };
+
+    const associationCache = new Map<string, ScrapedTeam[]>();
+    const getAssociation = (assocName: string) =>
+        ASSOCIATIONS.find(a => a.name.toLowerCase().includes(assocName.toLowerCase()));
+
+    const getTeamsForAssociation = async (assocName: string) => {
+        const association = getAssociation(assocName);
+        if (!association) return { association: null as any, teams: null as any };
+        if (associationCache.has(association.name)) {
+            return { association, teams: associationCache.get(association.name)! };
+        }
+        const teams = await scrapeAssociation(association);
+        associationCache.set(association.name, teams);
+        return { association, teams };
+    };
+
+    const groundTruthPath = 'scripts/ground-truth.json';
+    let groundTruthData: GroundTruthEntry[] = [];
+    if (fs.existsSync(groundTruthPath)) {
+        try {
+            groundTruthData = JSON.parse(fs.readFileSync(groundTruthPath, 'utf8')) as GroundTruthEntry[];
+        } catch (error) {
+            console.warn(`Unable to read ground truth file at ${groundTruthPath}:`, error);
+        }
+    }
 
     // Group tests by association
     const testsByAssociation = TEST_CASES.reduce((acc, test) => {
@@ -132,8 +177,7 @@ async function runTests() {
         console.log(`\n📋 Testing ${assocName} (${tests[0].platform})`);
         console.log('-'.repeat(80));
 
-        const association = ASSOCIATIONS.find(a => a.name.toLowerCase().includes(assocName.toLowerCase()));
-
+        const { association, teams } = await getTeamsForAssociation(assocName);
         if (!association) {
             console.log(`❌ Association "${assocName}" not found in ASSOCIATIONS list`);
             tests.forEach(test => {
@@ -148,7 +192,6 @@ async function runTests() {
             continue;
         }
 
-        const teams = await scrapeAssociation(association);
         console.log(`   Found ${teams.length} teams total\n`);
 
         for (const test of tests) {
@@ -216,6 +259,74 @@ async function runTests() {
         }
     }
 
+    // Ground truth verification (season-specific known values)
+    if (groundTruthData.length > 0) {
+        console.log('\n📌 Ground Truth Verification');
+        console.log('-'.repeat(80));
+    }
+
+    const normalizeToken = (value: string | undefined) =>
+        (value || '').toLowerCase().replace(/\s+/g, '');
+
+    for (const entry of groundTruthData) {
+        console.log(`\n🔍 ${entry.association} (${entry.season})`);
+        const { association, teams } = await getTeamsForAssociation(entry.association);
+        if (!association || !teams) {
+            console.log(`   ❌ Association "${entry.association}" not found or failed to scrape`);
+            results.groundTruth.failed += entry.teams.length;
+            entry.teams.forEach(expected => {
+                results.groundTruth.entries.push({
+                    association: entry.association,
+                    season: entry.season,
+                    expected,
+                    found: null,
+                    status: 'FAILED',
+                    reason: 'Association not found'
+                });
+            });
+            continue;
+        }
+
+        for (const expected of entry.teams) {
+            results.groundTruth.total++;
+            const match = teams.find(t => {
+                if (normalizeToken(t.team_level) !== normalizeToken(expected.team_level)) return false;
+                if (normalizeToken(t.name) !== normalizeToken(expected.name)) return false;
+                if (expected.level_detail && normalizeToken(t.level_detail) !== normalizeToken(expected.level_detail)) return false;
+                if (expected.calendar_sync_url && t.calendar_sync_url !== expected.calendar_sync_url) return false;
+                return true;
+            });
+
+            const passed = !!match;
+            const symbol = passed ? '✅' : '❌';
+            const detail = expected.level_detail ? ` ${expected.level_detail}` : '';
+
+            console.log(`   ${symbol} ${expected.name} (${expected.team_level}${detail})`);
+            if (!passed) {
+                const fallback = teams.find(t =>
+                    normalizeToken(t.team_level) === normalizeToken(expected.team_level) &&
+                    normalizeToken(t.name) === normalizeToken(expected.name)
+                );
+                if (fallback) {
+                    console.log(`      Found team, URL mismatch: ${fallback.calendar_sync_url}`);
+                } else {
+                    console.log('      Found: NOT FOUND');
+                }
+                results.groundTruth.failed++;
+            } else {
+                results.groundTruth.passed++;
+            }
+
+            results.groundTruth.entries.push({
+                association: entry.association,
+                season: entry.season,
+                expected,
+                found: match || null,
+                status: passed ? 'PASSED' : 'FAILED'
+            });
+        }
+    }
+
     // Print summary
     console.log('\n' + '='.repeat(80));
     console.log('📊 Test Summary');
@@ -232,12 +343,18 @@ async function runTests() {
         console.log(`   ${platform}: ${stats.passed}/${total} (${rate}%)`);
     }
 
+    if (results.groundTruth.total > 0) {
+        console.log('\n📌 Ground Truth Totals:');
+        console.log(`   ✅ Passed: ${results.groundTruth.passed}`);
+        console.log(`   ❌ Failed: ${results.groundTruth.failed}`);
+    }
+
     // Write results
     fs.writeFileSync('test_results.json', JSON.stringify(results, null, 2));
     console.log('\n📝 Detailed results written to test_results.json\n');
 
     // Exit with error code if any tests failed
-    if (results.summary.failed > 0) {
+    if (results.summary.failed > 0 || results.groundTruth.failed > 0) {
         process.exit(1);
     }
 }

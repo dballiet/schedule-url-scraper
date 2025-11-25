@@ -2,9 +2,9 @@
 
 import { useState, useRef } from 'react';
 import { AssociationSelector } from '@/components/AssociationSelector';
+import { AgeGroupSelector } from '@/components/AgeGroupSelector';
 import { ScrapeProgress } from '@/components/ScrapeProgress';
-import { ResultsTable } from '@/components/ResultsTable';
-import { CsvTeamRecord } from '@/lib/csv-utils';
+import { AGE_GROUPS, AgeGroup } from '@/lib/types';
 import { Play, Upload, Download, FileCheck } from 'lucide-react';
 
 interface ProgressData {
@@ -26,6 +26,7 @@ interface ComparisonStats {
 
 export default function Home() {
   const [selectedAssociations, setSelectedAssociations] = useState<string[]>([]);
+  const [selectedAgeGroups, setSelectedAgeGroups] = useState<AgeGroup[]>([...AGE_GROUPS]);
   const [masterCsv, setMasterCsv] = useState<string | null>(null);
   const [fileName, setFileName] = useState<string>('');
   const [isScraping, setIsScraping] = useState(false);
@@ -49,7 +50,7 @@ export default function Home() {
   };
 
   const startScraping = async () => {
-    if (selectedAssociations.length === 0) return;
+    if (selectedAssociations.length === 0 || selectedAgeGroups.length === 0) return;
 
     setIsScraping(true);
     setLogs([]);
@@ -63,6 +64,7 @@ export default function Home() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           associations: selectedAssociations,
+          ageGroups: selectedAgeGroups,
           masterCsv
         }),
       });
@@ -204,10 +206,17 @@ export default function Home() {
             onChange={setSelectedAssociations}
           />
 
+          <div className="mt-6 border-t pt-6">
+            <AgeGroupSelector
+              selected={selectedAgeGroups}
+              onChange={setSelectedAgeGroups}
+            />
+          </div>
+
           <div className="mt-6 flex justify-end">
             <button
               onClick={startScraping}
-              disabled={isScraping || selectedAssociations.length === 0}
+              disabled={isScraping || selectedAssociations.length === 0 || selectedAgeGroups.length === 0}
               className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
               {isScraping ? 'Scraping...' : 'Start Scraping'}

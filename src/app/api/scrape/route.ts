@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { scrapeAssociation } from '@/lib/scraper';
 import { ASSOCIATIONS } from '@/lib/associations';
-import { ScrapedTeam } from '@/lib/types';
+import { AGE_GROUPS, AgeGroup, ScrapedTeam } from '@/lib/types';
 import { exportToCsv, importFromCsv, mergeTeams } from '@/lib/csv-utils';
 import Papa from 'papaparse';
 
@@ -9,11 +9,26 @@ export const runtime = 'nodejs';
 export const maxDuration = 3600; // 60 minutes for batch scraping
 
 export async function POST(req: NextRequest) {
-    const { associations, masterCsv } = await req.json();
+    const { associations, masterCsv, ageGroups } = await req.json();
 
     if (!associations || (!Array.isArray(associations) && associations !== 'all')) {
         return NextResponse.json({ error: 'Invalid associations list' }, { status: 400 });
     }
+
+    const selectedAgeGroups: AgeGroup[] = (() => {
+        if (!ageGroups || ageGroups === 'all') return [...AGE_GROUPS];
+        if (Array.isArray(ageGroups)) {
+            const filtered = ageGroups.filter((g: string) => AGE_GROUPS.includes(g as AgeGroup)) as AgeGroup[];
+            return filtered;
+        }
+        return [];
+    })();
+
+    if (selectedAgeGroups.length === 0) {
+        return NextResponse.json({ error: 'No valid age groups provided' }, { status: 400 });
+    }
+
+    const selectedAgeGroupSet = new Set(selectedAgeGroups);
 
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
@@ -41,7 +56,7 @@ export async function POST(req: NextRequest) {
                     send({ type: 'status', message: `Scraping ${association.name}...` });
 
                     try {
-                        const teams = await scrapeAssociation(association);
+                        const teams = await scrapeAssociation(association, selectedAgeGroups);
                         allTeams.push(...teams);
 
                         const elapsedMs = Date.now() - startTime;
@@ -75,7 +90,8 @@ export async function POST(req: NextRequest) {
 
                 if (masterCsv) {
                     // Merge with master CSV
-                    const masterRecords = importFromCsv(masterCsv);
+                    const masterRecords = importFromCsv(masterCsv)
+                        .filter(record => selectedAgeGroupSet.has(record.age_group as AgeGroup));
                     const merged = mergeTeams(masterRecords, allTeams);
                     finalCsv = Papa.unparse(merged);
 
