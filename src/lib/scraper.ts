@@ -77,6 +77,39 @@ function normalizeUrl(baseUrl: string, href: string): string {
     }
 }
 
+function isRogersHost(url: string): boolean {
+    return url.includes('rogershockey.com');
+}
+
+async function discoverRogersTeamCalendars(baseUrl: string): Promise<string[]> {
+    const calendars = new Set<string>();
+    const baseHtml = await fetchHtml(baseUrl);
+    if (baseHtml) {
+        const directIds = baseHtml.match(/\/team\/(\d+)\/calendar/gi) || [];
+        directIds.forEach(match => calendars.add(normalizeUrl(baseUrl, match)));
+
+        const idMatches = baseHtml.match(/teamId\\":(\d+)/g) || [];
+        idMatches.forEach(m => {
+            const num = m.match(/(\d+)/);
+            if (num) calendars.add(`${baseUrl}/team/${num[1]}/calendar`);
+        });
+    }
+
+    // Probe nearby IDs based on observed ranges
+    const ranges = [
+        [162560, 162585], // squirt/youth
+        [164470, 164500], // mites
+        [189520, 189550]  // girls 10U/12U/15U
+    ];
+    for (const [start, end] of ranges) {
+        for (let id = start; id <= end; id++) {
+            calendars.add(`${baseUrl}/team/${id}/calendar`);
+        }
+    }
+
+    return Array.from(calendars);
+}
+
 function buildSprocketCalendarUrl(association: Association, href?: string, navigationTeamId?: string | null): string | null {
     if (href) {
         let absolute = normalizeUrl(association.baseUrl, href);
@@ -137,12 +170,17 @@ function getSameHostUrl(baseUrl: string, href: string, baseHost: string): string
 function getAgeGroup(name: string): AgeGroup | null {
     const lower = name.toLowerCase();
     if (lower.includes('mite')) return 'Mites';
-    if (lower.includes('squirt') || lower.includes('sq-') || /\bsq\b/.test(lower)) return 'Squirts';
-    if (lower.includes('peewee') || lower.includes('pw-') || /\bpw\b/.test(lower)) return 'Peewees';
-    if (lower.includes('bantam') || lower.includes('btm-') || lower.includes('bn-') || /\b(btm|bn)\b/.test(lower)) return 'Bantams';
-    if (/\b10u\b/.test(lower) || /\bu10\b/.test(lower)) return '10U';
-    if (/\b12u\b/.test(lower) || /\bu12\b/.test(lower)) return '12U';
-    if (/\b15u\b/.test(lower) || /\bu15\b/.test(lower)) return '15U';
+    if (lower.includes('squirt') || lower.includes('sq-') || /\bsq\b/.test(lower) || /\bsqu\b/.test(lower)) return 'Squirts';
+    if (lower.includes('peewee') || /\bpee\s*wee\b/.test(lower) || lower.includes('peew') ||
+        lower.includes('pw-') || /\bpw\b/.test(lower) || /\bpws\b/.test(lower)) return 'Peewees';
+    if (lower.includes('bantam') || lower.includes('bant-') || lower.includes('ban ') ||
+        lower.includes('btm-') || lower.includes('bn-') || /\b(btm|bn|ban|bant)\b/.test(lower)) return 'Bantams';
+    const tenU = /(?:\b10\s*u|\bu\s*10|\b10-u|\bu-10|\b10u\b|\bu10\b)(?=\b|[^0-9])/;
+    const twelveU = /(?:\b12\s*u|\bu\s*12|\b12-u|\bu-12|\b12u\b|\bu12\b)(?=\b|[^0-9])/;
+    const fifteenU = /(?:\b15\s*u|\bu\s*15|\b15-u|\bu-15|\b15u\b|\bu15\b)(?=\b|[^0-9])/;
+    if (tenU.test(lower)) return '10U';
+    if (twelveU.test(lower)) return '12U';
+    if (fifteenU.test(lower)) return '15U';
     return null;
 }
 
@@ -177,8 +215,11 @@ function normalizeCompetitiveLevelDetail(detail: string): string {
     const stripped = detail.toLowerCase()
         .replace(/\b(bantam|bantams|ban|btm|bn|squirt|squirts|sq|peewee|peewees|pw)\b/g, '')
         .trim();
-    const token = stripped.match(/^(aa|a|b1|b2|b|c1|c2|c)/i) || stripped.match(/\b(aa|a|b1|b2|b|c1|c2|c)\b/i);
-    return token ? token[1].toUpperCase() : detail;
+    const matches = stripped.match(/\b(aa|a|b1|b2|b|c1|c2|c)\b/gi);
+    if (matches && matches.length > 0) {
+        return matches[matches.length - 1].toUpperCase();
+    }
+    return detail;
 }
 
 function normalizeLevelDetailForAgeGroup(ageGroup: string, detail: string): string {
@@ -200,8 +241,8 @@ function getNormalizedLevelToken(ageGroup: string, detail: string): string | nul
         const stripped = detail.toLowerCase()
             .replace(/\b(bantam|bantams|ban|btm|bn|squirt|squirts|sq|peewee|peewees|pw)\b/g, '')
             .trim();
-        const token = stripped.match(/^(aa|a|b1|b2|b|c1|c2|c)/i) || stripped.match(/\b(aa|a|b1|b2|b|c1|c2|c)\b/i);
-        return token ? token[1].toUpperCase() : null;
+        const matches = stripped.match(/\b(aa|a|b1|b2|b|c1|c2|c)\b/gi);
+        return matches && matches.length > 0 ? matches[matches.length - 1].toUpperCase() : null;
     }
     return null;
 }
@@ -221,23 +262,36 @@ function isAggregateOrInHouse(name: string, detail: string): boolean {
         'team', 'teams', 'program', 'league', 'open', 'intro', 'skills',
         'clinic', 'camp', 'practice', 'edge work', '3v3', '3 v 3',
         'scrimmage', 'tournament', 'jamboree', 'classic', 'cup', 'tornado',
-        'coach', 'manager', 'schedule', 'miska', 'wild night', 'evaluation', 'evaluations', 'mini mite'
+        'coach', 'manager', 'schedule', 'miska', 'wild night', 'evaluation', 'evaluations', 'mini mite',
+        'night', 'session', 'summer', 'level', 'jersey', 'travel', 'in house', 'house', 'ih', 'goalie'
     ];
     return keywords.some(k => combined.includes(k));
 }
 
 function shouldSkipTeam(ageGroup: string, levelDetail: string, name: string): boolean {
+    const combinedLower = `${name} ${levelDetail}`.toLowerCase();
+    const isNumberedMite = ageGroup === 'Mites' && /\b[1-4]\b/.test(levelDetail);
+
     if (isAggregateLevelDetail(levelDetail)) return true;
     const normalizedName = name.toLowerCase().replace(/\s+/g, '');
     const normalizedAge = ageGroup.toLowerCase().replace(/\s+/g, '');
     if (levelDetail.toLowerCase() === 'unknown' && normalizedName === normalizedAge) return true;
     const lowerName = name.toLowerCase();
+    if (ageGroup === 'Mites' && /ih/.test(lowerName)) return true;
     if (ageGroup === 'Mites' && levelDetail.toLowerCase() === '8u' &&
         lowerName.includes('mite') && !/(black|white|blue|gold|red|green|purple|navy|orange|gray|grey|silver|maroon|royal|aa|a|b1|b2|b|c|d)/.test(lowerName)) {
         return true;
     }
     if (ageGroup === 'Mites' && lowerName.includes('hockey mite')) return true;
-    if (isAggregateOrInHouse(name, levelDetail)) return true;
+    if (isAggregateOrInHouse(name, levelDetail)) {
+        // Allow numbered mite groups even if the page says "teams"
+        if (isNumberedMite) {
+            const blocked = ['mini mite', 'mini-mite', 'intro', 'house', 'session', 'summer', 'sunday'];
+            if (blocked.some(k => combinedLower.includes(k))) return true;
+        } else {
+            return true;
+        }
+    }
     const token = getNormalizedLevelToken(ageGroup, levelDetail) ||
         getNormalizedLevelToken(ageGroup, name) ||
         levelDetail;
@@ -307,6 +361,14 @@ function extractSeasonYearRange(text: string): { start: number, end: number } | 
             };
         }
     }
+
+    // Fallback: single explicit year like "2025" in slugs (treat as season start)
+    const singleYearMatch = text.match(/\b(20\d{2})\b/);
+    if (singleYearMatch) {
+        const year = parseInt(singleYearMatch[1]);
+        return { start: year, end: year + 1 };
+    }
+
     return null;
 }
 
@@ -350,9 +412,9 @@ function isLikelyNonTeamPage(name: string, url: string): boolean {
         'contact', 'board', 'coaching corner', 'coaches corner',
         'game day roster', 'layout', 'cost', 'fees',
         'camp', 'clinic', 'article', 'news', 'trophy', 'achievement',
-        'photo album', 'pictures', 'champions', 'congratulations',
+        'photo album', 'pictures', 'picture', 'photo', 'champions', 'congratulations',
         'schedule and results', 'tournament', 'classic', 'showcase',
-        'festival', 'cup', 'invite', 'invitational'
+        'festival', 'cup', 'invite', 'invitational', 'preview', 'goalie'
     ];
 
     if (rejectKeywords.some(kw => lower.includes(kw))) {
@@ -361,6 +423,14 @@ function isLikelyNonTeamPage(name: string, url: string): boolean {
 
     // Reject pages that are likely just navigation
     if (name.includes('>') || lower.includes('click here')) {
+        return true;
+    }
+
+    const urlRejectKeywords = [
+        'tournament', 'team-placement', 'camp-and-team-placement',
+        'responsibilities', 'awards', 'photo-day'
+    ];
+    if (urlRejectKeywords.some(k => lowerUrl.includes(k))) {
         return true;
     }
 
@@ -409,7 +479,14 @@ function isValidCalendarUrl(url: string): boolean {
 async function findCalendarUrl(teamUrl: string): Promise<string | null> {
     const idMatch = teamUrl.match(/\/page\/show\/(\d+)/);
     const html = await fetchHtml(teamUrl);
-    if (!html) return null;
+    if (!html) {
+        if (idMatch) {
+            const id = idMatch[1];
+            const baseUrl = new URL(teamUrl).origin;
+            return `webcal://${new URL(baseUrl).hostname}/ical_feed?tags=${id}`;
+        }
+        return null;
+    }
 
     const $ = cheerio.load(html);
     let bestUrl: string | null = null;
@@ -509,10 +586,15 @@ async function fetchSitemap(baseUrl: string): Promise<string[]> {
         const url = $(el).text().trim();
         const lowerUrl = url.toLowerCase();
 
+        // Skip layout container tabs (usually tournament/info subpages, not team calendars)
+        if (lowerUrl.includes('layout_container/show_layout_tab')) return;
+
         if (lowerUrl.includes('team') ||
             lowerUrl.includes('bantam') ||
             lowerUrl.includes('squirt') ||
             lowerUrl.includes('peewee') ||
+            lowerUrl.includes('pee-wee') ||
+            lowerUrl.includes('pee wee') ||
             lowerUrl.includes('mite') ||
             lowerUrl.includes('travel') ||
             lowerUrl.includes('youth') ||
@@ -521,8 +603,11 @@ async function fetchSitemap(baseUrl: string): Promise<string[]> {
             lowerUrl.includes('bn-') ||
             lowerUrl.includes('sq-') ||
             lowerUrl.includes('10u') ||
+            lowerUrl.includes('u10') ||
             lowerUrl.includes('12u') ||
-            lowerUrl.includes('15u')) {
+            lowerUrl.includes('u12') ||
+            lowerUrl.includes('15u') ||
+            lowerUrl.includes('u15')) {
             urls.push(url);
         }
     });
@@ -701,6 +786,53 @@ const associationOverrides: Record<string, string[]> = {
         'https://www.edinahockeyassociation.com/page/show/9116606-bantams',
         'https://www.edinahockeyassociation.com/page/show/9116605-peewees',
         'https://www.edinahockeyassociation.com/page/show/9116609-squirts'
+    ],
+    'Elk River Youth Hockey Association': [
+        // Missing from sitemap; provided by user
+        'https://www.elkriverhockey.org/team/188851/calendar',
+        'https://www.elkriverhockey.org/team/195248/calendar'
+    ],
+    'Hopkins Youth Hockey Association': [
+        // Missing Mite color variant provided by user
+        'https://www.hopkinshockey.com/team/154799/calendar',
+        'https://www.hopkinshockey.com/team/154798/calendar',
+        'https://www.hopkinshockey.com/team/201758/calendar',
+        'https://www.hopkinshockey.com/team/201759/calendar',
+        'https://www.hopkinshockey.com/team/201760/calendar',
+        'https://www.hopkinshockey.com/team/201761/calendar',
+        'https://www.hopkinshockey.com/team/154796/calendar',
+        'https://www.hopkinshockey.com/team/198986/calendar',
+        'https://www.hopkinshockey.com/team/198987/calendar',
+        'https://www.hopkinshockey.com/team/154797/calendar'
+    ],
+    'Rogers Youth Hockey Association': [
+        // Missing Squirt B2 Blue provided by user
+        'https://www.rogershockey.com/team/162579/calendar',
+        // Missing Squirt B1 Blue provided by user
+        'https://www.rogershockey.com/team/162577/calendar'
+    ],
+    'Lakeville Hockey Association': [
+        // Missing Peewee North AA provided by user
+        'https://www.lakevillehockey.org/page/show/9122007-pee-wee-north-aa'
+    ]
+};
+
+const associationSeedTeams: Record<string, ScrapedTeam[]> = {
+    'Hopkins Youth Hockey Association': [
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 2 Blue', sport_type: 'hockey', team_level: 'Mites', level_detail: '2', calendar_sync_url: 'https://www.hopkinshockey.com/team/201758/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 2 Gray', sport_type: 'hockey', team_level: 'Mites', level_detail: '2', calendar_sync_url: 'https://www.hopkinshockey.com/team/201759/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 2 Green', sport_type: 'hockey', team_level: 'Mites', level_detail: '2', calendar_sync_url: 'https://www.hopkinshockey.com/team/201760/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 2 White', sport_type: 'hockey', team_level: 'Mites', level_detail: '2', calendar_sync_url: 'https://www.hopkinshockey.com/team/201761/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 3 Blue', sport_type: 'hockey', team_level: 'Mites', level_detail: '3', calendar_sync_url: 'https://www.hopkinshockey.com/team/154796/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 3 Gray', sport_type: 'hockey', team_level: 'Mites', level_detail: '3', calendar_sync_url: 'https://www.hopkinshockey.com/team/198986/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 3 Green', sport_type: 'hockey', team_level: 'Mites', level_detail: '3', calendar_sync_url: 'https://www.hopkinshockey.com/team/198987/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 3 White', sport_type: 'hockey', team_level: 'Mites', level_detail: '3', calendar_sync_url: 'https://www.hopkinshockey.com/team/154797/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 4 Blue', sport_type: 'hockey', team_level: 'Mites', level_detail: '4', calendar_sync_url: 'https://www.hopkinshockey.com/team/154798/calendar' },
+        { association_name: 'Hopkins Youth Hockey Association', name: 'Mite 4 White', sport_type: 'hockey', team_level: 'Mites', level_detail: '4', calendar_sync_url: 'https://www.hopkinshockey.com/team/154799/calendar' }
+    ],
+    'Rogers Youth Hockey Association': [
+        { association_name: 'Rogers Youth Hockey Association', name: 'Squirt B2 Blue', sport_type: 'hockey', team_level: 'Squirts', level_detail: 'B2', calendar_sync_url: 'https://www.rogershockey.com/team/162579/calendar' },
+        { association_name: 'Rogers Youth Hockey Association', name: 'Squirt B1 Blue', sport_type: 'hockey', team_level: 'Squirts', level_detail: 'B1', calendar_sync_url: 'https://www.rogershockey.com/team/162577/calendar' }
     ]
 };
 
@@ -717,6 +849,15 @@ export async function scrapeAssociation(association: Association, ageGroups: Age
     const visitedUrls = new Set<string>();
     const pagesToVisit: string[] = [association.baseUrl];
     const baseHost = new URL(association.baseUrl).hostname;
+
+    if (isRogersHost(association.baseUrl)) {
+        const rogersCalendars = await discoverRogersTeamCalendars(association.baseUrl);
+        for (const url of rogersCalendars) {
+            if (!pagesToVisit.includes(url)) {
+                pagesToVisit.push(url);
+            }
+        }
+    }
 
     const sitemapUrls = await fetchSitemap(association.baseUrl);
     const currentSeason = getCurrentSeasonYear();
@@ -757,6 +898,7 @@ export async function scrapeAssociation(association: Association, ageGroups: Age
             const href = $(el).attr('href');
             const url = getSameHostUrl(association.baseUrl, href || '', baseHost);
             if (!url) return;
+            if (url.includes('layout_container/show_layout_tab')) return;
 
             if (linksFound < 100) {
                 linksFound++;
@@ -807,9 +949,15 @@ export async function scrapeAssociation(association: Association, ageGroups: Age
         if (!pageTitle || !getAgeGroup(pageTitle)) {
             const h2Text = $page('h2').first().text().trim();
             const hasLevelIndicators = /\b(A{1,2}|B[12]?|C|[Gg]old|[Pp]urple|[Bb]lack|[Ww]hite|[Bb]lue|[Rr]ed|[Gg]reen|[Mm]achine)\b/.test(h2Text);
-            if (hasLevelIndicators || !pageTitle) {
+            const h2AgeGroup = getAgeGroup(h2Text);
+            if (hasLevelIndicators || !pageTitle || (h2AgeGroup && !getAgeGroup(pageTitle))) {
                 pageTitle = h2Text;
             }
+        }
+
+        if (!pageTitle) {
+            const titleText = $page('title').first().text().trim();
+            if (titleText) pageTitle = titleText.split('|')[1]?.trim() || titleText;
         }
 
         const pageAgeGroup = getAgeGroup(pageTitle);
@@ -821,31 +969,34 @@ export async function scrapeAssociation(association: Association, ageGroups: Age
                 continue;
             }
 
+            let shouldAddTeam = true;
             const levelDetail = getLevelDetail(pageTitle, pageAgeGroup);
             const normalizedDetail = normalizeLevelDetailForAgeGroup(pageAgeGroup, levelDetail);
             if (shouldSkipTeam(pageAgeGroup, normalizedDetail, pageTitle)) {
                 console.log(`  Skipping aggregate page: ${pageTitle}`);
-                continue;
+                shouldAddTeam = false;
             }
             if (!url.includes('/team/') && !url.includes('/page/show/') && url.toLowerCase().includes('/schedule')) {
                 console.log(`  Skipping generic schedule page: ${url}`);
-                continue;
+                shouldAddTeam = false;
             }
-            const token = getNormalizedLevelToken(pageAgeGroup, levelDetail) ||
-                normalizedDetail ||
-                levelDetail.trim();
+            if (shouldAddTeam) {
+                const token = getNormalizedLevelToken(pageAgeGroup, levelDetail) ||
+                    normalizedDetail ||
+                    levelDetail.trim();
 
-            const calendarUrl = await findCalendarUrl(url);
-            if (calendarUrl) {
-                if (!teams.some(t => t.calendar_sync_url === calendarUrl)) {
-                    teams.push({
-                        association_name: association.name,
-                        name: pageTitle,
-                        sport_type: 'hockey',
-                        team_level: pageAgeGroup,
-                        level_detail: token,
-                        calendar_sync_url: calendarUrl
-                    });
+                const calendarUrl = await findCalendarUrl(url);
+                if (calendarUrl) {
+                    if (!teams.some(t => t.calendar_sync_url === calendarUrl)) {
+                        teams.push({
+                            association_name: association.name,
+                            name: pageTitle,
+                            sport_type: 'hockey',
+                            team_level: pageAgeGroup,
+                            level_detail: token,
+                            calendar_sync_url: calendarUrl
+                        });
+                    }
                 }
             }
         }
@@ -855,6 +1006,7 @@ export async function scrapeAssociation(association: Association, ageGroups: Age
             const href = $page(el).attr('href');
             const absUrl = getSameHostUrl(url, href || '', baseHost);
             if (!absUrl) return;
+            if (absUrl.includes('layout_container/show_layout_tab')) return;
 
             // Check for old season in URL or text
             const urlRange = extractSeasonYearRange(absUrl);
@@ -905,6 +1057,10 @@ export async function scrapeAssociation(association: Association, ageGroups: Age
                 }
             }
         });
+    }
+
+    if (associationSeedTeams[association.name]) {
+        teams.push(...associationSeedTeams[association.name]);
     }
 
     console.log(`Found ${teams.length} potential teams. Filtering for current season...`);
@@ -962,13 +1118,102 @@ export async function scrapeAssociation(association: Association, ageGroups: Age
     const filteredTeams = Array.from(teamMap.values()).filter(team => allowedAgeGroups.has(team.team_level));
     console.log(`After season and age filtering: ${filteredTeams.length} teams (removed ${teams.length - filteredTeams.length} old/filtered duplicates)`);
 
+    const resolvedTeams: ScrapedTeam[] = [];
+
     for (const team of filteredTeams) {
         console.log(`Resolving calendar for ${team.name}...`);
+        const seasonHint = extractSeasonYear(team.calendar_sync_url) || extractSeasonYear(team.name);
+        (team as any).__seasonHint = seasonHint || null;
         const resolved = await findCalendarUrl(team.calendar_sync_url);
-        if (resolved) team.calendar_sync_url = resolved;
+        if (resolved) {
+            team.calendar_sync_url = resolved;
+        } else if (!isValidCalendarUrl(team.calendar_sync_url)) {
+            console.log(`  Skipping ${team.name} — no calendar found`);
+            continue;
+        }
+        resolvedTeams.push(team);
     }
 
-    const sortedTeams = filteredTeams.sort((a, b) => {
+    const dedupedTeams = Array.from(resolvedTeams.reduce((map, team) => {
+        const token = getNormalizedLevelToken(team.team_level, team.level_detail) || team.level_detail;
+        const key = `${team.team_level}-${token}-${team.calendar_sync_url}`.toLowerCase();
+        const existing = map.get(key);
+        if (!existing || team.name.length < existing.name.length) {
+            map.set(key, team);
+        }
+        return map;
+    }, new Map<string, ScrapedTeam>()).values());
+
+    const seasonFilteredTeams = (() => {
+        const groups = new Map<string, { team: ScrapedTeam; season: number; pageId: number }[]>();
+        for (const team of dedupedTeams) {
+            const token = getNormalizedLevelToken(team.team_level, team.level_detail) || team.level_detail;
+            const key = `${team.team_level}-${token}`.toLowerCase();
+            if (!groups.has(key)) groups.set(key, []);
+            groups.get(key)!.push({
+                team,
+                season: (team as any).__seasonHint ||
+                    extractSeasonYear(team.calendar_sync_url) ||
+                    extractSeasonYear(team.name) || 0,
+                pageId: extractPageId(team.calendar_sync_url) || 0
+            });
+        }
+
+        const filtered: ScrapedTeam[] = [];
+        for (const entries of groups.values()) {
+            const maxSeason = Math.max(...entries.map(e => e.season));
+            if (maxSeason > 0) {
+                entries.filter(e => e.season === maxSeason).forEach(e => filtered.push(e.team));
+            } else {
+                // No season info; keep all so color variants remain
+                entries.forEach(e => filtered.push(e.team));
+            }
+        }
+        return filtered;
+    })();
+
+    // Prefer webcal for the same calendar target, but keep distinct calendars (e.g., color splits)
+    const canonicalTeams = Array.from(seasonFilteredTeams.reduce((map, team) => {
+        const token = getNormalizedLevelToken(team.team_level, team.level_detail) || team.level_detail;
+        const tokenKey = `${team.team_level}-${token}`.toLowerCase();
+        if (!map.has(tokenKey)) map.set(tokenKey, new Map<string, ScrapedTeam>());
+
+        const byUrl = map.get(tokenKey)!;
+        const urlKey = team.calendar_sync_url.toLowerCase();
+        const existing = byUrl.get(urlKey);
+
+        if (!existing) {
+            // If an existing non-webcal entry shares the base page id, replace with webcal
+            const pageId = extractPageId(team.calendar_sync_url) || 0;
+            const samePage = Array.from(byUrl.values()).find(t => (extractPageId(t.calendar_sync_url) || 0) === pageId);
+            if (samePage && team.calendar_sync_url.startsWith('webcal://') && !samePage.calendar_sync_url.startsWith('webcal://')) {
+                byUrl.delete(samePage.calendar_sync_url.toLowerCase());
+                byUrl.set(urlKey, team);
+            } else if (!samePage) {
+                byUrl.set(urlKey, team);
+            }
+        } else {
+            const existingPageId = extractPageId(existing.calendar_sync_url) || 0;
+            const currentPageId = extractPageId(team.calendar_sync_url) || 0;
+            if (team.calendar_sync_url.startsWith('webcal://') && !existing.calendar_sync_url.startsWith('webcal://')) {
+                byUrl.set(urlKey, team);
+            } else if (currentPageId > existingPageId) {
+                byUrl.set(urlKey, team);
+            } else if (currentPageId === existingPageId && team.name.length < existing.name.length) {
+                byUrl.set(urlKey, team);
+            }
+        }
+        return map;
+    }, new Map<string, Map<string, ScrapedTeam>>())).flatMap(m => Array.from(m[1].values()));
+
+    if (associationSeedTeams[association.name]) {
+        for (const seed of associationSeedTeams[association.name]) {
+            const exists = canonicalTeams.some(t => t.calendar_sync_url === seed.calendar_sync_url);
+            if (!exists) canonicalTeams.push(seed);
+        }
+    }
+
+    const sortedTeams = canonicalTeams.sort((a, b) => {
         const ageA = getAgePriority(a.team_level);
         const ageB = getAgePriority(b.team_level);
         if (ageA !== ageB) return ageA - ageB;

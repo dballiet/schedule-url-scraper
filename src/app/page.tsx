@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { AssociationSelector } from '@/components/AssociationSelector';
 import { AgeGroupSelector } from '@/components/AgeGroupSelector';
 import { ScrapeProgress } from '@/components/ScrapeProgress';
+import { CsvResultsPreview } from '@/components/CsvResultsPreview';
 import { AGE_GROUPS, AgeGroup } from '@/lib/types';
 import { Play, Upload, Download, FileCheck } from 'lucide-react';
 
@@ -306,6 +307,10 @@ export default function Home() {
               )}
             </div>
           </div>
+        )}
+
+        {csvData && (
+          <CsvResultsPreview csvText={csvData} />
         )}
       </div>
     </main>
