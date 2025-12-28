@@ -34,11 +34,14 @@ export async function scrapeBatch(
             )
         );
 
-    const total = toScrape.length;
-    console.log(`Starting batch scrape of ${total} associations...`);
+    // Shuffle associations to avoid predictable access patterns
+    const shuffled = [...toScrape].sort(() => Math.random() - 0.5);
 
-    for (let i = 0; i < toScrape.length; i++) {
-        const association = toScrape[i];
+    const total = shuffled.length;
+    console.log(`Starting batch scrape of ${total} associations (shuffled order)...`);
+
+    for (let i = 0; i < shuffled.length; i++) {
+        const association = shuffled[i];
         const current = i + 1;
 
         try {
@@ -68,9 +71,10 @@ export async function scrapeBatch(
             console.log(`  Total teams so far: ${allTeams.length}`);
             console.log(`  Elapsed: ${Math.floor(elapsedMs / 1000)}s | Est. remaining: ${Math.floor(estimatedRemainingMs / 1000)}s`);
 
-            // Delay before next association (except for last one)
+            // Random delay between associations (3-5 seconds)
             if (current < total) {
-                await new Promise(resolve => setTimeout(resolve, delayMs));
+                const delay = 3000 + Math.random() * 2000;
+                await new Promise(resolve => setTimeout(resolve, delay));
             }
         } catch (error) {
             console.error(`Error scraping ${association.name}:`, error);

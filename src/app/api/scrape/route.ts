@@ -46,11 +46,14 @@ export async function POST(req: NextRequest) {
                     ? ASSOCIATIONS
                     : associations.map((name: string) => ASSOCIATIONS.find(a => a.name === name)).filter(Boolean);
 
-                const total = toScrape.length;
+                // Shuffle associations to avoid predictable access patterns
+                const shuffled = [...toScrape].sort(() => Math.random() - 0.5);
+
+                const total = shuffled.length;
                 send({ type: 'start', total });
 
-                for (let i = 0; i < toScrape.length; i++) {
-                    const association = toScrape[i];
+                for (let i = 0; i < shuffled.length; i++) {
+                    const association = shuffled[i];
                     const current = i + 1;
 
                     send({ type: 'status', message: `Scraping ${association.name}...` });
@@ -74,9 +77,9 @@ export async function POST(req: NextRequest) {
                             estimatedRemainingMs
                         });
 
-                        // Small delay between associations
+                        // Random delay between associations (3-5 seconds)
                         if (current < total) {
-                            await new Promise(resolve => setTimeout(resolve, 2000));
+                            await new Promise(resolve => setTimeout(resolve, 3000 + Math.random() * 2000));
                         }
                     } catch (error) {
                         console.error(`Error scraping ${association.name}:`, error);

@@ -118,6 +118,13 @@ const TEST_CASES: TestCase[] = [
         teamName: 'Squirt B2 Gold',
         expectedUrl: 'webcal://www.plsha.com/ical_feed?tags=5220340',
         platform: 'SportsEngine'
+    },
+    // Mankato (SportsEngine) - tests empty feed filter
+    {
+        association: 'Mankato Area Hockey Association',
+        teamName: 'Peewee C White',
+        expectedUrl: 'webcal://www.mankatohockey.com/ical_feed?tags=9178224',
+        platform: 'SportsEngine'
     }
 ];
 

@@ -4,11 +4,12 @@ import puppeteer from 'puppeteer';
 import { AGE_GROUPS, AgeGroup, Association, ScrapedTeam } from './types';
 
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36';
-const MIN_HOST_GAP_MS = 400;
-const HOST_JITTER_MS = 200;
+const MIN_HOST_GAP_MS = 800;
+const HOST_JITTER_MS = 400;
 const MAX_FETCH_RETRIES = 2;
 const htmlCache = new Map<string, Promise<string | null>>();
 const hostLastRequest = new Map<string, number>();
+const hostErrorCount = new Map<string, number>();
 
 function sleep(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -18,7 +19,10 @@ async function applyHostDelay(url: string) {
     try {
         const host = new URL(url).hostname;
         const last = hostLastRequest.get(host) || 0;
-        const gap = MIN_HOST_GAP_MS + Math.random() * HOST_JITTER_MS;
+        const errorCount = hostErrorCount.get(host) || 0;
+        // Progressive throttling: increase delay based on recent errors
+        const throttleMultiplier = Math.pow(1.5, errorCount);
+        const gap = (MIN_HOST_GAP_MS + Math.random() * HOST_JITTER_MS) * throttleMultiplier;
         const waitFor = Math.max(0, last + gap - Date.now());
         if (waitFor > 0) await sleep(waitFor);
         hostLastRequest.set(host, Date.now());
@@ -40,12 +44,27 @@ async function fetchHtml(url: string): Promise<string | null> {
                     headers: { 'User-Agent': USER_AGENT },
                     timeout: 10000,
                 });
+                // Reset error count on successful request
+                try {
+                    const host = new URL(url).hostname;
+                    hostErrorCount.set(host, 0);
+                } catch { }
                 return response.data;
             } catch (error) {
                 const isAxios = axios.isAxiosError(error);
                 const status = isAxios ? error.response?.status : null;
                 const retryable = status === 429 || status === 503 || status === 504;
                 const shouldRetry = retryable && attempt < MAX_FETCH_RETRIES;
+
+                // Track rate limit errors for progressive throttling
+                if (status === 429 || status === 503) {
+                    try {
+                        const host = new URL(url).hostname;
+                        const currentErrors = hostErrorCount.get(host) || 0;
+                        hostErrorCount.set(host, currentErrors + 1);
+                        console.warn(`Rate limited by ${host} (error count: ${currentErrors + 1}), increasing delay...`);
+                    } catch { }
+                }
 
                 if (!shouldRetry) {
                     if (isAxios) {
@@ -66,6 +85,31 @@ async function fetchHtml(url: string): Promise<string | null> {
 
     htmlCache.set(url, fetchPromise);
     return fetchPromise;
+}
+
+async function fetchIcalContent(url: string): Promise<string | null> {
+    // Convert webcal:// to https:// for fetching
+    const fetchUrl = url.replace(/^webcal:\/\//, 'https://');
+    try {
+        await applyHostDelay(fetchUrl);
+        const response = await axios.get(fetchUrl, {
+            headers: { 'User-Agent': USER_AGENT },
+            timeout: 10000,
+        });
+        return response.data;
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            console.error(`Failed to fetch iCal ${url}: ${error.message}`);
+        }
+        return null;
+    }
+}
+
+async function getIcalEventCount(url: string): Promise<number> {
+    const content = await fetchIcalContent(url);
+    if (!content) return -1; // Error fetching
+    const matches = content.match(/BEGIN:VEVENT/g);
+    return matches ? matches.length : 0;
 }
 
 function normalizeUrl(baseUrl: string, href: string): string {
@@ -833,6 +877,12 @@ const associationSeedTeams: Record<string, ScrapedTeam[]> = {
     'Rogers Youth Hockey Association': [
         { association_name: 'Rogers Youth Hockey Association', name: 'Squirt B2 Blue', sport_type: 'hockey', team_level: 'Squirts', level_detail: 'B2', calendar_sync_url: 'https://www.rogershockey.com/team/162579/calendar' },
         { association_name: 'Rogers Youth Hockey Association', name: 'Squirt B1 Blue', sport_type: 'hockey', team_level: 'Squirts', level_detail: 'B1', calendar_sync_url: 'https://www.rogershockey.com/team/162577/calendar' }
+    ],
+    // Eastview co-ops with AVB Hockey for some Bantam teams - these are linked on Eastview's site but hosted on avbhockey.com
+    'Eastview Hockey Association': [
+        { association_name: 'Eastview Hockey Association', name: 'Bantam A', sport_type: 'hockey', team_level: 'Bantams', level_detail: 'A', calendar_sync_url: 'webcal://www.avbhockey.com/ical_feed?tags=9095170' },
+        { association_name: 'Eastview Hockey Association', name: 'Bantam B1 - White', sport_type: 'hockey', team_level: 'Bantams', level_detail: 'B1', calendar_sync_url: 'webcal://www.avbhockey.com/ical_feed?tags=9095171' },
+        { association_name: 'Eastview Hockey Association', name: 'Bantam B2 - White', sport_type: 'hockey', team_level: 'Bantams', level_detail: 'B2', calendar_sync_url: 'webcal://www.avbhockey.com/ical_feed?tags=9095172' }
     ]
 };
 
@@ -1134,7 +1184,23 @@ export async function scrapeAssociation(association: Association, ageGroups: Age
         resolvedTeams.push(team);
     }
 
-    const dedupedTeams = Array.from(resolvedTeams.reduce((map, team) => {
+    // Filter out teams with empty iCal feeds (old/inactive seasons)
+    console.log('Checking for empty iCal feeds...');
+    const activeTeams: ScrapedTeam[] = [];
+    for (const team of resolvedTeams) {
+        if (team.calendar_sync_url.includes('ical_feed') ||
+            team.calendar_sync_url.startsWith('webcal://')) {
+            const eventCount = await getIcalEventCount(team.calendar_sync_url);
+            if (eventCount === 0) {
+                console.log(`  Filtering empty calendar: ${team.name}`);
+                continue;
+            }
+        }
+        activeTeams.push(team);
+    }
+    console.log(`After empty feed filtering: ${activeTeams.length} teams (removed ${resolvedTeams.length - activeTeams.length} empty calendars)`);
+
+    const dedupedTeams = Array.from(activeTeams.reduce((map, team) => {
         const token = getNormalizedLevelToken(team.team_level, team.level_detail) || team.level_detail;
         const key = `${team.team_level}-${token}-${team.calendar_sync_url}`.toLowerCase();
         const existing = map.get(key);
