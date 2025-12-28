@@ -516,6 +516,22 @@ function isValidCalendarUrl(url: string): boolean {
     if (url.includes('single_event') || url.includes('event_id=')) {
         return false;
     }
+
+    const lowerUrl = url.toLowerCase();
+
+    // Skip bare /schedule URLs without team context - these are aggregate association schedules
+    // Example: owatonnahockey.com/schedule is an association-wide schedule, not a team calendar
+    if ((lowerUrl.endsWith('/schedule') || lowerUrl.match(/\/schedule[?#]/)) &&
+        !lowerUrl.includes('/team/')) {
+        return false;
+    }
+
+    // Skip /events/calendar/ URLs - these are SportsEngine event pages, not team calendars
+    // Example: sfyha.org/events/calendar/120773
+    if (lowerUrl.includes('/events/calendar/') || lowerUrl.includes('/events/')) {
+        return false;
+    }
+
     // Must be webcal:// or contain calendar/schedule/ical paths
     return url.startsWith('webcal://') ||
         url.includes('/ical_feed') ||
