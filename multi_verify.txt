@@ -1,0 +1,434 @@
+﻿=== Multi-Association Verification ===
+Testing that single_event fix works universally...
+
+
+Testing Mahtomedi Youth Hockey Association...
+Scraping Mahtomedi Youth Hockey Association...
+Checking sitemap: https://mahtomedihockey.pucksystems.com/sitemap.xml
+Found 83 relevant URLs in sitemap.
+Filtered sitemap: 73 / 83 URLs kept (removed old seasons)
+Scanning page (1/500): https://mahtomedihockey.pucksystems.com
+Scanning page (2/500): https://mahtomedihockey.pucksystems.com/page/show/44039-teams
+Scanning page (3/500): https://mahtomedihockey.pucksystems.com/page/show/44198-bantam
+  Skipping aggregate page: Bantam
+Scanning page (4/500): https://mahtomedihockey.pucksystems.com/page/show/44199-peewee
+  Skipping aggregate page: PeeWee
+Scanning page (5/500): https://mahtomedihockey.pucksystems.com/page/show/44200-squirt
+Scanning page (6/500): https://mahtomedihockey.pucksystems.com/page/show/69497-team-picture-information
+Scanning page (7/500): https://mahtomedihockey.pucksystems.com/page/show/219070-team-managers-corner
+Scanning page (8/500): https://mahtomedihockey.pucksystems.com/page/show/377319-mite-8u-6u-program-information
+Scanning page (9/500): https://mahtomedihockey.pucksystems.com/page/show/2150003-mahtomedi-youth-hockey-association-by-laws
+Scanning page (10/500): https://mahtomedihockey.pucksystems.com/page/show/2163743-mite-and-6u-8u-coordinators-corner
+Scanning page (11/500): https://mahtomedihockey.pucksystems.com/page/show/2196089-mini-mites
+Scanning page (12/500): https://mahtomedihockey.pucksystems.com/page/show/2196259-mite-4
+Scanning page (13/500): https://mahtomedihockey.pucksystems.com/page/show/2199160-mite-2
+Scanning page (14/500): https://mahtomedihockey.pucksystems.com/page/show/2204461-mite-1
+Scanning page (15/500): https://mahtomedihockey.pucksystems.com/page/show/8237097-mite-3
+Scanning page (16/500): https://mahtomedihockey.pucksystems.com/page/show/8730742-squirt-a-myha-2024-25-
+Scanning page (17/500): https://mahtomedihockey.pucksystems.com/page/show/8730744-squirt-b1-myha-2024-25-
+Scanning page (18/500): https://mahtomedihockey.pucksystems.com/page/show/8730745-squirt-b2-myha-2024-25-
+Scanning page (19/500): https://mahtomedihockey.pucksystems.com/page/show/8730746-squirt-b1-gold-myha-2024-25-
+Scanning page (20/500): https://mahtomedihockey.pucksystems.com/page/show/8730748-squirt-c-myha-2024-25-
+Scanning page (21/500): https://mahtomedihockey.pucksystems.com/page/show/8730907-peewee-aa-myha-2024-25-
+Scanning page (22/500): https://mahtomedihockey.pucksystems.com/page/show/8730908-peewee-b1-myha-2024-25-
+Scanning page (23/500): https://mahtomedihockey.pucksystems.com/page/show/8730964-peewee-b2-myha-2024-25-
+Scanning page (24/500): https://mahtomedihockey.pucksystems.com/page/show/8730967-peewee-c-myha-2024-25-
+Scanning page (25/500): https://mahtomedihockey.pucksystems.com/page/show/8778564-mini-mites-all-myha-2024-25-
+Scanning page (26/500): https://mahtomedihockey.pucksystems.com/page/show/8778565-mite-1-all-myha-2024-25-
+Scanning page (27/500): https://mahtomedihockey.pucksystems.com/page/show/8778567-mite-2-all-myha-2024-25-
+Scanning page (28/500): https://mahtomedihockey.pucksystems.com/page/show/8793228-mite-all
+Scanning page (29/500): https://mahtomedihockey.pucksystems.com/page/show/8793231-mite-all-myha-2024-25-
+Scanning page (30/500): https://mahtomedihockey.pucksystems.com/page/show/8818660-mite-1-blue-myha-2024-25-
+Scanning page (31/500): https://mahtomedihockey.pucksystems.com/page/show/8818661-mite-1-white-myha-2024-25-
+Scanning page (32/500): https://mahtomedihockey.pucksystems.com/page/show/9168686-bantam-aa-myha-2025-26-
+Scanning page (33/500): https://mahtomedihockey.pucksystems.com/page/show/9177784-bantam-b1-myha-2025-26-
+Scanning page (34/500): https://mahtomedihockey.pucksystems.com/page/show/9177786-bantam-b2-myha-2025-26-
+Scanning page (35/500): https://mahtomedihockey.pucksystems.com/page/show/9177791-bantam-c-myha-2025-26-
+Scanning page (36/500): https://mahtomedihockey.pucksystems.com/page/show/9177811-peewee-aa-myha-2025-26-
+Scanning page (37/500): https://mahtomedihockey.pucksystems.com/page/show/9177813-peewee-b1-myha-2025-26-
+Scanning page (38/500): https://mahtomedihockey.pucksystems.com/page/show/9177815-peewee-b2-myha-2025-26-
+Scanning page (39/500): https://mahtomedihockey.pucksystems.com/page/show/9177816-peewee-c-myha-2025-26-
+Scanning page (40/500): https://mahtomedihockey.pucksystems.com/page/show/9177825-squirt-a-myha-2025-26-
+Scanning page (41/500): https://mahtomedihockey.pucksystems.com/page/show/9177826-squirt-b1-myha-2025-26-
+Scanning page (42/500): https://mahtomedihockey.pucksystems.com/page/show/9177829-squirt-b2-myha-2025-26-
+Scanning page (43/500): https://mahtomedihockey.pucksystems.com/page/show/9177831-squirt-c-myha-2025-26-
+Scanning page (44/500): https://mahtomedihockey.pucksystems.com/page/show/9263726-mite-all-myha-2025-26-
+Scanning page (45/500): https://mahtomedihockey.pucksystems.com/page/show/9263727-mite-4-myha-2025-26-
+Scanning page (46/500): https://mahtomedihockey.pucksystems.com/page/show/9263731-mite-1-all-myha-2025-26-
+Scanning page (47/500): https://mahtomedihockey.pucksystems.com/page/show/9263732-mite-1-blue-myha-2025-26-
+Scanning page (48/500): https://mahtomedihockey.pucksystems.com/page/show/9263733-mite-1-white-myha-2025-26-
+Scanning page (49/500): https://mahtomedihockey.pucksystems.com/page/show/9263734-mite-3-all-myha-2025-26-
+Scanning page (50/500): https://mahtomedihockey.pucksystems.com/page/show/9263738-mite-2-all-myha-2025-26-
+Scanning page (51/500): https://mahtomedihockey.pucksystems.com/page/show/9263740-mite-2-white-myha-2025-26-
+Scanning page (52/500): https://mahtomedihockey.pucksystems.com/page/show/9263745-mite-2-blue-myha-2025-26-
+Scanning page (53/500): https://mahtomedihockey.pucksystems.com/page/show/9263759-mini-mites-all-myha-2025-26-
+Scanning page (54/500): https://mahtomedihockey.pucksystems.com/page/show/9263762-mini-mites-blue-myha-2025-26-
+Scanning page (55/500): https://mahtomedihockey.pucksystems.com/page/show/9263765-mini-mites-white-myha-2025-26-
+Scanning page (56/500): https://mahtomedihockey.pucksystems.com/page/show/9263769-mini-mites-silver-myha-2025-26-
+Scanning page (57/500): https://mahtomedihockey.pucksystems.com/page/show/9263781-mini-mites-gold-myha-2025-26-
+Scanning page (58/500): https://mahtomedihockey.pucksystems.com/page/show/9281423-mite-3-white-myha-2025-26-
+Scanning page (59/500): https://mahtomedihockey.pucksystems.com/page/show/9281435-mite-3-blue-myha-2025-26-
+Scanning page (60/500): https://mahtomedihockey.pucksystems.com/
+Scanning page (61/500): https://mahtomedihockey.pucksystems.com/page/show/50406-player-and-coach-registration-and-information
+Scanning page (62/500): http://mahtomedihockey.pucksystems.com/page/show/44195-coaches-corner
+Found 24 potential teams. Filtering for current season...
+After season and age filtering: 8 teams (removed 16 old/filtered duplicates)
+Resolving calendar for PeeWee AA...
+Resolving calendar for PeeWee B1...
+Resolving calendar for PeeWee B2...
+Resolving calendar for PeeWee C...
+Resolving calendar for Bantam AA...
+Resolving calendar for Bantam B1...
+Resolving calendar for Bantam B2...
+Resolving calendar for Bantam C...
+Checking for empty iCal feeds...
+After empty feed filtering: 8 teams (removed 0 empty calendars)
+  Found 8 Bantam/Peewee teams
+  Γ£ô No issues detected
+  Sample URL: webcal://mahtomedihockey.pucksystems.com/ical_feed?tags=9168686
+
+Testing Buffalo Hockey Association...
+Scraping Buffalo Hockey Association...
+Checking sitemap: https://buffalo.pucksystems2.com/sitemap.xml
+Found 68 relevant URLs in sitemap.
+Filtered sitemap: 51 / 68 URLs kept (removed old seasons)
+Scanning page (1/500): https://buffalo.pucksystems2.com
+Scanning page (2/500): https://buffalo.pucksystems2.com/page/show/7046-teams
+Scanning page (3/500): https://buffalo.pucksystems2.com/page/show/13583-bantam-teams
+  Skipping aggregate page: Bantam Teams
+Scanning page (4/500): https://buffalo.pucksystems2.com/page/show/13590-peewee-teams
+  Skipping aggregate page: Peewee Teams
+Scanning page (5/500): https://buffalo.pucksystems2.com/page/show/15011-squirt-teams
+Scanning page (6/500): https://buffalo.pucksystems2.com/page/show/15071-high-school-teams
+Scanning page (7/500): https://buffalo.pucksystems2.com/page/show/388123-mite-mini-mite-and-8u-team-pages
+Scanning page (8/500): https://buffalo.pucksystems2.com/page/show/1050848-safe-sport-team-before-ice
+Scanning page (9/500): https://buffalo.pucksystems2.com/page/show/8263148-squirt-3v3-league
+Scanning page (10/500): https://buffalo.pucksystems2.com/page/show/8589988-bantam-b1-2024-25-
+Scanning page (11/500): https://buffalo.pucksystems2.com/page/show/8589989-bantam-b2-2024-25-
+Scanning page (12/500): https://buffalo.pucksystems2.com/page/show/8603098-squirt-a-2024-25-
+Scanning page (13/500): https://buffalo.pucksystems2.com/page/show/8603099-squirt-b1-2024-25-
+Scanning page (14/500): https://buffalo.pucksystems2.com/page/show/8603100-squirt-b2-2024-25-
+Scanning page (15/500): https://buffalo.pucksystems2.com/page/show/8603102-squirt-c-white-2024-25-
+Scanning page (16/500): https://buffalo.pucksystems2.com/page/show/8603145-peewee-aa-2024-25-
+Scanning page (17/500): https://buffalo.pucksystems2.com/page/show/8603147-peewee-b1-2024-25-
+Scanning page (18/500): https://buffalo.pucksystems2.com/page/show/8603148-peewee-b2-2024-25-
+Scanning page (19/500): https://buffalo.pucksystems2.com/page/show/8603149-peewee-c-2024-25-
+Scanning page (20/500): https://buffalo.pucksystems2.com/page/show/8603183-mite-black-2024-25-
+Scanning page (21/500): https://buffalo.pucksystems2.com/page/show/8603198-mite-gray-2024-25-
+Scanning page (22/500): https://buffalo.pucksystems2.com/page/show/8603199-mite-purple-2024-25-
+Scanning page (23/500): https://buffalo.pucksystems2.com/page/show/8603200-mite-white-2024-25-
+Scanning page (24/500): https://buffalo.pucksystems2.com/page/show/8603284-mite-open-hockey-2024-25-
+Scanning page (25/500): https://buffalo.pucksystems2.com/page/show/9135400-bantam-aa-2025-26-
+Scanning page (26/500): https://buffalo.pucksystems2.com/page/show/9135404-bantam-b1-2025-26-
+Scanning page (27/500): https://buffalo.pucksystems2.com/page/show/9135406-bantam-b2-2025-26-
+Scanning page (28/500): https://buffalo.pucksystems2.com/page/show/9147096-10u-b-2025-26-
+Scanning page (29/500): https://buffalo.pucksystems2.com/page/show/9147097-squirt-a-2025-26-
+Scanning page (30/500): https://buffalo.pucksystems2.com/page/show/9147098-squirt-b1-2025-26-
+Scanning page (31/500): https://buffalo.pucksystems2.com/page/show/9147101-squirt-c-white-2025-26-
+Scanning page (32/500): https://buffalo.pucksystems2.com/page/show/9168139-10u-a-2025-26-
+Scanning page (33/500): https://buffalo.pucksystems2.com/page/show/9168157-12ua-2025-26-
+Scanning page (34/500): https://buffalo.pucksystems2.com/page/show/9168158-12ub-2025-26-
+Scanning page (35/500): https://buffalo.pucksystems2.com/page/show/9168252-15ua-2025-26-
+Scanning page (36/500): https://buffalo.pucksystems2.com/page/show/9168254-15ub-2025-26-
+Scanning page (37/500): https://buffalo.pucksystems2.com/page/show/9168283-peewee-aa-2025-26-
+Scanning page (38/500): https://buffalo.pucksystems2.com/page/show/9168284-peewee-b1-2025-26-
+Scanning page (39/500): https://buffalo.pucksystems2.com/page/show/9168285-peewee-b2-2025-26-
+Scanning page (40/500): https://buffalo.pucksystems2.com/page/show/9168286-peewee-c-2025-26-
+Scanning page (41/500): https://buffalo.pucksystems2.com/page/show/9168295-squirt-b2-2025-26-
+Scanning page (42/500): https://buffalo.pucksystems2.com/page/show/9230816-squirt-c-purple-2025-2026-
+Scanning page (43/500): https://buffalo.pucksystems2.com/page/show/9246457-mite-black-2025-26-
+Scanning page (44/500): https://buffalo.pucksystems2.com/page/show/9246458-mite-gray-2025-26-
+Scanning page (45/500): https://buffalo.pucksystems2.com/page/show/9246459-mite-purple-2025-26-
+Scanning page (46/500): https://buffalo.pucksystems2.com/page/show/9246460-mite-white-2025-26-
+Found 26 potential teams. Filtering for current season...
+After season and age filtering: 7 teams (removed 19 old/filtered duplicates)
+Resolving calendar for Bantam B1...
+Resolving calendar for Bantam B2...
+node.exe : Failed to fetch http://buffalo.pucksyst
+ems2.com/page/show/9135404-bantam-b1-2025-26-: 
+socket hang up
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Fail 
+   ed to fetch... socket hang up:String) [], Rem  
+  oteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Resolving calendar for PeeWee AA...
+Resolving calendar for PeeWee B1...
+Resolving calendar for PeeWee B2...
+Resolving calendar for PeeWee C...
+Resolving calendar for Bantam AA...
+Checking for empty iCal feeds...
+After empty feed filtering: 7 teams (removed 0 empty calendars)
+  Found 7 Bantam/Peewee teams
+  Γ£ô No issues detected
+  Sample URL: webcal://buffalo.pucksystems2.com/ical_feed?tags=9135400
+
+Testing Eagan Hockey Association...
+Scraping Eagan Hockey Association...
+Checking sitemap: https://www.eaganhockey.com/sitemap.xml
+Found 204 relevant URLs in sitemap.
+Filtered sitemap: 59 / 204 URLs kept (removed old seasons)
+Scanning page (1/500): https://www.eaganhockey.com
+Scanning page (2/500): https://www.eaganhockey.com/page/show/537009-team-information
+Scanning page (3/500): https://www.eaganhockey.com/bantam
+  Skipping aggregate page: Bantam
+Scanning page (4/500): https://www.eaganhockey.com/peewees
+  Skipping aggregate page: Peewee
+Scanning page (5/500): https://www.eaganhockey.com/page/show/646976-bantam
+  Skipping aggregate page: Bantam
+Scanning page (6/500): https://www.eaganhockey.com/page/show/646989-peewee
+  Skipping aggregate page: Peewee
+Scanning page (7/500): https://www.eaganhockey.com/page/show/647004-squirt
+Scanning page (8/500): https://www.eaganhockey.com/page/show/647017-mite-program
+Scanning page (9/500): https://www.eaganhockey.com/page/show/2194847-mini-mite
+Scanning page (10/500): https://www.eaganhockey.com/page/show/2194849-mite
+Scanning page (11/500): https://www.eaganhockey.com/page/show/3405842-fall-mite-4on4-league
+Scanning page (12/500): https://www.eaganhockey.com/page/show/4620764-termites
+Scanning page (13/500): https://www.eaganhockey.com/page/show/5827019-bantam-checking-clinic
+  Skipping non-team page: Bantam Checking Clinic
+Scanning page (14/500): https://www.eaganhockey.com/page/show/8209374-peewee-contact-clinic
+  Skipping non-team page: PeeWee Contact Clinic
+Scanning page (15/500): https://www.eaganhockey.com/page/show/8557092-termites-2024-2025-
+Scanning page (16/500): https://www.eaganhockey.com/page/show/8643195-peewee-b1-2024-2025-
+Scanning page (17/500): https://www.eaganhockey.com/page/show/8643196-peewee-b2-blue-2024-2025-
+Scanning page (18/500): https://www.eaganhockey.com/page/show/8647986-squirt-a-2024-2025-
+Scanning page (19/500): https://www.eaganhockey.com/page/show/8648023-squirt-b1-blue-2024-2025-
+Scanning page (20/500): https://www.eaganhockey.com/page/show/8648024-squirt-b2-blue-2024-2025-
+Scanning page (21/500): https://www.eaganhockey.com/page/show/8648025-squirt-b2-green-2024-2025-
+Scanning page (22/500): https://www.eaganhockey.com/page/show/8648026-squirt-c-green-2024-2025-
+Scanning page (23/500): https://www.eaganhockey.com/page/show/8648028-squirt-c-blue-2024-2025-
+Scanning page (24/500): https://www.eaganhockey.com/page/show/8648029-peewee-b2-green-2024-2025-
+Scanning page (25/500): https://www.eaganhockey.com/page/show/8648030-peewee-c-2024-2025-
+Scanning page (26/500): https://www.eaganhockey.com/page/show/8656617-squirt-contact-clinic
+Scanning page (27/500): https://www.eaganhockey.com/page/show/8766607-squirt-b1-green-2024-25-
+Scanning page (28/500): https://www.eaganhockey.com/page/show/8766610-squirt-b2-white-2024-2025-
+Scanning page (29/500): https://www.eaganhockey.com/page/show/9088669-termites-2025-2026-
+Scanning page (30/500): https://www.eaganhockey.com/page/show/9197026-squirt-a-2025-2026-
+Scanning page (31/500): https://www.eaganhockey.com/page/show/9197027-squirt-b1-blue-2025-2026-
+Scanning page (32/500): https://www.eaganhockey.com/page/show/9197030-squirt-b1-green-2025-2026-
+Scanning page (33/500): https://www.eaganhockey.com/page/show/9197031-squirt-b2-blue-2025-2026-
+Scanning page (34/500): https://www.eaganhockey.com/page/show/9197033-squirt-b2-green-2025-2026-
+Scanning page (35/500): https://www.eaganhockey.com/page/show/9197035-squirt-b2-white-2025-2026-
+Scanning page (36/500): https://www.eaganhockey.com/page/show/9197041-squirt-c-blue-2025-2026-
+Scanning page (37/500): https://www.eaganhockey.com/page/show/9197046-squirt-c-green-2025-2026-
+Scanning page (38/500): https://www.eaganhockey.com/page/show/9229008-peewee-a-2025-2026-
+Scanning page (39/500): https://www.eaganhockey.com/page/show/9229009-peewee-b1-2025-2026-
+Scanning page (40/500): https://www.eaganhockey.com/page/show/9229010-peewee-b2-blue-2025-2026-
+Scanning page (41/500): https://www.eaganhockey.com/page/show/9229011-peewee-b2-green-2025-2026-
+Scanning page (42/500): https://www.eaganhockey.com/page/show/9229012-peewee-c-2025-2026-
+Scanning page (43/500): https://www.eaganhockey.com/page/show/9229018-bantam-aa-2025-2026-
+Scanning page (44/500): https://www.eaganhockey.com/page/show/9229019-bantam-b1-2025-2026-
+Scanning page (45/500): https://www.eaganhockey.com/page/show/9229021-bantam-b2-2025-2026-
+Scanning page (46/500): https://www.eaganhockey.com/page/show/9229023-bantam-c-2025-2026-
+Scanning page (47/500): http://www.eaganhockey.com/teams
+Scanning page (48/500): http://www.eaganhockey.com/page/show/5765231-resources
+Scanning page (49/500): http://www.eaganhockey.com/page/show/607142-volunteering-dibs-
+Found 26 potential teams. Filtering for current season...
+After season and age filtering: 9 teams (removed 17 old/filtered duplicates)
+Resolving calendar for Peewee B1...
+Resolving calendar for Peewee B2-Blue...
+Resolving calendar for Peewee B2 - Green...
+Resolving calendar for Peewee C...
+Resolving calendar for Peewee A...
+Resolving calendar for Bantam AA...
+Resolving calendar for Bantam B1...
+Resolving calendar for Bantam B2...
+Resolving calendar for Bantam C...
+Checking for empty iCal feeds...
+After empty feed filtering: 9 teams (removed 0 empty calendars)
+  Found 9 Bantam/Peewee teams
+  Γ£ô No issues detected
+  Sample URL: webcal://www.eaganhockey.com/ical_feed?tags=9229018
+
+Testing Eastview Hockey Association...
+Scraping Eastview Hockey Association...
+Checking sitemap: https://www.eastviewhockey.net/sitemap.xml
+Found 35 relevant URLs in sitemap.
+Filtered sitemap: 35 / 35 URLs kept (removed old seasons)
+Scanning page (1/500): https://www.eastviewhockey.net
+Scanning page (2/500): https://www.eastviewhockey.net/page/show/2215931-tryout-and-team-placement-policy
+Scanning page (3/500): https://www.eastviewhockey.net/page/show/2217754-travel-policy
+Scanning page (4/500): https://www.eastviewhockey.net/page/show/5459726-team-managers
+Scanning page (5/500): https://www.eastviewhockey.net/page/show/5881988-travel-teams-jerseys-and-socks
+Scanning page (6/500): https://www.eastviewhockey.net/page/show/8727529-teams-2024-2025-
+Scanning page (7/500): https://www.eastviewhockey.net/page/show/9097804-teams-2025-2026-
+Scanning page (8/500): https://www.eastviewhockey.net/page/show/9097806-mites
+Scanning page (9/500): https://www.eastviewhockey.net/page/show/9097808-mite-1
+Scanning page (10/500): https://www.eastviewhockey.net/page/show/9097809-mite-2
+Scanning page (11/500): https://www.eastviewhockey.net/page/show/9097810-mite-3-boys
+Scanning page (12/500): https://www.eastviewhockey.net/page/show/9097811-mite-4-girls-intermediate
+Scanning page (13/500): https://www.eastviewhockey.net/page/show/9097812-mite-3-girls
+Scanning page (14/500): https://www.eastviewhockey.net/page/show/9097813-mite-4-boys-intermediate
+Scanning page (15/500): https://www.eastviewhockey.net/page/show/9097814-mite-4-boys-advanced
+Scanning page (16/500): https://www.eastviewhockey.net/page/show/9097815-mite-4-girls-advanced
+Scanning page (17/500): https://www.eastviewhockey.net/page/show/9097816-traveling-teams
+Scanning page (18/500): https://www.eastviewhockey.net/page/show/9097818-bantam-b1-black
+Scanning page (19/500): https://www.eastviewhockey.net/page/show/9097820-bantam-b2-black
+Scanning page (20/500): https://www.eastviewhockey.net/page/show/9097822-bantam-c
+Scanning page (21/500): https://www.eastviewhockey.net/page/show/9097824-peewee-b1
+Scanning page (22/500): https://www.eastviewhockey.net/page/show/9097825-peewee-b2
+Scanning page (23/500): https://www.eastviewhockey.net/page/show/9097826-peewee-c-
+Scanning page (24/500): https://www.eastviewhockey.net/page/show/9097827-squirt-b1
+Scanning page (25/500): https://www.eastviewhockey.net/page/show/9097828-squirt-b2
+Scanning page (26/500): https://www.eastviewhockey.net/page/show/9097829-squirt-c
+Scanning page (27/500): https://www.eastviewhockey.net/page/show/9097832-goalies-mite-and-squirt-10u
+Scanning page (28/500): https://www.eastviewhockey.net/page/show/9097833-goalies-peewee-12u-and-banatam
+  Skipping non-team page: Goalies - Peewee/12U & Bantam/15U
+Scanning page (29/500): https://www.eastviewhockey.net/page/show/9111068-mite-teams-jerseys-and-socks
+Scanning page (30/500): https://www.eastviewhockey.net/page/show/9144637-bantam-fall-camp-bantam-fall-camp-2025-
+  Skipping non-team page: Bantam Fall Camp
+Scanning page (31/500): https://www.eastviewhockey.net/page/show/9144644-peewee-fall-camp-peewee-fall-camp-2025-
+  Skipping non-team page: Peewee Fall Camp
+Scanning page (32/500): https://www.eastviewhockey.net/page/show/9144645-squirt-fall-camp-squirt-fall-camp-2025-
+Scanning page (33/500): https://www.eastviewhockey.net/page/show/9144647-mite-fall-camp-mite-fall-camp-2025-
+Scanning page (34/500): https://www.eastviewhockey.net/page/show/9145653-bantam-tryouts-bantam-tryout-2025-26-
+  Skipping aggregate page: Bantam Tryouts
+Scanning page (35/500): http://www.eastviewhockey.net/page/show/9145653-bantam-tryouts-bantam-tryout-2025-26-
+  Skipping aggregate page: Bantam Tryouts
+Scanning page (36/500): https://www.eastviewhockey.net/page/show/9145659-peewee-tryouts-peewee-tryouts-2025-26-
+  Skipping aggregate page: Peewee Tryouts
+Scanning page (37/500): http://www.eastviewhockey.net/page/show/9145659-peewee-tryouts-peewee-tryouts-2025-26-
+  Skipping aggregate page: Peewee Tryouts
+Scanning page (38/500): https://www.eastviewhockey.net/page/show/9145662-squirt-tryouts-squirts-tryouts-2025-26-
+Scanning page (39/500): http://www.eastviewhockey.net/board
+Scanning page (40/500): https://www.eastviewhockey.net/board
+Scanning page (41/500): https://www.eastviewhockey.net/apparel
+Found 22 potential teams. Filtering for current season...
+After season and age filtering: 11 teams (removed 11 old/filtered duplicates)
+Resolving calendar for Bantam B1-Black...
+Failed to fetch https://www.eastviewhockey.net/pag
+e/show/8727533-bantam-b1-black: Request failed 
+with status code 404
+Resolving calendar for Bantam B2 - Black...
+Resolving calendar for Bantam C...
+Resolving calendar for Peewee A...
+Failed to fetch https://www.eastviewhockey.net/pag
+e/show/8727535-peewee-a: Request failed with 
+status code 404
+Resolving calendar for Peewee B1...
+Resolving calendar for Peewee B2...
+Resolving calendar for Peewee C...
+Resolving calendar for Bantam B1 - Black...
+Resolving calendar for Bantam A...
+Resolving calendar for Bantam B1 - White...
+Resolving calendar for Bantam B2 - White...
+Checking for empty iCal feeds...
+Failed to fetch iCal webcal://www.eastviewhockey.n
+et/ical_feed?tags=8727533: Request failed with 
+status code 404
+Failed to fetch iCal webcal://www.eastviewhockey.n
+et/ical_feed?tags=8727535: Request failed with 
+status code 404
+After empty feed filtering: 11 teams (removed 0 empty calendars)
+  Found 11 Bantam/Peewee teams
+  Γ£ô No issues detected
+  Sample URL: webcal://www.avbhockey.com/ical_feed?tags=9095170
+
+Testing Lakeville Hockey Association...
+Scraping Lakeville Hockey Association...
+Checking sitemap: https://www.lakevillehockey.org/sitemap.xml
+Found 142 relevant URLs in sitemap.
+Filtered sitemap: 137 / 142 URLs kept (removed old seasons)
+Adding override URLs for Lakeville Hockey Association
+Scanning page (1/500): https://www.lakevillehockey.org
+Scanning page (2/500): https://www.lakevillehockey.org/page/show/527168-team-managers
+Scanning page (3/500): https://www.lakevillehockey.org/page/show/9121990-teams-2025-2026-
+Scanning page (4/500): https://www.lakevillehockey.org/page/show/9121996-bantam
+  Skipping aggregate page: Bantam
+Scanning page (5/500): http://www.lakevillehockey.org/page/show/9121996-bantam
+  Skipping aggregate page: Bantam
+Scanning page (6/500): https://www.lakevillehockey.org/page/show/9121997-bantam-north-aa
+Scanning page (7/500): https://www.lakevillehockey.org/page/show/9121998-bantam-north-b1
+Scanning page (8/500): https://www.lakevillehockey.org/page/show/9122000-bantam-north-b2
+Scanning page (9/500): https://www.lakevillehockey.org/page/show/9122001-bantam-south-aa
+Scanning page (10/500): https://www.lakevillehockey.org/page/show/9122002-bantam-south-b1
+Scanning page (11/500): https://www.lakevillehockey.org/page/show/9122004-bantam-south-b2
+Scanning page (12/500): https://www.lakevillehockey.org/page/show/9122005-bantam-south-c
+Scanning page (13/500): https://www.lakevillehockey.org/page/show/9122006-pee-wee
+  Skipping aggregate page: Pee Wee
+Scanning page (14/500): http://www.lakevillehockey.org/page/show/9122006-pee-wee
+  Skipping aggregate page: Pee Wee
+Scanning page (15/500): https://www.lakevillehockey.org/page/show/9122007-pee-wee-north-aa
+Scanning page (16/500): https://www.lakevillehockey.org/page/show/9122008-pee-wee-north-a
+Scanning page (17/500): https://www.lakevillehockey.org/page/show/9122009-pee-wee-north-b1
+Scanning page (18/500): https://www.lakevillehockey.org/page/show/9122010-peewee-north-b2
+Scanning page (19/500): https://www.lakevillehockey.org/page/show/9122011-north-peewee-b2-parent-resources
+Scanning page (20/500): https://www.lakevillehockey.org/page/show/9122012-pee-wee-north-c
+Scanning page (21/500): https://www.lakevillehockey.org/page/show/9122014-pee-wee-south-aa
+Scanning page (22/500): https://www.lakevillehockey.org/page/show/9122015-pee-wee-south-b1
+Scanning page (23/500): https://www.lakevillehockey.org/page/show/9122016-pee-wee-south-b2
+Scanning page (24/500): https://www.lakevillehockey.org/page/show/9122017-pee-wee-south-c
+Scanning page (25/500): https://www.lakevillehockey.org/page/show/9122019-squirt
+Scanning page (26/500): https://www.lakevillehockey.org/page/show/9122020-squirt-north-a
+Scanning page (27/500): https://www.lakevillehockey.org/page/show/9122021-squirt-north-b1
+Scanning page (28/500): https://www.lakevillehockey.org/page/show/9122022-squirt-north-b2
+Scanning page (29/500): https://www.lakevillehockey.org/page/show/9122023-north-squirt-b2-parent-resources
+Scanning page (30/500): https://www.lakevillehockey.org/page/show/9122024-squirt-north-c-black
+Scanning page (31/500): https://www.lakevillehockey.org/page/show/9122025-squirt-north-c-red
+Scanning page (32/500): https://www.lakevillehockey.org/page/show/9122026-squirt-south-a
+Scanning page (33/500): https://www.lakevillehockey.org/page/show/9122027-squirt-south-b1
+Scanning page (34/500): https://www.lakevillehockey.org/page/show/9122028-squirt-south-b2
+Scanning page (35/500): https://www.lakevillehockey.org/page/show/9122029-south-squirt-c-crimson
+Scanning page (36/500): https://www.lakevillehockey.org/page/show/9122030-squirt-south-c-gold
+Scanning page (37/500): https://www.lakevillehockey.org/page/show/9122031-u15
+Scanning page (38/500): https://www.lakevillehockey.org/page/show/9122032-u15-b
+Scanning page (39/500): https://www.lakevillehockey.org/page/show/9122034-u12
+Scanning page (40/500): https://www.lakevillehockey.org/page/show/9122035-u12-a
+Scanning page (41/500): https://www.lakevillehockey.org/page/show/9122036-u12-b1
+Scanning page (42/500): https://www.lakevillehockey.org/page/show/9122037-u12-b2
+Scanning page (43/500): https://www.lakevillehockey.org/page/show/9122038-u10
+Scanning page (44/500): https://www.lakevillehockey.org/page/show/9122039-u10-a
+Scanning page (45/500): https://www.lakevillehockey.org/page/show/9122040-u10-b1
+Scanning page (46/500): https://www.lakevillehockey.org/page/show/9122041-u10-b2-black
+Scanning page (47/500): https://www.lakevillehockey.org/page/show/9122042-u10-b2-red
+Scanning page (48/500): https://www.lakevillehockey.org/page/show/9122052-mite
+Scanning page (49/500): https://www.lakevillehockey.org/page/show/9122054-mite-1
+Scanning page (50/500): https://www.lakevillehockey.org/page/show/9122058-mite-2
+Scanning page (51/500): https://www.lakevillehockey.org/page/show/9122064-mite-3
+Scanning page (52/500): https://www.lakevillehockey.org/page/show/9122071-mite-4
+Scanning page (53/500): https://www.lakevillehockey.org/page/show/9122080-mite-prep
+Scanning page (54/500): https://www.lakevillehockey.org/page/show/9126920-bantam-north-c
+Scanning page (55/500): http://www.lakevillehockey.org/page/show/471027-board
+Scanning page (56/500): https://www.lakevillehockey.org/page/show/471029
+Scanning page (57/500): https://www.lakevillehockey.org/page/show/471029-sponsors
+Found 35 potential teams. Filtering for current season...
+After season and age filtering: 17 teams (removed 18 old/filtered duplicates)
+Resolving calendar for Bantam North - AA...
+Resolving calendar for Bantam North - B1...
+Resolving calendar for Bantam North - B2...
+Resolving calendar for Bantam South - AA...
+Resolving calendar for Bantam South - B1...
+Resolving calendar for Bantam South - B2...
+Resolving calendar for Bantam South - C...
+Resolving calendar for Pee Wee North - AA...
+Resolving calendar for Pee Wee North - A...
+Resolving calendar for Pee Wee North - B1...
+Resolving calendar for Peewee North - B2...
+Resolving calendar for Pee Wee North - C...
+Resolving calendar for Pee Wee South - AA...
+Resolving calendar for Pee Wee South - B1...
+Resolving calendar for Pee Wee South - B2...
+Resolving calendar for Pee Wee South - C...
+Resolving calendar for Bantam North - C...
+Checking for empty iCal feeds...
+  Filtering empty calendar: Peewee North - B2
+After empty feed filtering: 16 teams (removed 1 empty calendars)
+  Found 16 Bantam/Peewee teams
+  Γ£ô No issues detected
+  Sample URL: webcal://www.lakevillehockey.org/ical_feed?tags=9121997
+
+
+=== SUMMARY ===
+
+Association                              | Teams | Status
+-----------------------------------------|-------|--------
+Mahtomedi Youth Hockey Association       |     8 | Γ£ô OK
+Buffalo Hockey Association               |     7 | Γ£ô OK
+Eagan Hockey Association                 |     9 | Γ£ô OK
+Eastview Hockey Association              |    11 | Γ£ô OK
+Lakeville Hockey Association             |    16 | Γ£ô OK
+
+Γ£ô All associations passed verification!

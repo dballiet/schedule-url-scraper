@@ -1,0 +1,258 @@
+﻿=== Pine City Debug ===
+
+Scraping Pine City Youth Hockey Association...
+Checking sitemap: https://pinecityyouthhockey.pucksystems.com/sitemap.xml
+Found 89 relevant URLs in sitemap.
+Filtered sitemap: 86 / 89 URLs kept (removed old seasons)
+Scanning page (1/500): https://pinecityyouthhockey.pucksystems.com
+Scanning page (2/500): https://pinecityyouthhockey.pucksystems.com/page/show/48138-home
+Scanning page (3/500): https://pinecityyouthhockey.pucksystems.com/page/show/48140-teams
+Scanning page (4/500): https://pinecityyouthhockey.pucksystems.com/page/show/48141-calendar
+Scanning page (5/500): http://pinecityyouthhockey.pucksystems.com/page/show/9256617-10u-b2-2025-2026-
+Scanning page (6/500): http://pinecityyouthhockey.pucksystems.com/page/show/9256616-12u-b2-mpc-2025-2026-
+Scanning page (7/500): http://pinecityyouthhockey.pucksystems.com/page/show/9256615-12u-b1-mpc-2025-2026-
+Scanning page (8/500): http://pinecityyouthhockey.pucksystems.com/page/show/9256619-15u-b-mpc-2025-2026-
+Scanning page (9/500): http://pinecityyouthhockey.pucksystems.com/page/show/9289344-mite-d-2025-2026-
+Scanning page (10/500): https://pinecityyouthhockey.pucksystems.com/event/show/583852561
+Scanning page (11/500): https://pinecityyouthhockey.pucksystems.com/event/show/583452421
+Scanning page (12/500): https://pinecityyouthhockey.pucksystems.com/event/show/583452422
+Scanning page (13/500): https://pinecityyouthhockey.pucksystems.com/event/show/583452337
+Scanning page (14/500): https://pinecityyouthhockey.pucksystems.com/event/show/583852551
+Scanning page (15/500): https://pinecityyouthhockey.pucksystems.com/event/show/583852550
+Scanning page (16/500): https://pinecityyouthhockey.pucksystems.com/event/show/583852549
+Scanning page (17/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085537
+Scanning page (18/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085553
+Scanning page (19/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085549
+  Skipping aggregate page: Miska 12U-B1 MPC Shared w/ 10U-B2, 12U-B2 MPC
+Scanning page (20/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085547
+  Skipping aggregate page: Miska 10U-B2 Shared w/ 12U-B1 MPC, 12U-B2 MPC
+Scanning page (21/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085620
+Scanning page (22/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085543
+Scanning page (23/500): https://pinecityyouthhockey.pucksystems.com/event/show/582876919
+  Skipping aggregate page: 15U-B scrimmage vs Mirage
+Scanning page (24/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085108
+Scanning page (25/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085166
+Scanning page (26/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085092
+Scanning page (27/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085091
+Scanning page (28/500): https://pinecityyouthhockey.pucksystems.com/event/show/583085154
+Scanning page (29/500): https://pinecityyouthhockey.pucksystems.com/page/show/51373
+Scanning page (30/500): https://pinecityyouthhockey.pucksystems.com/event/show/580967879
+  Skipping aggregate page: Roster Sign Offs-MiteTeams
+Scanning page (31/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256616
+Scanning page (32/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256619
+Scanning page (33/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289344
+Scanning page (34/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256615
+Scanning page (35/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256617
+Scanning page (36/500): https://pinecityyouthhockey.pucksystems.com/page/show/48144-documents
+Scanning page (37/500): https://pinecityyouthhockey.pucksystems.com/page/show/48145-links
+Scanning page (38/500): https://pinecityyouthhockey.pucksystems.com/page/show/48146-board
+Scanning page (39/500): https://pinecityyouthhockey.pucksystems.com/page/show/48147-sponsors
+Scanning page (40/500): https://pinecityyouthhockey.pucksystems.com/page/show/48148-contact
+Scanning page (41/500): https://pinecityyouthhockey.pucksystems.com/page/show/51315-bantam
+  Skipping aggregate page: Bantam
+Scanning page (42/500): https://pinecityyouthhockey.pucksystems.com/page/show/51373-mite
+Scanning page (43/500): https://pinecityyouthhockey.pucksystems.com/page/show/51377-squirt
+  Skipping aggregate page: Squirt
+Scanning page (44/500): https://pinecityyouthhockey.pucksystems.com/page/show/51380-peewee
+  Skipping aggregate page: Peewee
+Scanning page (45/500): https://pinecityyouthhockey.pucksystems.com/page/show/51506-coach-info
+Scanning page (46/500): https://pinecityyouthhockey.pucksystems.com/page/show/51798-meeting-minutes
+Scanning page (47/500): https://pinecityyouthhockey.pucksystems.com/page/show/52974-volunteer
+Scanning page (48/500): https://pinecityyouthhockey.pucksystems.com/page/show/54851-arena
+Scanning page (49/500): https://pinecityyouthhockey.pucksystems.com/page/show/689942-managers-information
+Scanning page (50/500): https://pinecityyouthhockey.pucksystems.com/page/show/1426038-try-outs
+Scanning page (51/500): https://pinecityyouthhockey.pucksystems.com/page/show/2350331-pcyh-policies-and-procedures
+Scanning page (52/500): https://pinecityyouthhockey.pucksystems.com/page/show/2935144-concessions
+Scanning page (53/500): https://pinecityyouthhockey.pucksystems.com/page/show/3588872-tournament-
+Scanning page (54/500): https://pinecityyouthhockey.pucksystems.com/page/show/3727567-board-resources
+Scanning page (55/500): https://pinecityyouthhockey.pucksystems.com/page/show/3727568-pcyh-apparel
+Scanning page (56/500): https://pinecityyouthhockey.pucksystems.com/page/show/3727578-registration
+Scanning page (57/500): https://pinecityyouthhockey.pucksystems.com/page/show/3727579-player-registration-for-the-2025-2026-season-now-open-
+Scanning page (58/500): https://pinecityyouthhockey.pucksystems.com/page/show/3727580-coach-registration
+Scanning page (59/500): https://pinecityyouthhockey.pucksystems.com/page/show/3727582-manager-volunteer-registration
+Scanning page (60/500): https://pinecityyouthhockey.pucksystems.com/page/show/3727588-learn-to-skate
+Scanning page (61/500): https://pinecityyouthhockey.pucksystems.com/page/show/3727591-volunteer-managers-coaches-concessions
+Scanning page (62/500): https://pinecityyouthhockey.pucksystems.com/page/show/4546073-safesport
+Scanning page (63/500): https://pinecityyouthhockey.pucksystems.com/page/show/5031797-pine-city-youth-hockey-monthly-dues
+Scanning page (64/500): https://pinecityyouthhockey.pucksystems.com/page/show/5334702-girls
+Scanning page (65/500): https://pinecityyouthhockey.pucksystems.com/page/show/5910336-hilltop-recreation-area
+Scanning page (66/500): https://pinecityyouthhockey.pucksystems.com/page/show/7655857-rink-rat-challenge
+Scanning page (67/500): https://pinecityyouthhockey.pucksystems.com/page/show/8172920-coaches
+Scanning page (68/500): https://pinecityyouthhockey.pucksystems.com/page/show/8401701-charitable-gambling
+Scanning page (69/500): https://pinecityyouthhockey.pucksystems.com/page/show/8696636-miska-2024-2025-
+Scanning page (70/500): https://pinecityyouthhockey.pucksystems.com/page/show/8696637-step-ups-2024-2025-
+Scanning page (71/500): https://pinecityyouthhockey.pucksystems.com/page/show/8773048-goalies-2024-2025-
+Scanning page (72/500): https://pinecityyouthhockey.pucksystems.com/page/show/9129686-assets
+Scanning page (73/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256595-squirt-b1-2025-2026-
+Scanning page (74/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256604-squirt-c-2025-2026-
+Scanning page (75/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256605-peewee-b1-2025-2026-
+Scanning page (76/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256610-peewee-b2-2025-2026-
+Scanning page (77/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256611-peewee-c-2025-2026-
+Scanning page (78/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256614-bantam-b2-2025-2026-
+Scanning page (79/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256615-12u-b1-mpc-2025-2026-
+Scanning page (80/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256616-12u-b2-mpc-2025-2026-
+Scanning page (81/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256617-10u-b2-2025-2026-
+Scanning page (82/500): https://pinecityyouthhockey.pucksystems.com/page/show/9256619-15u-b-mpc-2025-2026-
+Scanning page (83/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289336-mite-a-2025-2026-
+Scanning page (84/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289338-mite-b-green-2025-2026-
+Scanning page (85/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289341-mite-b-black-2025-2026-
+Scanning page (86/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289343-mite-c-2025-2026-
+Scanning page (87/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289344-mite-d-2025-2026-
+Scanning page (88/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289345-6u-2025-2026-
+Scanning page (89/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289346-8u-b-2025-2026-
+Scanning page (90/500): https://pinecityyouthhockey.pucksystems.com/page/show/9289347-8u-c-2025-2026-
+Scanning page (91/500): http://pinecityyouthhockey.pucksystems.com/page/show/48146-board
+Found 79 potential teams. Filtering for current season...
+After season and age filtering: 53 teams (removed 26 old/filtered duplicates)
+Resolving calendar for 10U-B2 Shared w/ Squirt C...
+  Skipping 10U-B2 Shared w/ Squirt C ΓÇö no calendar found
+Resolving calendar for Squirt C  Shared w/ 10U-B2...
+  Skipping Squirt C  Shared w/ 10U-B2 ΓÇö no calendar found
+Resolving calendar for Squirt C...
+Resolving calendar for Peewee C...
+Resolving calendar for 12U-B1 MPC Shared w/ Squirt B1...
+  Skipping 12U-B1 MPC Shared w/ Squirt B1 ΓÇö no calendar found
+Resolving calendar for Squirt B1  Shared w/ 12U-B1 MPC...
+  Skipping Squirt B1  Shared w/ 12U-B1 MPC ΓÇö no calendar found
+Resolving calendar for Squirt B1...
+Resolving calendar for Mite A...
+Resolving calendar for Mite B Green...
+Resolving calendar for Mite B Black...
+Resolving calendar for Mite C...
+Resolving calendar for Peewee B1...
+Resolving calendar for Peewee B2...
+Resolving calendar for Bantam B2...
+Resolving calendar for 15U-B MPC Shared w/ Bantam B2...
+  Skipping 15U-B MPC Shared w/ Bantam B2 ΓÇö no calendar found
+Resolving calendar for Bantam B2 Shared w/ 15U-B MPC...
+  Skipping Bantam B2 Shared w/ 15U-B MPC ΓÇö no calendar found
+Resolving calendar for Mite B Black Shared w/ Mite B Green...
+  Skipping Mite B Black Shared w/ Mite B Green ΓÇö no calendar found
+Resolving calendar for Mite B Green Shared w/ Mite B Black...
+  Skipping Mite B Green Shared w/ Mite B Black ΓÇö no calendar found
+Resolving calendar for 12U-B2 MPC Shared w/ Peewee B2...
+  Skipping 12U-B2 MPC Shared w/ Peewee B2 ΓÇö no calendar found
+Resolving calendar for Peewee B2  Shared w/ Squirt B1...
+  Skipping Peewee B2  Shared w/ Squirt B1 ΓÇö no calendar found
+Resolving calendar for Squirt B1  Shared w/ Peewee B2...
+  Skipping Squirt B1  Shared w/ Peewee B2 ΓÇö no calendar found
+Resolving calendar for 10U-B2 Shared w/ Squirt B1...
+  Skipping 10U-B2 Shared w/ Squirt B1 ΓÇö no calendar found
+Resolving calendar for Squirt B1  Shared w/ 10U-B2...
+  Skipping Squirt B1  Shared w/ 10U-B2 ΓÇö no calendar found
+Resolving calendar for 6U Shared w/ Mite D/ Mite B Black...
+  Skipping 6U Shared w/ Mite D/ Mite B Black ΓÇö no calendar found
+Resolving calendar for 8U-B Shared w/ Mite A...
+  Skipping 8U-B Shared w/ Mite A ΓÇö no calendar found
+Resolving calendar for Mite A Shared w/ 8U-B...
+  Skipping Mite A Shared w/ 8U-B ΓÇö no calendar found
+Resolving calendar for PeeWee C Shared w/ Squirt B1...
+  Skipping PeeWee C Shared w/ Squirt B1 ΓÇö no calendar found
+Resolving calendar for Squirt B1  Shared w/ PeeWee C...
+  Skipping Squirt B1  Shared w/ PeeWee C ΓÇö no calendar found
+Resolving calendar for CANCELED 6U Shared w/ 8U- C, Mite D...
+  Skipping CANCELED 6U Shared w/ 8U- C, Mite D ΓÇö no calendar found
+Resolving calendar for 10U-B2 Shared w/ Peewee B2...
+  Skipping 10U-B2 Shared w/ Peewee B2 ΓÇö no calendar found
+Resolving calendar for Peewee B2  Shared w/ 10U-B2...
+  Skipping Peewee B2  Shared w/ 10U-B2 ΓÇö no calendar found
+Resolving calendar for Squirt C  Solo...
+  Skipping Squirt C  Solo ΓÇö no calendar found
+Resolving calendar for Mite A Shared w/ Mite B Green...
+  Skipping Mite A Shared w/ Mite B Green ΓÇö no calendar found
+Resolving calendar for Mite B Green Shared w/ Mite A...
+  Skipping Mite B Green Shared w/ Mite A ΓÇö no calendar found
+Resolving calendar for Mite A Shared w/ Mite C...
+  Skipping Mite A Shared w/ Mite C ΓÇö no calendar found
+Resolving calendar for Peewee B1 Shared w/ Squirt C...
+  Skipping Peewee B1 Shared w/ Squirt C ΓÇö no calendar found
+Resolving calendar for Squirt C  Shared w/ Peewee B1...
+  Skipping Squirt C  Shared w/ Peewee B1 ΓÇö no calendar found
+Resolving calendar for Mite A (2025-2026 )...
+Resolving calendar for Mite B Green (2025-2026)...
+Resolving calendar for Mite B Black (2025-2026)...
+Resolving calendar for Mite C (2025-2026)...
+Resolving calendar for Squirt B1 (2025-2026)...
+Resolving calendar for Squirt C (2025-2026)...
+Resolving calendar for Peewee B1 (2025-2026)...
+Resolving calendar for Peewee B2 (2025-2026)...
+Resolving calendar for Peewee C (2025-2026)...
+Resolving calendar for Bantam B2 (2025-2026)...
+Resolving calendar for 10U-B2...
+Resolving calendar for 12U-B2 MPC...
+Resolving calendar for 12U-B1 MPC...
+Resolving calendar for 15U-B MPC...
+Resolving calendar for Mite D...
+Resolving calendar for Mite...
+Checking for empty iCal feeds...
+After empty feed filtering: 26 teams (removed 0 empty calendars)
+
+=== Found 16 teams ===
+
+Γ£ô Bantam B2
+    Level: Bantams B2
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256614
+
+Γ£ô Peewee B1
+    Level: Peewees B1
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256605
+
+Γ£ô Peewee B2
+    Level: Peewees B2
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256610
+
+Γ£ô Peewee C
+    Level: Peewees C
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256611
+
+Γ£ô Squirt B1
+    Level: Squirts B1
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256595
+
+Γ£ô Squirt C
+    Level: Squirts C
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256604
+
+Γ£ô Mite A
+    Level: Mites A
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9289336
+
+Γ£ô Mite B Black
+    Level: Mites B
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9289341
+
+Γ£ô Mite B Green
+    Level: Mites B
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9289338
+
+Γ£ô Mite C
+    Level: Mites C
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9289343
+
+Γ£ô Mite D
+    Level: Mites D
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9289344
+
+Γ£ô Mite
+    Level: Mites Unknown
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=51373
+
+Γ£ô 15U-B MPC
+    Level: 15U B
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256619
+
+Γ£ô 12U-B1 MPC
+    Level: 12U B1
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256615
+
+Γ£ô 12U-B2 MPC
+    Level: 12U B2
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256616
+
+Γ£ô 10U-B2
+    Level: 10U B2
+    Calendar: webcal://pinecityyouthhockey.pucksystems.com/ical_feed?tags=9256617
+
+
+=== Summary: 0 teams with single_event URLs (should be 0) ===
+

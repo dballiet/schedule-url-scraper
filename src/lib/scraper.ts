@@ -511,6 +511,11 @@ function isLikelyNonTeamPage(name: string, url: string): boolean {
  * Validate that a URL is a proper calendar URL
  */
 function isValidCalendarUrl(url: string): boolean {
+    // Skip single_event URLs - these are for individual events, not team calendars
+    // (common on PuckSystems sites like Pine City)
+    if (url.includes('single_event') || url.includes('event_id=')) {
+        return false;
+    }
     // Must be webcal:// or contain calendar/schedule/ical paths
     return url.startsWith('webcal://') ||
         url.includes('/ical_feed') ||
@@ -540,6 +545,11 @@ async function findCalendarUrl(teamUrl: string): Promise<string | null> {
     $('a').each((_, el) => {
         const href = $(el).attr('href');
         if (!href) return;
+
+        // Skip single_event URLs - these are for individual events, not team calendars
+        if (href.includes('single_event') || href.includes('event_id=')) {
+            return; // continue to next link
+        }
 
         if (href.startsWith('webcal://') || href.includes('.ics') || href.includes('ical_feed')) {
             bestUrl = normalizeUrl(teamUrl, href);
